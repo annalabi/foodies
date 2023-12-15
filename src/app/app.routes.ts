@@ -8,9 +8,12 @@ import { FileNotFoundComponent } from './file-not-found/file-not-found.component
 import { FooterComponent } from './footer/footer.component';
 
 export const routes: Routes = [
-    {path: 'main', component: MainComponent},
-    {path: 'stores', component: StoresComponent},
-    {path: 'products', component: ProductsComponent},
+    {path: 'main', component: MainComponent,
+    children: [
+        {path: "stores", component: StoresComponent} ,
+        {path:"stores/:id", component: ProductsComponent},
+    ]},
+   
     {path: 'shoppingBasket', component: ShoppingBasketComponent},
     { path: '', redirectTo: 'home',  pathMatch: 'full' },
     { path: '**', component: FileNotFoundComponent}
