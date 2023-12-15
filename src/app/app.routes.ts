@@ -8,7 +8,7 @@ import { FileNotFoundComponent } from './file-not-found/file-not-found.component
 import { FooterComponent } from './footer/footer.component';
 
 export const routes: Routes = [
-    {path: 'main', component: MainComponent,
+    {path: 'home', component: MainComponent,
     children: [
         {path: "stores", component: StoresComponent} ,
         {path:"stores/:id", component: ProductsComponent},
