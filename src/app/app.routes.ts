@@ -6,9 +6,11 @@ import { ShoppingBasketComponent } from './components/shopping-basket/shopping-b
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FileNotFoundComponent } from './components/file-not-found/file-not-found.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
 
 export const routes: Routes = [
-    {path: 'home', component: MainComponent},
+    {path: 'home', component: HomeComponent},
+    {path: 'main', component: MainComponent},
     // children: [
     //     {path: "stores", component: StoresComponent} ,
     //     {path:"stores/:id", component: ProductsComponent},
