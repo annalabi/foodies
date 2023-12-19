@@ -1,18 +1,21 @@
 import { Routes } from '@angular/router';
-import { MainComponent } from './main/main.component';
-import { StoresComponent } from './stores/stores.component';
-import { ProductsComponent } from './products/products.component';
-import { ShoppingBasketComponent } from './shopping-basket/shopping-basket.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FileNotFoundComponent } from './file-not-found/file-not-found.component';
-import { FooterComponent } from './footer/footer.component';
+import { MainComponent } from './components/main/main.component';
+import { StoresComponent } from './components/stores/stores.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ShoppingBasketComponent } from './components/shopping-basket/shopping-basket.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FileNotFoundComponent } from './components/file-not-found/file-not-found.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 export const routes: Routes = [
-    {path: 'home', component: MainComponent,
-    children: [
-        {path: "stores", component: StoresComponent} ,
-        {path:"stores/:id", component: ProductsComponent},
-    ]},
+    {path: 'home', component: MainComponent},
+    // children: [
+    //     {path: "stores", component: StoresComponent} ,
+    //     {path:"stores/:id", component: ProductsComponent},
+    // ]},
+    {path: 'stores', component: StoresComponent},
+    {path: 'stores/:id', component: ProductsComponent},
+
    
     {path: 'shoppingBasket', component: ShoppingBasketComponent},
     { path: '', redirectTo: 'home',  pathMatch: 'full' },

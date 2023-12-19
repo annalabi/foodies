@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { MainComponent } from './main/main.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { ProductsComponent } from './products/products.component';
-import { StoresComponent } from './stores/stores.component';
-import { ShoppingBasketComponent } from './shopping-basket/shopping-basket.component';
-import { FileNotFoundComponent } from './file-not-found/file-not-found.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
+import { MainComponent } from './components/main/main.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProductsComponent } from './components/products/products.component';
+import { StoresComponent } from './components/stores/stores.component';
+import { ShoppingBasketComponent } from './components/shopping-basket/shopping-basket.component';
+import { FileNotFoundComponent } from './components/file-not-found/file-not-found.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @Component({
   selector: 'app-root',
