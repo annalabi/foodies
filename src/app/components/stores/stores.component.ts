@@ -6,6 +6,7 @@ import { Store } from '../../services/stores.model';
 import { StoresService } from '../../services/stores.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-stores',
@@ -14,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
     CommonModule,
     RouterOutlet,
     ProductsComponent,
+    FooterComponent,
     MatCardModule,
     MatButtonModule,
   ],

@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FileNotFoundComponent } from './components/file-not-found/file-not-found.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -17,6 +18,7 @@ export const routes: Routes = [
     // ]},
     {path: 'stores', component: StoresComponent},
     {path: 'stores/:id', component: ProductsComponent},
+    {path: 'aboutUs', component: AboutUsComponent},
 
    
     {path: 'shoppingBasket', component: ShoppingBasketComponent},

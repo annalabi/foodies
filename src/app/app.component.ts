@@ -9,6 +9,7 @@ import { ShoppingBasketComponent } from './components/shopping-basket/shopping-b
 import { FileNotFoundComponent } from './components/file-not-found/file-not-found.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ import { HeaderComponent } from './components/header/header.component';
             ShoppingBasketComponent,
             FileNotFoundComponent,
             FooterComponent,
+            AboutUsComponent,
             HeaderComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
