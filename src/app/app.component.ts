@@ -25,8 +25,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
             AboutUsComponent,
             HeaderComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  
 })
 export class AppComponent {
-  title = 'foodies';
+  title = 'WeFeed';
 }

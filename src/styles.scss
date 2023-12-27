@@ -2,6 +2,31 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+ 
+.animate-jump-in {
+    /* Define your animation properties */
+    animation-name: jumpIn;
+    /* ... other animation properties ... */
+  }
+  
+  .animate-once {
+    animation-iteration-count: infinite;
+  }
+  
+  .animate-duration-3000ms {
+    animation-duration: 3000ms;
+  }
+  
+  /* Define the actual animation keyframes */
+  @keyframes jumpIn {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
