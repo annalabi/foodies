@@ -19,3 +19,10 @@ export interface Rating {
     rate: number;
     count: number
 }
+
+export interface FamousStore {
+    id: number;
+    name: string;
+    category: string;
+    address: string;
+}

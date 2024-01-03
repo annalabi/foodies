@@ -42,8 +42,10 @@ h1 {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	background: url(/assets/images/homepage.jpg) top
-		right / cover;
+	background: url(/assets/images/homepage.jpg)no-repeat;
+	background-size: 100% auto;
+    background-position: center;
+    width: 100%; 
 	.word {
 		width: 550px;
 		margin: auto;
@@ -105,3 +107,11 @@ h1 {
 	margin-left: 20px;
 	text-align:left;
   }
+  .hide-scroll-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scroll-bar::-webkit-scrollbar {
+    display: none;
+  }
+  
