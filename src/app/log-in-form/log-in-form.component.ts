@@ -8,6 +8,6 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   templateUrl: './log-in-form.component.html',
   styleUrl: './log-in-form.component.scss'
 })
-export class LogInFormComponent {
+export class loginFormComponent {
 
 }

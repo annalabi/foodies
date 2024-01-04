@@ -9,7 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { SingUpFormComponent } from './sing-up-form/sing-up-form.component';
-import { LogInFormComponent } from './log-in-form/log-in-form.component';
+import { loginFormComponent } from './log-in-form/log-in-form.component';
 
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -22,7 +22,7 @@ export const routes: Routes = [
     {path: 'stores/:id', component: ProductsComponent},
     {path: 'aboutUs', component: AboutUsComponent},
     {path: 'signUp', component: SingUpFormComponent},
-    {path: 'logIn', component: LogInFormComponent},
+    {path: 'login', component: loginFormComponent},
    
     {path: 'shoppingBasket', component: ShoppingBasketComponent},
     { path: '', redirectTo: 'home',  pathMatch: 'full' },
