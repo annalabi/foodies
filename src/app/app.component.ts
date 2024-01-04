@@ -10,6 +10,7 @@ import { FileNotFoundComponent } from './components/file-not-found/file-not-foun
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { SingUpFormComponent } from './sing-up-form/sing-up-form.component';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +24,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
             FileNotFoundComponent,
             FooterComponent,
             AboutUsComponent,
-            HeaderComponent],
+            HeaderComponent,
+          SingUpFormComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   

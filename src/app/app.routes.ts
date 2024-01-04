@@ -8,6 +8,7 @@ import { FileNotFoundComponent } from './components/file-not-found/file-not-foun
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { SingUpFormComponent } from './sing-up-form/sing-up-form.component';
 
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -19,7 +20,7 @@ export const routes: Routes = [
     {path: 'stores', component: StoresComponent},
     {path: 'stores/:id', component: ProductsComponent},
     {path: 'aboutUs', component: AboutUsComponent},
-
+    {path: 'signUp', component: SingUpFormComponent},
    
     {path: 'shoppingBasket', component: ShoppingBasketComponent},
     { path: '', redirectTo: 'home',  pathMatch: 'full' },
