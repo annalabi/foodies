@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { SingUpFormComponent } from './sing-up-form/sing-up-form.component';
+import { LogInFormComponent } from './log-in-form/log-in-form.component';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,8 @@ import { SingUpFormComponent } from './sing-up-form/sing-up-form.component';
             FooterComponent,
             AboutUsComponent,
             HeaderComponent,
-          SingUpFormComponent],
+          SingUpFormComponent,
+        LogInFormComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   
