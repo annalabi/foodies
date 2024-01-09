@@ -41,7 +41,7 @@
   </div>
 </div>
 <!-- Top 10 Stores -->
-<div class="flex flex-col bg-white m-auto p-auto ">
+<div class="flex flex-col bg-white m-auto p-auto">
   <h2 class="flex py-5 lg:px-20 md:px-10 px-5 lg:mx-40 md:mx-20 mx-5 text-4xl">
     Most Popular Choices
   </h2>
@@ -52,11 +52,11 @@
           <div
             class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out text-center"
           >
-          <img src="{{card.image}}" 
-          alt=".."
-        />
-            <h3><b>{{ card.name }}</b></h3>
-            <p> &#9733;{{ card.rating.rate }} ({{ card.rating.count }})</p>
+            <img src="{{ card.image }}" alt=".." />
+            <h3>
+              <b>{{ card.name }}</b>
+            </h3>
+            <p>&#9733;{{ card.rating.rate }} ({{ card.rating.count }})</p>
             <p>{{ card.address }}</p>
           </div>
         </a>
@@ -66,33 +66,16 @@
 </div>
 
 <!-- Explore We Feed Cities -->
-<div class="container" style="max-width: 100%; overflow-x: auto; margin: 45px">
+<div class="container max-w-full overflow-x-auto my-12">
   <h2>
     Explore
     <div class="name inline-block">We Feed</div>
     cities
   </h2>
 
-  <ul
-    class="list inline-flex"
-    style="
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    "
-  >
+  <ul class="flex flex-wrap p-0 m-0 list-none">
     <li
-      class="p-2"
-      style="
-        flex: 1 0 25%;
-        max-width: calc(25% - 1rem);
-        box-sizing: border-box;
-        padding: 0.5rem;
-        text-align: center;
-        margin-left: 1rem;
-      "
+      class="p-2 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center"
     >
       <button
         class="bg-white hover:bg-teal-700 hover:text-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
@@ -101,15 +84,7 @@
       </button>
     </li>
     <li
-      class="p-2"
-      style="
-        flex: 1 0 25%;
-        max-width: calc(25% - 1rem);
-        box-sizing: border-box;
-        padding: 0.5rem;
-        text-align: center;
-        margin-left: 1rem;
-      "
+      class="p-2 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center"
     >
       <button
         class="bg-white hover:bg-teal-700 hover:text-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
@@ -118,15 +93,7 @@
       </button>
     </li>
     <li
-      class="p-2"
-      style="
-        flex: 1 0 25%;
-        max-width: calc(25% - 1rem);
-        box-sizing: border-box;
-        padding: 0.5rem;
-        text-align: center;
-        margin-left: 1rem;
-      "
+      class="p-2 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center"
     >
       <button
         class="bg-white hover:bg-teal-700 hover:text-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
@@ -135,15 +102,7 @@
       </button>
     </li>
     <li
-      class="p-2"
-      style="
-        flex: 1 0 25%;
-        max-width: calc(25% - 1rem);
-        box-sizing: border-box;
-        padding: 0.5rem;
-        text-align: center;
-        margin-left: 1rem;
-      "
+      class="p-2 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center"
     >
       <button
         class="bg-white hover:bg-teal-700 hover:text-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
@@ -152,15 +111,7 @@
       </button>
     </li>
     <li
-      class="p-2"
-      style="
-        flex: 1 0 25%;
-        max-width: calc(25% - 1rem);
-        box-sizing: border-box;
-        padding: 0.5rem;
-        text-align: center;
-        margin-left: 4.5rem;
-      "
+      class="p-2 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center"
     >
       <button
         class="bg-white hover:bg-teal-700 hover:text-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
@@ -169,15 +120,7 @@
       </button>
     </li>
     <li
-      class="p-2"
-      style="
-        flex: 1 0 25%;
-        max-width: calc(25% - 1rem);
-        box-sizing: border-box;
-        padding: 0.5rem;
-        text-align: center;
-        margin-left: 4.5rem;
-      "
+      class="p-2 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center"
     >
       <button
         class="bg-white hover:bg-teal-700 hover:text-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
@@ -186,15 +129,7 @@
       </button>
     </li>
     <li
-      class="p-2"
-      style="
-        flex: 1 0 25%;
-        max-width: calc(25% - 1rem);
-        box-sizing: border-box;
-        padding: 0.5rem;
-        text-align: center;
-        margin-left: 4.5rem;
-      "
+      class="p-2 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center"
     >
       <button
         class="bg-white hover:bg-teal-700 hover:text-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
@@ -203,15 +138,7 @@
       </button>
     </li>
     <li
-      class="p-2"
-      style="
-        flex: 1 0 25%;
-        max-width: calc(25% - 1rem);
-        box-sizing: border-box;
-        padding: 0.5rem;
-        text-align: center;
-        margin-left: 0rem;
-      "
+      class="p-2 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center"
     >
       <button
         class="bg-white hover:bg-teal-700 hover:text-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
@@ -220,15 +147,7 @@
       </button>
     </li>
     <li
-      class="p-2"
-      style="
-        flex: 1 0 25%;
-        max-width: calc(25% - 1rem);
-        box-sizing: border-box;
-        padding: 0.5rem;
-        text-align: center;
-        margin-left: 0rem;
-      "
+      class="p-2 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center"
     >
       <button
         class="bg-white hover:bg-teal-700 hover:text-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
@@ -237,15 +156,7 @@
       </button>
     </li>
     <li
-      class="p-2"
-      style="
-        flex: 1 0 25%;
-        max-width: calc(25% - 1rem);
-        box-sizing: border-box;
-        padding: 0.5rem;
-        text-align: center;
-        margin-left: 0rem;
-      "
+      class="p-2 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center"
     >
       <button
         class="bg-white hover:bg-teal-700 hover:text-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
@@ -254,15 +165,7 @@
       </button>
     </li>
     <li
-      class="p-2"
-      style="
-        flex: 1 0 25%;
-        max-width: calc(25% - 1rem);
-        box-sizing: border-box;
-        padding: 0.5rem;
-        text-align: center;
-        margin-left: 0rem;
-      "
+      class="p-2 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center"
     >
       <button
         class="bg-white hover:bg-teal-700 hover:text-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
@@ -271,15 +174,7 @@
       </button>
     </li>
     <li
-      class="p-2"
-      style="
-        flex: 1 0 25%;
-        max-width: calc(25% - 1rem);
-        box-sizing: border-box;
-        padding: 0.5rem;
-        text-align: center;
-        margin-left: 4.5rem;
-      "
+      class="p-2 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center"
     >
       <button
         class="bg-white hover:bg-teal-700 hover:text-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
@@ -290,7 +185,7 @@
   </ul>
 </div>
 <!-- Why order with We Feed -->
-<div class="cards flex flex-wrap" style="margin: 45px">
+<div class="cards flex flex-wrap m-12">
   <h2>
     Why order with
     <div class="name inline-block">We Feed</div>
