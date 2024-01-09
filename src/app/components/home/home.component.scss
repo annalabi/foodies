@@ -43,7 +43,7 @@ h1 {
 	justify-content: space-between;
 	align-items: center;
 	background: url(/assets/images/homepage.jpg)no-repeat;
-	background-size: 100% auto;
+	background-size: cover;
     background-position: center;
     width: 100%; 
 	.word {
@@ -114,4 +114,4 @@ h1 {
   .hide-scroll-bar::-webkit-scrollbar {
     display: none;
   }
-  
+   
