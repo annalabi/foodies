@@ -4,7 +4,7 @@
     "name": "McDonald's",
     "category": "FAST_FOOD",
     "address": "Syntagma 15",
-    "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+    "image": "https://imageproxy.wolt.com/venue/5b18d86f9c0caf000d17d51f/aff8d500-5728-11ec-ac96-ee505c5e0b42_mcdonalds1.jpg",
     "rating": { "rate": 3.9, "count": 120 },
     "products": [
       {
@@ -74,7 +74,7 @@
     "name": "StreetWok",
     "category": "ASIAN",
     "address": "Glyfada Str. 203",
-    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "image": "https://imageproxy.wolt.com/mes-image/f7c8ee52-b8d1-45c0-b28e-d02f72fa0a38/f5e53187-c583-4199-8554-86dcce6d1a2e",
     "rating": { "rate": 4.9, "count": 1760 },
     "products": [
       {
@@ -120,7 +120,7 @@
     "name": "Nanou Donuts House",
     "category": "DONUTS",
     "address": "Ampelokipous 23rd Av.",
-    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "image": "https://imageproxy.wolt.com/mes-image/28752efc-9d64-436a-aa7b-dd892ab8bb46/eba5505f-6991-43a3-9a3c-6a6c7f6aaba9",
     "rating": { "rate": 4.4, "count": 1520 },
     "products": [
       {
