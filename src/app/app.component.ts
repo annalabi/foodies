@@ -12,6 +12,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { SingUpFormComponent } from './sing-up-form/sing-up-form.component';
 import { loginFormComponent } from './log-in-form/log-in-form.component';
+import { MostPopularChoicesComponent } from './components/home/most-popular-choices/most-popular-choices.component';
+import { WeFeedCitiesComponent } from './components/home/we-feed-cities/we-feed-cities.component';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +29,9 @@ import { loginFormComponent } from './log-in-form/log-in-form.component';
             AboutUsComponent,
             HeaderComponent,
           SingUpFormComponent,
-        loginFormComponent],
+        loginFormComponent,
+        MostPopularChoicesComponent,
+      WeFeedCitiesComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   
