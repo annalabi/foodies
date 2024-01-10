@@ -8,8 +8,8 @@ import { FileNotFoundComponent } from './components/file-not-found/file-not-foun
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { SingUpFormComponent } from './sing-up-form/sing-up-form.component';
-import { loginFormComponent } from './log-in-form/log-in-form.component';
+import { SingUpFormComponent } from './components/sing-up-form/sing-up-form.component';
+import { loginFormComponent } from './components/log-in-form/log-in-form.component';
 
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
