@@ -11,7 +11,7 @@ module.exports = {
 
     colors: {
       'gray': "#8492a6",
-      'gray-dark': "#273444",
+      'gray-dark': "#111827",
       'gray-light': "#d3dce6",
       'gray-100':'#f3f4f6',
       'gray-200':'#e5e7eb',
@@ -28,10 +28,6 @@ module.exports = {
       'orange-100': '#ffedd5',
       'orange-300': '#fdba74',
       'orange-800': '#9a3412',
-      'yellow-50': '#fefce8',
-      'yellow-200': '#FCE96A',
-      'yellow-300': '#fde047',
-      'yellow-400': '#facc15',
       'yellow-600': '#ca8a04',
       'amber-600': '#d97706',
       'amber-50': '#fffbeb',
@@ -43,6 +39,7 @@ module.exports = {
       spacing:{
         '128': '32rem',
         '144': '36rem',
+        '80': '20.5rem',
       },
 
       borderRadius:{
