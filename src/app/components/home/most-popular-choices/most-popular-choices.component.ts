@@ -19,10 +19,12 @@ export class MostPopularChoicesComponent implements AfterViewInit {
 
   constructor(private cardService: CardService) {}
   ngAfterViewInit() {
-    this.cardService.getTop10Stores().subscribe((data) => {
-      console.log(data);
-      this.cardsData = data;
-      this.startScrolling();
+    this.cardService.getTop10Stores().subscribe({
+      next: (data) => {
+        console.log(data);
+        this.cardsData = data;
+        this.startScrolling();
+      },
     });
   }
   startScrolling() {
