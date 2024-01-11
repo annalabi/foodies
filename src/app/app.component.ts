@@ -9,11 +9,13 @@ import { ShoppingBasketComponent } from './components/shopping-basket/shopping-b
 import { FileNotFoundComponent } from './components/file-not-found/file-not-found.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { AboutUsComponent } from './about-us/about-us.component';
+import { AboutUsComponent } from './components/footer/about-us/about-us.component';
 import { SingUpFormComponent } from './components/sing-up-form/sing-up-form.component';
 import { loginFormComponent } from './components/log-in-form/log-in-form.component';
 import { MostPopularChoicesComponent } from './components/home/most-popular-choices/most-popular-choices.component';
 import { WeFeedCitiesComponent } from './components/home/we-feed-cities/we-feed-cities.component';
+import { FAQsComponent } from './components/footer/faqs/faqs.component';
+import { HowItWorksComponent } from './components/footer/how-it-works/how-it-works.component';
 
 @Component({
   selector: 'app-root',
@@ -34,6 +36,8 @@ import { WeFeedCitiesComponent } from './components/home/we-feed-cities/we-feed-
     loginFormComponent,
     MostPopularChoicesComponent,
     WeFeedCitiesComponent,
+    FAQsComponent,
+    HowItWorksComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],

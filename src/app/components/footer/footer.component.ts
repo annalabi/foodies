@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { FAQsComponent } from './faqs/faqs.component';
+import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,RouterOutlet,FAQsComponent, HowItWorksComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
