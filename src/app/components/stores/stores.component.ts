@@ -1,12 +1,12 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ProductsComponent } from '../products/products.component';
+import { Router, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Store } from '../../services/stores.model';
 import { StoresService } from '../../services/stores.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from '../footer/footer.component';
+import { ProductsComponent } from '../products/products.component';
 
 @Component({
   selector: 'app-stores',
@@ -24,8 +24,16 @@ import { FooterComponent } from '../footer/footer.component';
 })
 export class StoresComponent {
   service = inject(StoresService);
+  router: Router = inject(Router);
 
   @Input() stores!: Store[];
 
   constructor() {}
+
+
+  // theo
+  nextPage(name: string){
+    name = name.replace(/\s/g, "")
+    this.router.navigate(["./main", name])
+  }
 }

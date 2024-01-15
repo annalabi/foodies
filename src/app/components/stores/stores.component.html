@@ -8,9 +8,11 @@
     <div>
       @for (store of stores; track $index) {
 
+      <!-- theo/click -->
       <button
         class="w-full max-w-lg bg-white hover:bg-offwhite hover:border-gray-light border border-gray-dark rounded-lg shadow"
-      >
+        (click)="nextPage(store.name)" 
+        >
         <div class="w-full h-64 overflow-hidden">
           <img
             class="rounded-t-sm w-full h-64 hover:scale-110 transition duration-500 cursor-pointer object-cover"
