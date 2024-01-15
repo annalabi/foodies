@@ -12,6 +12,7 @@ import { SingUpFormComponent } from './components/sing-up-form/sing-up-form.comp
 import { loginFormComponent } from './components/log-in-form/log-in-form.component';
 import { FAQsComponent } from './components/footer/faqs/faqs.component';
 import { HowItWorksComponent } from './components/footer/how-it-works/how-it-works.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -27,6 +28,7 @@ export const routes: Routes = [
     {path: 'login', component: loginFormComponent},
     {path: 'FAQs', component: FAQsComponent},
     {path: 'howItWorks', component: HowItWorksComponent},
+    {path: 'contactus', component: ContactUsComponent},
    
     {path: 'shoppingBasket', component: ShoppingBasketComponent},
     { path: '', redirectTo: 'home',  pathMatch: 'full' },

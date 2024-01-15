@@ -16,6 +16,7 @@ import { MostPopularChoicesComponent } from './components/home/most-popular-choi
 import { WeFeedCitiesComponent } from './components/home/we-feed-cities/we-feed-cities.component';
 import { FAQsComponent } from './components/footer/faqs/faqs.component';
 import { HowItWorksComponent } from './components/footer/how-it-works/how-it-works.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 @Component({
   selector: 'app-root',
@@ -37,7 +38,8 @@ import { HowItWorksComponent } from './components/footer/how-it-works/how-it-wor
     MostPopularChoicesComponent,
     WeFeedCitiesComponent,
     FAQsComponent,
-    HowItWorksComponent
+    HowItWorksComponent,
+    ContactUsComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],

@@ -33,6 +33,9 @@ module.exports = {
       'yellow-600': '#ca8a04',
       'amber-600': '#d97706',
       'amber-50': '#fffbeb',
+      'green-100':'#dcfce7',
+      'green-200':'#bbf7d0',
+      'green-300':'#86efac',
       
     },
 
