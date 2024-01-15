@@ -28,9 +28,7 @@ export const routes: Routes = [
     {path: 'login', component: loginFormComponent},
     {path: 'FAQs', component: FAQsComponent},
     {path: 'howItWorks', component: HowItWorksComponent},
-    
     {path: 'contactus', component: ContactUsComponent},
-   
     {path: 'shoppingBasket', component: ShoppingBasketComponent},
     { path: '', redirectTo: 'home',  pathMatch: 'full' },
     { path: '**', component: FileNotFoundComponent}
