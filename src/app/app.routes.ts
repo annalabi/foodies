@@ -12,6 +12,7 @@ import { loginFormComponent } from './components/log-in-form/log-in-form.compone
 import { FAQsComponent } from './components/footer/faqs/faqs.component';
 import { HowItWorksComponent } from './components/footer/how-it-works/how-it-works.component';
 import { ProductsComponent } from './components/products/products.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -28,6 +29,8 @@ export const routes: Routes = [
     {path: 'FAQs', component: FAQsComponent},
     {path: 'howItWorks', component: HowItWorksComponent},
     
+    {path: 'contactus', component: ContactUsComponent},
+   
     {path: 'shoppingBasket', component: ShoppingBasketComponent},
     { path: '', redirectTo: 'home',  pathMatch: 'full' },
     { path: '**', component: FileNotFoundComponent}
