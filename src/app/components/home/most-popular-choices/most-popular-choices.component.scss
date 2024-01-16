@@ -5,3 +5,6 @@
 .hide-scroll-bar::-webkit-scrollbar {
   display: none;
 }
+.hide-scroll-bar:hover {
+  overflow: hidden;
+}
