@@ -35,6 +35,9 @@ export class ProductsComponent {
     console.log("hello")
   }
 
+  addProduct(){
+    
+  }
   
   
 

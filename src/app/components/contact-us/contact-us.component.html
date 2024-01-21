@@ -14,9 +14,10 @@
                         class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm mb-4 focus:ring-primary-600 focus:border-primary-600" />
                     <textarea placeholder='Message' rows="6"
                         class="w-full rounded-md px-6 bg-[#f0f1f2] text-sm pt-3 focus:ring-primary-600 focus:border-primary-600"></textarea>
-                    <button type='submit'
-                        class="text-white bg-yellow-600 hover:bg-orange-800 font-medium rounded-md text-sm px-6 py-3 block w-full mt-3"><a routerLink="/home">Send
-                            Message </a></button>
+                    <button type='submit'(click)="sendMessage()"
+                        class="text-white bg-yellow-600 hover:bg-orange-800 font-medium rounded-md text-sm px-6 py-3 block w-full mt-3">Send
+                            Message</button>
+                            <div *ngIf="messageSent" class="text-teal-700 mt-4"><b>Your message has been sent!</b></div>
                 </form>
             </div>
             <div class="z-10 relative lg:col-span-2">
