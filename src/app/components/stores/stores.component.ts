@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from '../footer/footer.component';
 import { ProductsComponent } from '../products/products.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-stores',
@@ -18,6 +19,8 @@ import { ProductsComponent } from '../products/products.component';
     FooterComponent,
     MatCardModule,
     MatButtonModule,
+    NavbarComponent,
+    FooterComponent
   ],
   templateUrl: './stores.component.html',
   styleUrl: './stores.component.scss',

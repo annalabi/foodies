@@ -6,6 +6,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { MostPopularChoicesComponent } from './most-popular-choices/most-popular-choices.component';
 import { WeFeedCitiesComponent } from './we-feed-cities/we-feed-cities.component';
 import { OrderWithWeFeedComponent } from './order-with-we-feed/order-with-we-feed.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ import { OrderWithWeFeedComponent } from './order-with-we-feed/order-with-we-fee
     MostPopularChoicesComponent,
     WeFeedCitiesComponent,
     OrderWithWeFeedComponent,
+    FooterComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
