@@ -1,8 +1,40 @@
 <div class="flex">
   <div
-    class="w-80 h-auto bg-gray-100 border-gray-600 ml-8 mr-4 px-8 space-x-4 overflow-y-auto"
+    class="h-auto bg-gray-100 border-gray-600 ml-8 mr-4 px-8 space-x-4 overflow-y-auto"
   >
     <h1>Filters</h1>
+    <h2>
+      Category
+      <div>
+        <button
+          [ngClass]="{
+            'bg-gray-400': isSelected(fastfoodFilter),
+          }"
+          (click)="updateEnabledFoodCategories(fastfoodFilter)"
+          class="p-2 rounded-full text-base text-sm text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+        >
+          Fast Food
+        </button>
+        <button
+          [ngClass]="{
+          'bg-gray-400': isSelected(asianFilter),
+        }"
+          (click)="updateEnabledFoodCategories(asianFilter)"
+          class="p-2 rounded-full text-base text-sm text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+        >
+          Asian
+        </button>
+        <button
+          [ngClass]="{
+          'bg-gray-400': isSelected(donutFilter),
+        }"
+          (click)="updateEnabledFoodCategories(donutFilter)"
+          class="p-2 rounded-full text-base text-sm text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+        >
+          Donuts
+        </button>
+      </div>
+    </h2>
   </div>
   <div>
     <div>
@@ -19,16 +51,16 @@
               alt="Image of store"
             />
           </div>
-            <div class="p-5 hover:text-white">
-              <p class="mb-2 text-xl font-bold text-teal">
-                {{ store.name }}
-              </p>
-              <p class="mb-3 font-normal text-gray-700">
-                {{ store.rating.rate }} / 5
-                <span> ( {{ store.rating.count }} )</span>
-              </p>
-            </div>
-          </button>
+          <div class="p-5 hover:text-white">
+            <p class="mb-2 text-xl font-bold text-teal">
+              {{ store.name }}
+            </p>
+            <p class="mb-3 font-normal text-gray-700">
+              {{ store.rating.rate }} / 5
+              <span> ( {{ store.rating.count }} )</span>
+            </p>
+          </div>
+        </button>
       </div>
       }
     </div>
