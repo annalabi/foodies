@@ -7,11 +7,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from '../footer/footer.component';
 import { ProductsComponent } from '../products/products.component';
+import { ScrollService } from '../../services/scroll.service';
+import { DropdownComponent } from '../dropdown/dropdown.component';
+import { DropdownItems } from '../dropdown/dropdown.model';
 
 @Component({
   selector: 'app-stores',
   standalone: true,
   imports: [
+    DropdownComponent,
     CommonModule,
     RouterOutlet,
     ProductsComponent,
@@ -24,6 +28,7 @@ import { ProductsComponent } from '../products/products.component';
 })
 export class StoresComponent implements OnInit {
   service = inject(StoresService);
+  scrollService = inject(ScrollService);
   router: Router = inject(Router);
 
   @Input() stores!: Store[];
@@ -33,11 +38,16 @@ export class StoresComponent implements OnInit {
   donutFilter = FoodCategory.DONUTS;
   fastfoodFilter = FoodCategory.FAST_FOOD;
   enabledCategoryFilters: FoodCategory[] = [];
+  dropdownItems: DropdownItems[] = [
+    { label: 'Sort By Largest', value: '1' },
+    { label: 'Sort By City', value: '2' },
+  ];
 
   constructor() {}
 
   ngOnInit(): void {
     this.initialStore = this.stores;
+    this.scrollService.startFromTop();
   }
 
   // theo
@@ -45,8 +55,6 @@ export class StoresComponent implements OnInit {
     name = name.replace(/\s/g, '');
     this.router.navigate(['./main', name]);
   }
-
-  changeFoodCategory(foodCategory: FoodCategory) {}
 
   updateEnabledFoodCategories(foodCategory: FoodCategory) {
     if (this.enabledCategoryFilters.includes(foodCategory)) {
@@ -73,5 +81,9 @@ export class StoresComponent implements OnInit {
 
   isSelected(foodCategory: FoodCategory): boolean {
     return this.enabledCategoryFilters.includes(foodCategory);
+  }
+
+  selectFilter(dropdownItem: DropdownItems) {
+    console.log(dropdownItem);
   }
 }

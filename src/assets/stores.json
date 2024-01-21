@@ -160,5 +160,167 @@
         "price": 1.99
       }
     ]
+  },
+  {
+    "id": 4,
+    "name": "McDonald's",
+    "category": "FAST_FOOD",
+    "address": "Syntagma 15",
+    "image": "https://imageproxy.wolt.com/venue/5b18d86f9c0caf000d17d51f/aff8d500-5728-11ec-ac96-ee505c5e0b42_mcdonalds1.jpg",
+    "rating": { "rate": 3.9, "count": 120 },
+    "products": [
+      {
+        "id": "1",
+        "name": "Big Mac",
+        "category": "BURGERS",
+        "price": 4.99
+      },
+      {
+        "id": "2",
+        "name": "Crispy McBacon",
+        "category": "BURGERS",
+        "price": 3.99
+      },
+      {
+        "id": "3",
+        "name": "Deluxe Burger",
+        "category": "BURGERS",
+        "price": 2.99
+      },
+      {
+        "id": "4",
+        "name": "Single Big Tasty Chicken Bacon",
+        "category": "BURGERS",
+        "price": 2.79
+      },
+      {
+        "id": "5",
+        "name": "Chicken McNuggets",
+        "category": "NUGGETS",
+        "price": 3.99
+      },
+      {
+        "id": "6",
+        "name": "Caesar Salad with crispy chicken",
+        "category": "SALADS",
+        "price": 4.5
+      },
+      {
+        "id": "7",
+        "name": "Caesar Salad with grilled chicken",
+        "category": "SALADS",
+        "price": 4.5
+      },
+      {
+        "id": "8",
+        "name": "Side Salad",
+        "category": "SALADS",
+        "price": 2.5
+      },
+      {
+        "id": "9",
+        "name": "Onion Rings",
+        "category": "FRIES_&_SIDES",
+        "price": 0.99
+      },
+      {
+        "id": "10",
+        "name": "Deluxe Fries",
+        "category": "FRIES_&_SIDES",
+        "price": 1.2
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "StreetWok",
+    "category": "ASIAN",
+    "address": "Glyfada Str. 203",
+    "image": "https://imageproxy.wolt.com/mes-image/00cfccff-810c-48c1-9fe5-18c0a8a0ce81/b85fa96d-40cf-44b2-b58c-c282156ecafa",
+    "rating": { "rate": 4.9, "count": 1760 },
+    "products": [
+      {
+        "id": "11",
+        "name": "Pork Noodles with teriyaki",
+        "category": "NOODLES",
+        "price": 7.2
+      },
+      {
+        "id": "12",
+        "name": "Chicken Egg Noodles with sweet chili",
+        "category": "NOODLES",
+        "price": 8.2
+      },
+      {
+        "id": "13",
+        "name": "Beef Rice Noodles with cantonese",
+        "category": "NOODLES",
+        "price": 7.2
+      },
+      {
+        "id": "14",
+        "name": "Shrimp White Rice with Coconut Curry",
+        "category": "RICE",
+        "price": 8.2
+      },
+      {
+        "id": "15",
+        "name": "Mushroom Brown Rice with satay",
+        "category": "RICE",
+        "price": 7.2
+      },
+      {
+        "id": "16",
+        "name": "Mixed ingredients with pineapple, brocoli, baby corn and black mushrooms",
+        "category": "OTHER",
+        "price": 5.2
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Nanou Donuts House",
+    "category": "DONUTS",
+    "address": "Ampelokipous 23rd Av.",
+    "image": "https://imageproxy.wolt.com/venue/6218e8734c5b9b885776b9ad/ec636f46-ed73-11ec-aa52-eac3a2e93abc_25a0a4d2_07b5_11eb_a8f6_a65e3009f9e4_mini_box_donuts0103__1_.jpg",
+    "rating": { "rate": 4.4, "count": 1520 },
+    "products": [
+      {
+        "id": "17",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "18",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "19",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "20",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "21",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "22",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
   }
 ]
