@@ -4,6 +4,7 @@ import { ContactUsComponent } from '../contact-us/contact-us.component';
 import { HomeComponent } from '../home/home.component';
 import { CommonModule } from '@angular/common';
 import { Collapse, CollapseOptions } from 'flowbite';
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
