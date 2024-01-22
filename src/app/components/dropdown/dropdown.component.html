@@ -1,0 +1,38 @@
+<!-- <div (clickElsewhere)="closeDropdown()">
+  <button
+    (click)="toggleDropdown()"
+    type="button"
+    class="text-gray-500 group p-4 inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900"
+  >
+    <span>Options</span>
+  </button>
+  <div *ngIf="dropdown">
+    <div
+      class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5"
+    >
+      <div class="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
+        @for (item of dropdownItems; track $index) {
+        <button
+          (click)="onItemClick(item)"
+          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+        >
+          {{ item.label }}
+        </button>
+        }
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<select
+  id="underline_select"
+  class="block my-2 py-3 px-4 w-auto text-xl text-gray-dark bg-transparent rounded-xl border-0 border-b-2 border-gray-200 appearance-none 
+         focus:outline-none focus:ring-0 focus:border-gray-200 peer hover-bg-gray-dark"
+>
+  <option value="" disabled selected>Sort by...</option>
+  <ng-container *ngFor="let item of dropdownItems; let i = index">
+    <option (click)="onItemClick(item)" [value]="item.value">
+      {{ item.label }}
+    </option>
+  </ng-container>
+</select>
