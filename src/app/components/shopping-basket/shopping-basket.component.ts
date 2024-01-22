@@ -47,20 +47,22 @@ export class ShoppingBasketComponent {
     this.total = +this.total.toFixed(2)
   }
 
-  removeProduct(removeProduct: Products){
-
+  removeProduct(index: number){
+    this.addedProducts.splice(index,1)
+    console.log(index)
+    console.log(this.addedProducts)
   }
 
 
-  ngOnChanges(changes: SimpleChange){
-    if(this.addedProducts.length == 0){
-      this.EmptyCart = true
-    }
-    else{
-      this.EmptyCart = false
-    }
+  // ngOnChanges(changes: SimpleChange){
+  //   if(this.addedProducts.length == 0){
+  //     this.EmptyCart = true
+  //   }
+  //   else{
+  //     this.EmptyCart = false
+  //   }
 
-  }
+  // }
 
   
   // for tests

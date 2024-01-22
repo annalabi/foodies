@@ -3,7 +3,7 @@
 <p class="border border-grayteal"></p>
 
 
-<ng-template *ngIf="EmptyCart; then Empty; else notEmpty "></ng-template>
+<ng-template *ngIf="addedProducts.length == 0; then Empty; else notEmpty "></ng-template>
 
 <!-- EMPTY CART -->
 <ng-template #Empty>
@@ -19,7 +19,7 @@
         @for (product of addedProducts; track $index) {
 
             <div class="group bg-white hover:bg-gray-100 ring-2 ring-gray-200 hover:ring-teal rounded-3xl m-2">
-                <div class="relative pb-2 flex-col rounded-lg p-4" (click)="removeProduct(product)">
+                <div class="relative pb-2 flex-col rounded-lg p-4" (click)="removeProduct($index)">
                   <a class="flex-1 font-semibold text-gray-900 ">
                     {{product.id}}. {{product.name}} 
                   </a>
@@ -39,9 +39,9 @@
 
         <!-- TOTAL -->
         <p class="border border-grayteal"></p>
-        <div>
-          <p class="pt-2 pl-2 text-teal font-bold">TOTAL:</p>
-          <p>{{total}}€</p>
+        <div class="grid grid-cols-2 pt-2 pl-2 ">
+          <p class="text-teal font-bold">TOTAL:</p>
+          <p class="text-lg ">{{total}}€</p>
         </div>
         
 
