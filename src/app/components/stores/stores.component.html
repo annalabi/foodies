@@ -1,102 +1,112 @@
-<!-- filters -->
-<div class="flex my-2">
-  <div
-    class="h-auto bg-gray-100 border-gray-600 mx-4 pl-4 pr-8 overflow-y-auto"
-  >
-    <div>
-      <div>
-        <app-dropdown
-          [dropdownItems]="dropdownItems"
-          (itemClicked)="selectFilter($event)"
-        />
-
-        <p class="text-2xl !my-6 !ml-1">Category</p>
-        <button
-          [ngClass]="{
-            'bg-gray-400': isSelected(fastfoodFilter),
-          }"
-          (click)="updateEnabledFoodCategories(fastfoodFilter)"
-          class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-        >
-          Fast Food
-        </button>
-        <button
-          [ngClass]="{
-          'bg-gray-400': isSelected(asianFilter),
-        }"
-          (click)="updateEnabledFoodCategories(asianFilter)"
-          class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-        >
-          Asian
-        </button>
-        <button
-          [ngClass]="{
-          'bg-gray-400': isSelected(donutFilter),
-        }"
-          (click)="updateEnabledFoodCategories(donutFilter)"
-          class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-        >
-          Donuts
-        </button>
-        <button
-          [ngClass]="{
-          'bg-gray-400': isSelected(souvlakiFilter),
-        }"
-          (click)="updateEnabledFoodCategories(souvlakiFilter)"
-          class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-        >
-          Souvlaki
-        </button>
-        <button
-          [ngClass]="{
-          'bg-gray-400': isSelected(pizzaFilter),
-        }"
-          (click)="updateEnabledFoodCategories(pizzaFilter)"
-          class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-        >
-          Pizza
-        </button>
-        <button
-          [ngClass]="{
-          'bg-gray-400': isSelected(coffeeFilter),
-        }"
-          (click)="updateEnabledFoodCategories(coffeeFilter)"
-          class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-        >
-          Coffee
-        </button>
-      </div>
-    </div>
+<div class="flex flex-col">
+  <div class="container">
+    <app-navbar></app-navbar>
   </div>
 
-  <!-- store list -->
-  <div>
-    <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2">
-      @for (store of stores; track $index) {
-      <div class="w-full max-w-lg bg-white p-1">
-        <button
-          class="hover:bg-offwhite hover:border-gray-light border border-gray-dark rounded-lg shadow"
-          (click)="nextPage(store.name)"
-        >
-          <div class="w-full h-64 overflow-hidden">
-            <img
-              class="rounded-t-sm w-full h-64 hover:scale-110 transition duration-500 cursor-pointer object-cover"
-              [src]="store.image"
-              alt="Image of store"
+  <div class="mt-16">
+    <!-- filters -->
+    <div class="flex my-2">
+      <div
+        class="h-auto bg-gray-100 border-gray-600 mx-4 pl-4 pr-8 overflow-y-auto"
+      >
+        <div>
+          <div>
+            <app-dropdown
+              [dropdownItems]="dropdownItems"
+              (itemClicked)="selectFilter($event)"
             />
+
+            <p class="text-lg !my-6 !ml-1">Category</p>
+            <p class="text-2xl !my-6 !ml-1">Category</p>
+            <button
+              [ngClass]="{
+                'bg-gray-400': isSelected(fastfoodFilter),
+              }"
+              (click)="updateEnabledFoodCategories(fastfoodFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Fast Food
+            </button>
+            <button
+              [ngClass]="{
+              'bg-gray-400': isSelected(asianFilter),
+            }"
+              (click)="updateEnabledFoodCategories(asianFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Asian
+            </button>
+            <button
+              [ngClass]="{
+              'bg-gray-400': isSelected(donutFilter),
+            }"
+              (click)="updateEnabledFoodCategories(donutFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Donuts
+            </button>
+            <button
+              [ngClass]="{
+              'bg-gray-400': isSelected(souvlakiFilter),
+            }"
+              (click)="updateEnabledFoodCategories(souvlakiFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Souvlaki
+            </button>
+            <button
+              [ngClass]="{
+              'bg-gray-400': isSelected(pizzaFilter),
+            }"
+              (click)="updateEnabledFoodCategories(pizzaFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Pizza
+            </button>
+            <button
+              [ngClass]="{
+              'bg-gray-400': isSelected(coffeeFilter),
+            }"
+              (click)="updateEnabledFoodCategories(coffeeFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Coffee
+            </button>
           </div>
-          <div class="p-5 hover:text-white">
-            <p class="mb-2 text-xl font-bold text-teal">
-              {{ store.name }}
-            </p>
-            <p class="mb-3 font-normal text-gray-700">
-              {{ store.rating.rate }} / 5
-              <span> ( {{ store.rating.count }} )</span>
-            </p>
-          </div>
-        </button>
+        </div>
       </div>
-      }
+
+      <!-- store list -->
+      <div>
+        <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2">
+          @for (store of stores; track $index) {
+          <div class="w-full max-w-lg bg-white p-1">
+            <button
+              class="hover:bg-offwhite hover:border-gray-light border border-gray-dark rounded-lg shadow"
+              (click)="nextPage(store.name)"
+            >
+              <div class="w-full h-64 overflow-hidden">
+                <img
+                  class="rounded-t-sm w-full h-64 hover:scale-110 transition duration-500 cursor-pointer object-cover"
+                  [src]="store.image"
+                  alt="Image of store"
+                />
+              </div>
+              <div class="p-5 hover:text-white">
+                <p class="mb-2 text-xl font-bold text-teal">
+                  {{ store.name }}
+                </p>
+                <p class="mb-3 font-normal text-gray-700">
+                  {{ store.rating.rate }} / 5
+                  <span> ( {{ store.rating.count }} )</span>
+                </p>
+              </div>
+            </button>
+          </div>
+          }
+        </div>
+      </div>
     </div>
+    <app-footer> </app-footer>
   </div>
 </div>

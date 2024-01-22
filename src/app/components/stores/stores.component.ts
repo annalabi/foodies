@@ -10,6 +10,7 @@ import { ProductsComponent } from '../products/products.component';
 import { ScrollService } from '../../services/scroll.service';
 import { DropdownComponent } from '../dropdown/dropdown.component';
 import { DropdownItems, DropdownLabel, DropdownValue } from '../dropdown/dropdown.model';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-stores',
@@ -22,6 +23,8 @@ import { DropdownItems, DropdownLabel, DropdownValue } from '../dropdown/dropdow
     FooterComponent,
     MatCardModule,
     MatButtonModule,
+    NavbarComponent,
+    FooterComponent
   ],
   templateUrl: './stores.component.html',
   styleUrl: './stores.component.scss',
