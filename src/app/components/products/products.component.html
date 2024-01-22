@@ -29,9 +29,9 @@
               {{categoryChanger(product.category)}}
             }
             
-            <!-- name/price  -->
+            <!-- id/name  -->
             <div class="group bg-white hover:bg-gray-100 ring-2 ring-gray-200 hover:ring-teal rounded-3xl m-2">
-              <div class="relative pb-2 flex-col rounded-lg p-4" (click)="addProduct()">
+              <div class="relative pb-2 flex-col rounded-lg p-4" (click)="addProduct(product)">
                 <a class="flex-1 font-semibold text-gray-900 ">
                   {{product.id}}. {{product.name}} 
                 </a>
@@ -42,7 +42,7 @@
                 </div>
 
                 <!-- price display -->
-                <p class="flex-2 text-gray-600">{{product.price}}$</p>
+                <p class="flex-2 text-gray-600">{{product.price}}€</p>
 
               </div>
             </div>
@@ -53,13 +53,12 @@
 
     <!-- cart section -->
     <div class="rounded-3xl pt-3 shadow-xl bg-gray-100">
-        <!-- cart -->
-        <!-- <app-cart></app-cart> -->
+        
+      <app-shopping-basket ></app-shopping-basket>
+
     </div>
   </div>
 
-<!--   ??
-  {{test()}} -->
   
 </ng-template>  
 
