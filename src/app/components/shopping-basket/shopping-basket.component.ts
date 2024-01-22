@@ -1,7 +1,6 @@
-import { Component, EventEmitter, Input, Output, SimpleChange, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Products } from '../../services/stores.model';
 import { PublisherService } from '../../services/publisher.service';
-import { EmptyError } from 'rxjs';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,24 +12,9 @@ import { CommonModule } from '@angular/common';
 })
 export class ShoppingBasketComponent {
 
-  // @Output() productEmitter = new EventEmitter();
-  
-  // addedProducts: Products[] = [{id: 1,name: "bfg",category: "strggging",price: 1}];
-
-  // addedProduct(selectedProduct: Products){
-  //   this.productEmitter.emit(selectedProduct);
-
-  //   this.addedProducts.push(selectedProduct)
-  //   this.addedProducts.push({id: 1,name: "bfg",category: "strggging",price: 1})
-  // }
-
-  
-
-  
   publisherService = inject(PublisherService);
 
   addedProducts: Products[] = [];
-  EmptyCart: boolean = true;
   total: number = 0;
 
   constructor(){
@@ -42,27 +26,15 @@ export class ShoppingBasketComponent {
 
   addedProduct(selectedProduct: Products){
     this.addedProducts.push(selectedProduct)
-    this.EmptyCart = false
     this.total += selectedProduct.price
     this.total = +this.total.toFixed(2)
   }
 
   removeProduct(index: number){
+    this.total -= this.addedProducts[index].price
     this.addedProducts.splice(index,1)
-    console.log(index)
-    console.log(this.addedProducts)
+    this.total = +this.total.toFixed(2)
   }
-
-
-  // ngOnChanges(changes: SimpleChange){
-  //   if(this.addedProducts.length == 0){
-  //     this.EmptyCart = true
-  //   }
-  //   else{
-  //     this.EmptyCart = false
-  //   }
-
-  // }
 
   
   // for tests
