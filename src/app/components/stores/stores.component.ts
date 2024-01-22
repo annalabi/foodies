@@ -9,13 +9,15 @@ import { FooterComponent } from '../footer/footer.component';
 import { ProductsComponent } from '../products/products.component';
 import { ScrollService } from '../../services/scroll.service';
 import { DropdownComponent } from '../dropdown/dropdown.component';
-import { DropdownItems, DropdownLabel, DropdownValue } from '../dropdown/dropdown.model';
+import { DropdownItems } from '../dropdown/dropdown.model';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { FoodCategoryToDisplayPipe } from '../../pipes/food-category-to-display.pipe';
 
 @Component({
   selector: 'app-stores',
   standalone: true,
   imports: [
+    FoodCategoryToDisplayPipe,
     DropdownComponent,
     CommonModule,
     RouterOutlet,
@@ -24,7 +26,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
     MatCardModule,
     MatButtonModule,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
   ],
   templateUrl: './stores.component.html',
   styleUrl: './stores.component.scss',
@@ -45,8 +47,12 @@ export class StoresComponent implements OnInit {
   coffeeFilter = FoodCategory.COFFEE;
   enabledCategoryFilters: FoodCategory[] = [];
   dropdownItems: DropdownItems[] = [
-    { label: DropdownLabel['Sort by name'], value: DropdownValue['Sort by name']},
-    { label: DropdownLabel['Sort by rating'], value: DropdownValue['Sort by rating'] },
+    { label: 'Sort by name', value: '01' },
+    { label: 'Sort by rating', value: '02' },
+    { label: 'Sort by popularity', value: '03' },
+    { label: 'Sort by delivery time', value: '04' },
+    { label: 'Sort by min consumption', value: '05' },
+    { label: 'Sort by delivert cost', value: '06' },
   ];
 
   constructor() {}
@@ -89,7 +95,44 @@ export class StoresComponent implements OnInit {
     return this.enabledCategoryFilters.includes(foodCategory);
   }
 
-  selectFilter(dropdownItem: DropdownItems) {
+  selectFilter(dropdownItem: DropdownItems): void {
     console.log(dropdownItem);
+    // sort by name
+    if (dropdownItem.value === '01') {
+      this.sortByName();
+      //  sort by rating
+    } else if (dropdownItem.value === '02') {
+      this.sortByRating();
+      //  sort by popularity
+    } else if (dropdownItem.value === '03') {
+      this.sortByPopularity();
+      // Sort by delivery time
+    } else if (dropdownItem.value === '04') {
+      this.sortByDeliveryTime();
+    }
+  }
+
+  private sortByName() {
+    this.stores.sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  private sortByRating() {
+    this.stores.sort((a, b) => b.rating.rate - a.rating.rate);
+  }
+
+  private sortByPopularity() {
+    this.stores.sort((a, b) => {
+      // First, compare by rating
+      const ratingComparison = b.rating.rate - a.rating.rate;
+
+      // If ratings are equal, compare by count
+      return ratingComparison !== 0
+        ? ratingComparison
+        : b.rating.count - a.rating.count;
+    });
+  }
+
+  private sortByDeliveryTime() {
+    this.stores.sort((a, b) => a.deliveryTime.localeCompare(b.deliveryTime));
   }
 }

@@ -2,13 +2,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 // import { ClickElsewhereDirective } from '../../directives/ClickElsewhereDirective';
 import { CommonModule } from '@angular/common';
 import { DropdownItems } from './dropdown.model';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-dropdown',
   standalone: true,
-  imports: [CommonModule, 
-    // ClickElsewhereDirective
-  ],
+  imports: [CommonModule, FormsModule],
   templateUrl: './dropdown.component.html',
   styleUrl: './dropdown.component.scss',
 })
@@ -17,6 +16,7 @@ export class DropdownComponent {
   @Output() itemClicked: EventEmitter<DropdownItems> =
     new EventEmitter<DropdownItems>();
 
+  selectedSortOption: string = '';
   dropdown: boolean = false;
 
   toggleDropdown(): void {
@@ -27,8 +27,17 @@ export class DropdownComponent {
     this.dropdown = false;
   }
 
-  onItemClick(item: DropdownItems): void {
-    this.itemClicked.emit(item);
-    this.closeDropdown();
+  onItemClick(item: string): void {
+    const selectedItem = this.dropdownItems.find(
+      (dropdown) => dropdown.value === item
+    );
+
+    if (selectedItem) {
+      this.itemClicked.emit({
+        label: selectedItem.label,
+        value: selectedItem.value,
+      });
+      this.closeDropdown();
+    }
   }
 }

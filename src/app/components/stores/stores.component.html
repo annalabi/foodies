@@ -1,8 +1,7 @@
-<div class="flex flex-col">
-  <div class="container">
-    <app-navbar></app-navbar>
-  </div>
-
+<div class="container">
+  <app-navbar></app-navbar>
+</div>
+<div class="flex flex-col m-3">
   <div class="mt-16">
     <!-- filters -->
     <div class="flex my-2">
@@ -16,7 +15,6 @@
               (itemClicked)="selectFilter($event)"
             />
 
-            <p class="text-lg !my-6 !ml-1">Category</p>
             <p class="text-2xl !my-6 !ml-1">Category</p>
             <button
               [ngClass]="{
@@ -92,14 +90,39 @@
                   alt="Image of store"
                 />
               </div>
-              <div class="p-5 hover:text-white">
-                <p class="mb-2 text-xl font-bold text-teal">
+              <div class="p-1">
+                <!-- <p class="mb-2 text-xl font-bold text-teal">
                   {{ store.name }}
                 </p>
                 <p class="mb-3 font-normal text-gray-700">
                   {{ store.rating.rate }} / 5
                   <span> ( {{ store.rating.count }} )</span>
-                </p>
+                </p> -->
+                <div class="h-28 grid grid-cols-2 gap-4 content-stretch ...">
+                  <div>
+                    <p class="text-xl font-bold text-teal">{{ store.name }}</p>
+                    <div>
+                      <span class="text-md font-medium">
+                        {{ store.category | foodCategoryToDisplay }}
+                      </span>
+                      <span class="text-md font-medium">
+                        {{ store.deliveryTime }}
+                        <span>'</span>
+                        <span>&#8226;</span>
+                      </span>
+                      <span>Delivery Time</span>
+                      <span class="text-md font-medium">
+                        {{ store.minConsumption }}
+                      </span>
+                    </div>
+                    <div class="py-2 pl-20 font-medium text-gray-700">
+                      <p>
+                        {{ store.rating.rate }} / 5
+                        <span> ( {{ store.rating.count }} )</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </button>
           </div>
