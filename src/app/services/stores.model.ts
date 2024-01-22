@@ -5,9 +5,9 @@ export interface Store {
   address: string;
   image: string;
   rating: Rating;
-  deliveryTime: string;
-  minConsumption: string;
-  deliveryCost: string;
+  deliveryTime: number;
+  minConsumption: number;
+  deliveryCost: number;
   products: Products[];
 }
 

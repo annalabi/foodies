@@ -52,7 +52,7 @@ export class StoresComponent implements OnInit {
     { label: 'Sort by popularity', value: '03' },
     { label: 'Sort by delivery time', value: '04' },
     { label: 'Sort by min consumption', value: '05' },
-    { label: 'Sort by delivert cost', value: '06' },
+    { label: 'Sort by delivery cost', value: '06' },
   ];
 
   constructor() {}
@@ -109,6 +109,12 @@ export class StoresComponent implements OnInit {
       // Sort by delivery time
     } else if (dropdownItem.value === '04') {
       this.sortByDeliveryTime();
+      //  Sort by min consumption
+    } else if (dropdownItem.value === '05') {
+      this.sortByMinConsumption();
+      // Sort by delivery cost
+    } else if (dropdownItem.value === '06') {
+      this.sortByDeliveryCost();
     }
   }
 
@@ -133,6 +139,14 @@ export class StoresComponent implements OnInit {
   }
 
   private sortByDeliveryTime() {
-    this.stores.sort((a, b) => a.deliveryTime.localeCompare(b.deliveryTime));
+    this.stores.sort((a, b) => a.deliveryTime - b.deliveryTime);
+  }
+
+  private sortByMinConsumption() {
+    this.stores.sort((a, b) => a.minConsumption - b.minConsumption);
+  }
+
+  private sortByDeliveryCost() {
+    this.stores.sort((a, b) => a.deliveryCost - b.deliveryCost);
   }
 }
