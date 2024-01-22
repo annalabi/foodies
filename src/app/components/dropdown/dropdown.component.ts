@@ -1,12 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ClickElsewhereDirective } from '../../directives/ClickElsewhereDirective';
+// import { ClickElsewhereDirective } from '../../directives/ClickElsewhereDirective';
 import { CommonModule } from '@angular/common';
 import { DropdownItems } from './dropdown.model';
 
 @Component({
   selector: 'app-dropdown',
   standalone: true,
-  imports: [CommonModule, ClickElsewhereDirective],
+  imports: [CommonModule, 
+    // ClickElsewhereDirective
+  ],
   templateUrl: './dropdown.component.html',
   styleUrl: './dropdown.component.scss',
 })

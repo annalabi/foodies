@@ -9,7 +9,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { ProductsComponent } from '../products/products.component';
 import { ScrollService } from '../../services/scroll.service';
 import { DropdownComponent } from '../dropdown/dropdown.component';
-import { DropdownItems } from '../dropdown/dropdown.model';
+import { DropdownItems, DropdownLabel, DropdownValue } from '../dropdown/dropdown.model';
 
 @Component({
   selector: 'app-stores',
@@ -37,10 +37,13 @@ export class StoresComponent implements OnInit {
   asianFilter = FoodCategory.ASIAN;
   donutFilter = FoodCategory.DONUTS;
   fastfoodFilter = FoodCategory.FAST_FOOD;
+  souvlakiFilter = FoodCategory.SOUVLAKI;
+  pizzaFilter = FoodCategory.PIZZA;
+  coffeeFilter = FoodCategory.COFFEE;
   enabledCategoryFilters: FoodCategory[] = [];
   dropdownItems: DropdownItems[] = [
-    { label: 'Sort By Largest', value: '1' },
-    { label: 'Sort By City', value: '2' },
+    { label: DropdownLabel['Sort by name'], value: DropdownValue['Sort by name']},
+    { label: DropdownLabel['Sort by rating'], value: DropdownValue['Sort by rating'] },
   ];
 
   constructor() {}
