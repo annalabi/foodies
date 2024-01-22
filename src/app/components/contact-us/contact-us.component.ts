@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -11,10 +12,15 @@ import { FooterComponent } from '../footer/footer.component';
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.scss',
 })
-export class ContactUsComponent {
+export class ContactUsComponent implements OnInit {
   messageSent: boolean = false;
 
   sendMessage() {
     this.messageSent = true;
+  }
+  scrollService = inject(ScrollService);
+
+  ngOnInit(): void {
+    this.scrollService.startFromTop();
   }
 }
