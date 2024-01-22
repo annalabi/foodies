@@ -29,6 +29,7 @@ module.exports = {
       'teal-400': '#2dd4bf',
       'teal-500': '#14b8a6',
       'teal-700': '#0f766e',
+      'teal-800': '#115e59',
       'emerald-600': '#059669',
       'grayteal':'#2c4d4a',
       'white': '#fff',
