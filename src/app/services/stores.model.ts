@@ -1,37 +1,40 @@
 export interface Store {
-    id: number;
-    name: string;
-    category: FoodCategory;
-    address: string;
-    image: string;
-    rating: Rating;
-    products: Products[]
+  id: number;
+  name: string;
+  category: FoodCategory;
+  address: string;
+  image: string;
+  rating: Rating;
+  deliveryTime: number;
+  minConsumption: number;
+  deliveryCost: number;
+  products: Products[];
 }
 
 export interface Products {
-    id: number;
-    name: string;
-    category: string;
-    price: number;
+  id: number;
+  name: string;
+  category: string;
+  price: number;
 }
 
 export interface Rating {
-    rate: number;
-    count: number
+  rate: number;
+  count: number;
 }
 
 export interface FamousStore {
-    id: number;
-    name: string;
-    category: string;
-    address: string;
+  id: number;
+  name: string;
+  category: string;
+  address: string;
 }
 
 export const enum FoodCategory {
-    FAST_FOOD = "FAST_FOOD",
-    ASIAN = "ASIAN",
-    DONUTS = "DONUTS",
-    SOUVLAKI = 'SOUVLAKI',
-    PIZZA = 'PIZZA',
-    COFFEE = 'COFFEE',
+  FAST_FOOD = 'FAST_FOOD',
+  ASIAN = 'ASIAN',
+  DONUTS = 'DONUTS',
+  SOUVLAKI = 'SOUVLAKI',
+  PIZZA = 'PIZZA',
+  COFFEE = 'COFFEE',
 }
