@@ -12,60 +12,57 @@
 
     <!-- loaded -->
     <ng-template #loaded>
-      <div
-        class="border-solid border-8 border-white p-2 grid grid-cols-4 gap-4"
-      >
-        <div
-          class="rounded-3xl shadow-xl p-5 grid grid-cols-subgrid gap-4 col-span-3 bg-gray-100"
-        >
+      <div class="border-solid border-8 border-white p-2 grid grid-cols-4 gap-4">
+        <div class="rounded-3xl shadow-xl p-5 grid grid-cols-subgrid gap-4 col-span-3 bg-gray-100">
           <div class="col-start-2">
             <!-- products display -->
             <div class="flex-auto rounded-3xl py-2 shadow-2xl">
               @for (product of products; track $index) {
 
-              <!-- category display -->
-              @if (first_time == true ) {
-              {{ not_fisrt_time(product.category) }}
-              } @if (category != product.category) {
-              <p class="pt-5 pl-2 text-teal font-bold">
-                {{ product.category }}
-              </p>
-              <p class="border border-grayteal"></p>
-              {{categoryChanger(product.category)}}
-            }
-            
-            <!-- id/name  -->
-            <div class="group bg-white hover:bg-gray-100 ring-2 ring-gray-200 hover:ring-teal rounded-3xl m-2">
-              <div class="relative pb-2 flex-col rounded-lg p-4" (click)="addProduct(product)">
-                <a class="flex-1 font-semibold text-gray-900 ">
-                  {{product.id}}. {{product.name}} 
-                </a>
-                
-                <!-- Add display -->
-                <div class="absolute right-8 top-7 h-5 w-10">
-                  <p class="opacity-0 group-hover:opacity-100 text-gray-500 text-semibold">Add ></p>
+                <!-- category display -->
+                @if (first_time == true ) {
+                  {{ not_fisrt_time(product.category) }}
+                } 
+
+                @if (category != product.category) {
+                  <p class="pt-5 pl-2 text-teal font-bold">
+                    {{ product.category }}
+                  </p>
+                  <p class="border border-grayteal"></p>
+                  {{categoryChanger(product.category)}}
+                }
+              
+                <!-- id/name  -->
+                <div class="group bg-white hover:bg-gray-100 ring-2 ring-gray-200 hover:ring-teal rounded-3xl m-2">
+                  <div class="relative pb-2 flex-col rounded-lg p-4" (click)="addProduct(product)">
+                    <a class="flex-1 font-semibold text-gray-900 ">
+                      {{product.id}}. {{product.name}} 
+                    </a>
+                    
+                    <!-- Add display -->
+                    <div class="absolute right-8 top-7 h-5 w-10">
+                      <p class="opacity-0 group-hover:opacity-100 text-gray-500 text-semibold">Add ></p>
+                    </div>
+
+                    <!-- price display -->
+                    <p class="flex-2 text-gray-600">{{product.price}}€</p>
+
+                  </div>
+              
                 </div>
-
-                <!-- price display -->
-                <p class="flex-2 text-gray-600">{{product.price}}€</p>
-
-              </div>
               }
             </div>
           </div>
+
+          <!-- cart section -->
+          <div class="rounded-3xl pt-3 shadow-xl bg-gray-100">
+            <app-shopping-basket ></app-shopping-basket>
+          </div>
         </div>
-
-    <!-- cart section -->
-    <div class="rounded-3xl pt-3 shadow-xl bg-gray-100">
-        
-      <app-shopping-basket ></app-shopping-basket>
-
-    </div>
-  </div>
-
-  
-</ng-template>  
-
-    <app-footer> </app-footer>
+      </div> 
+    </ng-template> 
+    
   </div>
 </div>
+
+<app-footer> </app-footer>
