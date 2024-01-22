@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,ts}"],
+  content: ["./src/**/*.{html,ts}" , "./node_modules/flowbite/**/*.js"],
   theme: {
     screens: {
       sm: "480px",
@@ -37,6 +37,8 @@ module.exports = {
       'orange-300': '#fdba74',
       'orange-800': '#9a3412',
       'yellow-600': '#ca8a04',
+      'yellow-400': '#facc15',
+      'yellow-500': '#eab308',
       'amber-600': '#d97706',
       'amber-50': '#fffbeb',
       'green-100':'#dcfce7',
@@ -67,5 +69,5 @@ module.exports = {
       }
     }
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 };

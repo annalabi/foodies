@@ -1,5 +1,5 @@
 <!-- new navbar  -->
-<nav class="bg-teal fixed w-full z-20 top-0">
+<nav class="bg-teal-700 fixed w-full z-20 top-0">
   <div
     class="mr-max-w-screen-xl flex flex-wrap items-center justify-between p-4"
   >
@@ -18,7 +18,7 @@
         <a routerLink="/signUp" routerLinkActive="active-link">
           <button
             type="button"
-            class="bg-yellow-600 hover:bg-orange-800 hover:border-orange-800 text-white text-sm font-bold py-2 px-4 border-yellow-600 rounded"
+            class="bg-yellow-400 hover:bg-orange-800 hover:border-orange-800 text-white text-sm font-bold py-2 px-4 border-yellow-400 rounded"
           >
             Sign Up
           </button>
@@ -27,9 +27,10 @@
       <button
         data-collapse-toggle="navbar-sticky"
         type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-orange-50 border-orange-50 hover:text-yellow-600 hover:border-yellow-600 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-orange-50 border-orange-50 hover:text-yellow-400 hover:border-yellow-400 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
         aria-controls="navbar-sticky"
         aria-expanded="false"
+        (click)="toggleNavbar()"
       >
         <span class="sr-only">Open main menu</span>
         <svg
@@ -52,15 +53,16 @@
     <div
       class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 w-full block flex-grow lg:flex mr-8 lg:items-center lg:w-auto"
       id="navbar-sticky"
+      [ngClass]="{ 'hidden': isNavbarCollapsed }"
     >
       <ul
-        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-teal"
+        class="flex flex-col p-1 md:p-0 mt-4 font-medium rounded-lg bg-teal-700 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 "
       >
         <li>
           <a
             routerLink="/contactus"
             routerLinkActive="active-link"
-            class="block mt-1 lg:inline-block lg:mt-1 text-orange-50 hover:text-yellow-600"
+            class="block mt-1 lg:inline-block lg:mt-1 text-orange-50 hover:text-yellow-400" aria-current="page"
             >Contact Us</a
           >
         </li>
