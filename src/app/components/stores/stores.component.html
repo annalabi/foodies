@@ -17,32 +17,60 @@
             />
 
             <p class="text-lg !my-6 !ml-1">Category</p>
+            <p class="text-2xl !my-6 !ml-1">Category</p>
             <button
               [ngClass]="{
-            'bg-gray-400': isSelected(fastfoodFilter),
-          }"
+                'bg-gray-400': isSelected(fastfoodFilter),
+              }"
               (click)="updateEnabledFoodCategories(fastfoodFilter)"
-              class="p-2 m-1 rounded-full text-base text-sm text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
             >
               Fast Food
             </button>
             <button
               [ngClass]="{
-          'bg-gray-400': isSelected(asianFilter),
-        }"
+              'bg-gray-400': isSelected(asianFilter),
+            }"
               (click)="updateEnabledFoodCategories(asianFilter)"
-              class="p-2 m-1 rounded-full text-base text-sm text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
             >
               Asian
             </button>
             <button
               [ngClass]="{
-          'bg-gray-400': isSelected(donutFilter),
-        }"
+              'bg-gray-400': isSelected(donutFilter),
+            }"
               (click)="updateEnabledFoodCategories(donutFilter)"
-              class="p-2 m-1 rounded-full text-base text-sm text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
             >
               Donuts
+            </button>
+            <button
+              [ngClass]="{
+              'bg-gray-400': isSelected(souvlakiFilter),
+            }"
+              (click)="updateEnabledFoodCategories(souvlakiFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Souvlaki
+            </button>
+            <button
+              [ngClass]="{
+              'bg-gray-400': isSelected(pizzaFilter),
+            }"
+              (click)="updateEnabledFoodCategories(pizzaFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Pizza
+            </button>
+            <button
+              [ngClass]="{
+              'bg-gray-400': isSelected(coffeeFilter),
+            }"
+              (click)="updateEnabledFoodCategories(coffeeFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Coffee
             </button>
           </div>
         </div>

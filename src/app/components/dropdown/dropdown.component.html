@@ -1,4 +1,4 @@
-<div (clickElsewhere)="closeDropdown()">
+<!-- <div (clickElsewhere)="closeDropdown()">
   <button
     (click)="toggleDropdown()"
     type="button"
@@ -22,4 +22,17 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<select
+  id="underline_select"
+  class="block my-2 py-3 px-4 w-auto text-xl text-gray-dark bg-transparent rounded-xl border-0 border-b-2 border-gray-200 appearance-none 
+         focus:outline-none focus:ring-0 focus:border-gray-200 peer hover-bg-gray-dark"
+>
+  <option value="" disabled selected>Sort by...</option>
+  <ng-container *ngFor="let item of dropdownItems; let i = index">
+    <option (click)="onItemClick(item)" [value]="item.value">
+      {{ item.label }}
+    </option>
+  </ng-container>
+</select>

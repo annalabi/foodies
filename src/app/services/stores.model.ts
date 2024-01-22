@@ -31,4 +31,7 @@ export const enum FoodCategory {
     FAST_FOOD = "FAST_FOOD",
     ASIAN = "ASIAN",
     DONUTS = "DONUTS",
+    SOUVLAKI = 'SOUVLAKI',
+    PIZZA = 'PIZZA',
+    COFFEE = 'COFFEE',
 }

@@ -163,11 +163,11 @@
   },
   {
     "id": 4,
-    "name": "McDonald's",
-    "category": "FAST_FOOD",
+    "name": "O gyros",
+    "category": "SOUVLAKI",
     "address": "Syntagma 15",
     "image": "https://imageproxy.wolt.com/venue/5b18d86f9c0caf000d17d51f/aff8d500-5728-11ec-ac96-ee505c5e0b42_mcdonalds1.jpg",
-    "rating": { "rate": 3.9, "count": 120 },
+    "rating": { "rate": 2.9, "count": 100 },
     "products": [
       {
         "id": "1",
@@ -233,11 +233,11 @@
   },
   {
     "id": 5,
-    "name": "StreetWok",
-    "category": "ASIAN",
+    "name": "Pizza",
+    "category": "PIZZA",
     "address": "Glyfada Str. 203",
     "image": "https://imageproxy.wolt.com/mes-image/00cfccff-810c-48c1-9fe5-18c0a8a0ce81/b85fa96d-40cf-44b2-b58c-c282156ecafa",
-    "rating": { "rate": 4.9, "count": 1760 },
+    "rating": { "rate": 4.5, "count": 1780 },
     "products": [
       {
         "id": "11",
@@ -279,11 +279,11 @@
   },
   {
     "id": 6,
-    "name": "Nanou Donuts House",
-    "category": "DONUTS",
+    "name": "Cafe",
+    "category": "COFFEE",
     "address": "Ampelokipous 23rd Av.",
     "image": "https://imageproxy.wolt.com/venue/6218e8734c5b9b885776b9ad/ec636f46-ed73-11ec-aa52-eac3a2e93abc_25a0a4d2_07b5_11eb_a8f6_a65e3009f9e4_mini_box_donuts0103__1_.jpg",
-    "rating": { "rate": 4.4, "count": 1520 },
+    "rating": { "rate": 4.8, "count": 1920 },
     "products": [
       {
         "id": "17",
