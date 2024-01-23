@@ -12,4 +12,6 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   templateUrl: './we-feed-cities.component.html',
   styleUrl: './we-feed-cities.component.scss',
 })
-export class WeFeedCitiesComponent {}
+export class WeFeedCitiesComponent {
+  
+}

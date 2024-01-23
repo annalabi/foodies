@@ -5,10 +5,14 @@
     "category": "FAST_FOOD",
     "address": "Syntagma 15",
     "image": "https://imageproxy.wolt.com/venue/5b18d86f9c0caf000d17d51f/aff8d500-5728-11ec-ac96-ee505c5e0b42_mcdonalds1.jpg",
-    "rating": { "rate": 3.9, "count": 1200 },
+    "rating": {
+      "rate": 3.9,
+      "count": 1200
+    },
     "deliveryTime": 45,
     "minConsumption": 10,
     "deliveryCost": 2,
+    "region": "Athens",
     "products": [
       {
         "id": "1",
@@ -78,10 +82,14 @@
     "category": "ASIAN",
     "address": "Glyfada Str. 203",
     "image": "https://imageproxy.wolt.com/mes-image/00cfccff-810c-48c1-9fe5-18c0a8a0ce81/b85fa96d-40cf-44b2-b58c-c282156ecafa",
-    "rating": { "rate": 4.9, "count": 1760 },
+    "rating": {
+      "rate": 4.9,
+      "count": 1760
+    },
     "deliveryTime": 60,
     "minConsumption": 6,
     "deliveryCost": 2,
+    "region": "Athens",
     "products": [
       {
         "id": "11",
@@ -127,10 +135,14 @@
     "category": "DONUTS",
     "address": "Ampelokipous 23rd Av.",
     "image": "https://imageproxy.wolt.com/venue/6218e8734c5b9b885776b9ad/ec636f46-ed73-11ec-aa52-eac3a2e93abc_25a0a4d2_07b5_11eb_a8f6_a65e3009f9e4_mini_box_donuts0103__1_.jpg",
-    "rating": { "rate": 4.4, "count": 1520 },
+    "rating": {
+      "rate": 4.4,
+      "count": 1520
+    },
     "deliveryTime": 20,
     "minConsumption": 12,
     "deliveryCost": 0.5,
+    "region": "Thessaloniki",
     "products": [
       {
         "id": "17",
@@ -176,10 +188,14 @@
     "category": "SOUVLAKI",
     "address": "Syntagma 15",
     "image": "https://imageproxy.wolt.com/venue/5b18d86f9c0caf000d17d51f/aff8d500-5728-11ec-ac96-ee505c5e0b42_mcdonalds1.jpg",
-    "rating": { "rate": 4.9, "count": 1000 },
+    "rating": {
+      "rate": 4.9,
+      "count": 1000
+    },
     "deliveryTime": 30,
     "minConsumption": 8,
     "deliveryCost": 0.5,
+    "region": "Thessaloniki",
     "products": [
       {
         "id": "1",
@@ -249,10 +265,14 @@
     "category": "PIZZA",
     "address": "Glyfada Str. 203",
     "image": "https://imageproxy.wolt.com/mes-image/00cfccff-810c-48c1-9fe5-18c0a8a0ce81/b85fa96d-40cf-44b2-b58c-c282156ecafa",
-    "rating": { "rate": 4.5, "count": 1780 },
+    "rating": {
+      "rate": 4.5,
+      "count": 1780
+    },
     "deliveryTime": 45,
     "minConsumption": 12,
     "deliveryCost": 1,
+    "region": "Athens",
     "products": [
       {
         "id": "11",
@@ -298,10 +318,14 @@
     "category": "COFFEE",
     "address": "Ampelokipous 23rd Av.",
     "image": "https://imageproxy.wolt.com/venue/6218e8734c5b9b885776b9ad/ec636f46-ed73-11ec-aa52-eac3a2e93abc_25a0a4d2_07b5_11eb_a8f6_a65e3009f9e4_mini_box_donuts0103__1_.jpg",
-    "rating": { "rate": 4.8, "count": 1920 },
+    "rating": {
+      "rate": 4.8,
+      "count": 1920
+    },
     "deliveryTime": 60,
     "minConsumption": 10,
     "deliveryCost": 1.5,
+    "region": "Kavala",
     "products": [
       {
         "id": "17",
@@ -347,10 +371,14 @@
     "category": "FAST_FOOD",
     "address": "Syntagma 15",
     "image": "https://imageproxy.wolt.com/venue/5b18d86f9c0caf000d17d51f/aff8d500-5728-11ec-ac96-ee505c5e0b42_mcdonalds1.jpg",
-    "rating": { "rate": 4, "count": 1000 },
+    "rating": {
+      "rate": 4,
+      "count": 1000
+    },
     "deliveryTime": 45,
     "minConsumption": 8,
     "deliveryCost": 1.2,
+    "region": "Kavala",
     "products": [
       {
         "id": "1",
@@ -420,10 +448,14 @@
     "category": "ASIAN",
     "address": "Glyfada Str. 203",
     "image": "https://imageproxy.wolt.com/mes-image/00cfccff-810c-48c1-9fe5-18c0a8a0ce81/b85fa96d-40cf-44b2-b58c-c282156ecafa",
-    "rating": { "rate": 4.8, "count": 1760 },
+    "rating": {
+      "rate": 4.8,
+      "count": 1760
+    },
     "deliveryTime": 30,
     "minConsumption": 10,
     "deliveryCost": 1.2,
+    "region": "Ioannina",
     "products": [
       {
         "id": "11",
@@ -469,10 +501,14 @@
     "category": "DONUTS",
     "address": "Ampelokipous 23rd Av.",
     "image": "https://imageproxy.wolt.com/venue/6218e8734c5b9b885776b9ad/ec636f46-ed73-11ec-aa52-eac3a2e93abc_25a0a4d2_07b5_11eb_a8f6_a65e3009f9e4_mini_box_donuts0103__1_.jpg",
-    "rating": { "rate": 4.2, "count": 1520 },
+    "rating": {
+      "rate": 4.2,
+      "count": 1520
+    },
     "deliveryTime": 40,
     "minConsumption": 7,
     "deliveryCost": 0.9,
+    "region": "Ioannina",
     "products": [
       {
         "id": "17",
@@ -518,10 +554,14 @@
     "category": "SOUVLAKI",
     "address": "Syntagma 15",
     "image": "https://imageproxy.wolt.com/venue/5b18d86f9c0caf000d17d51f/aff8d500-5728-11ec-ac96-ee505c5e0b42_mcdonalds1.jpg",
-    "rating": { "rate": 4.9, "count": 1000 },
+    "rating": {
+      "rate": 4.9,
+      "count": 1000
+    },
     "deliveryTime": 60,
     "minConsumption": 12,
     "deliveryCost": 1,
+    "region": "Patra",
     "products": [
       {
         "id": "1",
@@ -591,10 +631,14 @@
     "category": "PIZZA",
     "address": "Glyfada Str. 203",
     "image": "https://imageproxy.wolt.com/mes-image/00cfccff-810c-48c1-9fe5-18c0a8a0ce81/b85fa96d-40cf-44b2-b58c-c282156ecafa",
-    "rating": { "rate": 4.5, "count": 1779 },
+    "rating": {
+      "rate": 4.5,
+      "count": 1779
+    },
     "deliveryTime": 60,
     "minConsumption": 13,
     "deliveryCost": 1,
+    "region": "Patra",
     "products": [
       {
         "id": "11",
@@ -640,10 +684,438 @@
     "category": "COFFEE",
     "address": "Ampelokipous 23rd Av.",
     "image": "https://imageproxy.wolt.com/venue/6218e8734c5b9b885776b9ad/ec636f46-ed73-11ec-aa52-eac3a2e93abc_25a0a4d2_07b5_11eb_a8f6_a65e3009f9e4_mini_box_donuts0103__1_.jpg",
-    "rating": { "rate": 4.8, "count": 2920 },
+    "rating": {
+      "rate": 4.8,
+      "count": 2920
+    },
     "deliveryTime": 55,
     "minConsumption": 8,
     "deliveryCost": 0,
+    "region": "Patra",
+    "products": [
+      {
+        "id": "17",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "18",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "19",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "20",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "21",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "22",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Pizza Fan",
+    "category": "PIZZA",
+    "address": "Ippokrateiou 35",
+    "image": "https://imageproxy.wolt.com/mes-image/f7c8ee52-b8d1-45c0-b28e-d02f72fa0a38/f5e53187-c583-4199-8554-86dcce6d1a2e",
+    "rating": {
+      "rate": 4.2,
+      "count": 156
+    },
+    "deliveryTime": 30,
+    "minConsumption": 10,
+    "deliveryCost": 1,
+    "region": "Patra",
+    "products": [
+      {
+        "id": "17",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "18",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "19",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "20",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "21",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "22",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Roma Pizza",
+    "category": "PIZZA",
+    "address": "Menelaou 22",
+    "image": "https://imageproxy.wolt.com/mes-image/28752efc-9d64-436a-aa7b-dd892ab8bb46/eba5505f-6991-43a3-9a3c-6a6c7f6aaba9",
+    "rating": {
+      "rate": 4.1,
+      "count": 169
+    },
+    "deliveryTime": 35,
+    "minConsumption": 8,
+    "deliveryCost": 1.5,
+    "region": "Lamia",
+    "products": [
+      {
+        "id": "17",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "18",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "19",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "20",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "21",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "22",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Goodys Burger House",
+    "category": "FAST_FOOD",
+    "address": "Ampelokipous 23rd Av.",
+    "image": "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/33569/cover?t=1675927151&platform=web",
+    "rating": {
+      "rate": 3.9,
+      "count": 121
+    },
+    "deliveryTime": 40,
+    "minConsumption": 9,
+    "deliveryCost": 2,
+    "region": "Lamia",
+    "products": [
+      {
+        "id": "17",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "18",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "19",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "20",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "21",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "22",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "The Big Bad Wolf",
+    "category": "SOUVLAKI",
+    "address": "Agioi Anargiroi 98",
+    "image": "https://selfservice.gr/wp-content/uploads/2022/03/bbw.jpg",
+    "rating": {
+      "rate": 4.4,
+      "count": 520
+    },
+    "deliveryTime": 20,
+    "minConsumption": 6,
+    "deliveryCost": 0.5,
+    "region": "Larissa",
+    "products": [
+      {
+        "id": "17",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "18",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "19",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "20",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "21",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "22",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Mikel",
+    "category": "COFFEE",
+    "address": "Ampelokipoi 72",
+    "image": "https://imageproxy.wolt.com/mes-image/ff3473a9-98c3-48b5-aa2d-4a454caf183a/0fff7cd4-d62c-4f9d-bca9-71e17a8fd13c",
+    "rating": {
+      "rate": 4.3,
+      "count": 689
+    },
+    "deliveryTime": 25,
+    "minConsumption": 5,
+    "deliveryCost": 0.5,
+    "region": "Larissa",
+    "products": [
+      {
+        "id": "17",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "18",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "19",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "20",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "21",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "22",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Coffee Lab",
+    "category": "COFFEE",
+    "address": "Athinaion 15",
+    "image": "https://imageproxy.wolt.com/mes-image/35d65592-ec79-423b-8921-ecb09cae52ba/a9bd9221-1631-4a00-92e4-5bde7b171e95",
+    "rating": {
+      "rate": 4.2,
+      "count": 352
+    },
+    "deliveryTime": 15,
+    "minConsumption": 2,
+    "deliveryCost": 1,
+    "region": "Larissa",
+    "products": [
+      {
+        "id": "17",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "18",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "19",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "20",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "21",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "22",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Gregory",
+    "category": "COFFEE",
+    "address": "Agisilaou 222",
+    "image": "https://imageproxy.wolt.com/venue/6419d121709881b02fc374fd/c41a2ee6-c7ff-11ed-a735-425ca627a9a2_3dd8a4d4_90b4_11ed_9e09_12a7b2cdefd1_e3dc686c_ea32_11ec_bd83_be3d55be3edb_grigoris_list_3.jpg",
+    "rating": {
+      "rate": 3.8,
+      "count": 118
+    },
+    "deliveryTime": 10,
+    "minConsumption": 0,
+    "deliveryCost": 0,
+    "region": "Chalkida",
+    "products": [
+      {
+        "id": "17",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "18",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "19",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "20",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "21",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "22",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "FoodTek",
+    "category": "SOUVLAKI",
+    "address": "Ioanninon 14",
+    "image": "https://cdn.e-food.gr/cdn-cgi/image/w=382,h=174,fit=cover,dpr=2/shop/5660212/cover",
+    "rating": {
+      "rate": 3.7,
+      "count": 59
+    },
+    "deliveryTime": 35,
+    "minConsumption": 8,
+    "deliveryCost": 1,
+    "region": "Chalkida",
     "products": [
       {
         "id": "17",

@@ -8,6 +8,7 @@ export interface Store {
   deliveryTime: number;
   minConsumption: number;
   deliveryCost: number;
+  region: string;
   products: Products[];
 }
 
@@ -26,8 +27,11 @@ export interface Rating {
 export interface FamousStore {
   id: number;
   name: string;
-  category: string;
+  category: FoodCategory;
   address: string;
+  deliveryTime: number;
+  minConsumption: number;
+  rating: Rating;
 }
 
 export const enum FoodCategory {

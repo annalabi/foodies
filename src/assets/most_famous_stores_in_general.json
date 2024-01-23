@@ -3,88 +3,154 @@
         "id": 1,
         "name": "McDonald's",
         "category": "FAST_FOOD",
-        "address": "Syntagma 15", 
+        "address": "Syntagma 15",
         "image": "https://imageproxy.wolt.com/venue/5b18d86f9c0caf000d17d51f/aff8d500-5728-11ec-ac96-ee505c5e0b42_mcdonalds1.jpg",
-        "rating": { "rate": 3.9, "count": 120 }
+        "rating": {
+            "rate": 3.9,
+            "count": 1200
+        },
+        "deliveryTime": 45,
+        "minConsumption": 10,
+        "deliveryCost": 2
     },
     {
-        "id": 12,
+        "id": 13,
         "name": "Pizza Fan",
         "category": "PIZZA",
-        "address": "Ippokrateiou 35", 
-        "image":"https://imageproxy.wolt.com/mes-image/f7c8ee52-b8d1-45c0-b28e-d02f72fa0a38/f5e53187-c583-4199-8554-86dcce6d1a2e",
-        "rating": { "rate": 4.2, "count": 156 }
+        "address": "Ippokrateiou 35",
+        "image": "https://imageproxy.wolt.com/mes-image/f7c8ee52-b8d1-45c0-b28e-d02f72fa0a38/f5e53187-c583-4199-8554-86dcce6d1a2e",
+        "rating": {
+            "rate": 4.2,
+            "count": 156
+        },
+        "deliveryTime": 30,
+        "minConsumption": 10,
+        "deliveryCost": 1
     },
     {
-        "id": 8,
+        "id": 14,
         "name": "Roma Pizza",
         "category": "PIZZA",
-        "address": "Menelaou 22", 
-        "image":"https://imageproxy.wolt.com/mes-image/28752efc-9d64-436a-aa7b-dd892ab8bb46/eba5505f-6991-43a3-9a3c-6a6c7f6aaba9",
-        "rating": { "rate": 4.1, "count": 169 }
+        "address": "Menelaou 22",
+        "image": "https://imageproxy.wolt.com/mes-image/28752efc-9d64-436a-aa7b-dd892ab8bb46/eba5505f-6991-43a3-9a3c-6a6c7f6aaba9",
+        "rating": {
+            "rate": 4.1,
+            "count": 169
+        },
+        "deliveryTime": 35,
+        "minConsumption": 8,
+        "deliveryCost": 1.5
     },
     {
-        "id": 105,
+        "id": 15,
         "name": "Goodys Burger House",
         "category": "FAST_FOOD",
         "address": "Ampelokipous 23rd Av.",
-        "image":"https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/33569/cover?t=1675927151&platform=web",
-        "rating": { "rate": 3.9, "count": 121 }
+        "image": "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/33569/cover?t=1675927151&platform=web",
+        "rating": {
+            "rate": 3.9,
+            "count": 121
+        },
+        "deliveryTime": 40,
+        "minConsumption": 9,
+        "deliveryCost": 2
     },
     {
-        "id": 80,
+        "id": 16,
         "name": "The Big Bad Wolf",
         "category": "SOUVLAKI",
-        "address": "Agioi Anargiroi 98" ,
-        "image":"https://selfservice.gr/wp-content/uploads/2022/03/bbw.jpg",
-        "rating": { "rate": 4.4, "count": 520 }
+        "address": "Agioi Anargiroi 98",
+        "image": "https://selfservice.gr/wp-content/uploads/2022/03/bbw.jpg",
+        "rating": {
+            "rate": 4.4,
+            "count": 520
+        },
+        "deliveryTime": 20,
+        "minConsumption": 6,
+        "deliveryCost": 0.5
     },
     {
-        "id": 34,
+        "id": 17,
         "name": "Mikel",
         "category": "COFFEE",
-        "address": "Ampelokipoi 72" ,
-        "image":"https://imageproxy.wolt.com/mes-image/ff3473a9-98c3-48b5-aa2d-4a454caf183a/0fff7cd4-d62c-4f9d-bca9-71e17a8fd13c",
-        "rating": { "rate": 4.3, "count": 689 }
+        "address": "Ampelokipoi 72",
+        "image": "https://imageproxy.wolt.com/mes-image/ff3473a9-98c3-48b5-aa2d-4a454caf183a/0fff7cd4-d62c-4f9d-bca9-71e17a8fd13c",
+        "rating": {
+            "rate": 4.3,
+            "count": 689
+        },
+        "deliveryTime": 25,
+        "minConsumption": 5,
+        "deliveryCost": 0.5
     },
     {
         "id": 2,
         "name": "StreetWok",
         "category": "ASIAN",
         "address": "Glyfada Str. 203",
-        "image":"https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/6854630/cover?t=1701681503&platform=web",
-        "rating": { "rate": 4.9, "count": 1760 }
+        "image": "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/6854630/cover?t=1701681503&platform=web",
+        "rating": {
+            "rate": 4.9,
+            "count": 1760
+        },
+        "deliveryTime": 60,
+        "minConsumption": 6,
+        "deliveryCost": 2
     },
     {
-        "id": 4,
+        "id": 18,
         "name": "Coffee Lab",
         "category": "COFFEE",
-        "address": "Athinaion 15" ,
-        "image":"https://imageproxy.wolt.com/mes-image/35d65592-ec79-423b-8921-ecb09cae52ba/a9bd9221-1631-4a00-92e4-5bde7b171e95",
-        "rating": { "rate": 4.2, "count": 352 }
+        "address": "Athinaion 15",
+        "image": "https://imageproxy.wolt.com/mes-image/35d65592-ec79-423b-8921-ecb09cae52ba/a9bd9221-1631-4a00-92e4-5bde7b171e95",
+        "rating": {
+            "rate": 4.2,
+            "count": 352
+        },
+        "deliveryTime": 15,
+        "minConsumption": 2,
+        "deliveryCost": 1
     },
     {
-        "id": 5,
+        "id": 19,
         "name": "Gregory",
         "category": "COFFEE",
-        "address": "Agisilaou 222" ,
-        "image":"https://imageproxy.wolt.com/venue/6419d121709881b02fc374fd/c41a2ee6-c7ff-11ed-a735-425ca627a9a2_3dd8a4d4_90b4_11ed_9e09_12a7b2cdefd1_e3dc686c_ea32_11ec_bd83_be3d55be3edb_grigoris_list_3.jpg",
-        "rating": { "rate": 3.8, "count": 118 }
+        "address": "Agisilaou 222",
+        "image": "https://imageproxy.wolt.com/venue/6419d121709881b02fc374fd/c41a2ee6-c7ff-11ed-a735-425ca627a9a2_3dd8a4d4_90b4_11ed_9e09_12a7b2cdefd1_e3dc686c_ea32_11ec_bd83_be3d55be3edb_grigoris_list_3.jpg",
+        "rating": {
+            "rate": 3.8,
+            "count": 118
+        },
+        "deliveryTime": 10,
+        "minConsumption": 0,
+        "deliveryCost": 0
     },
     {
         "id": 3,
         "name": "Nanou Donuts House",
         "category": "DONUTS",
         "address": "Ampelokipous 23rd Av.",
-        "image":"https://imageproxy.wolt.com/mes-image/5be9927a-59fe-4b7a-b1e7-6db52e7e2b00/c86f3085-5bdb-42e3-a340-1e7da8d72b73",
-        "rating": { "rate": 4.4, "count": 1520 }
+        "image": "https://imageproxy.wolt.com/mes-image/5be9927a-59fe-4b7a-b1e7-6db52e7e2b00/c86f3085-5bdb-42e3-a340-1e7da8d72b73",
+        "rating": {
+            "rate": 4.4,
+            "count": 1520
+        },
+        "deliveryTime": 20,
+        "minConsumption": 12,
+        "deliveryCost": 0.5
     },
     {
-        "id": 18,
+        "id": 20,
         "name": "FoodTek",
-        "category": "OTHER",
-        "address": "Ioanninon 14" ,
-        "image":"https://cdn.e-food.gr/cdn-cgi/image/w=382,h=174,fit=cover,dpr=2/shop/5660212/cover",
-        "rating": { "rate": 3.7, "count": 59 }
+        "category": "SOUVLAKI",
+        "address": "Ioanninon 14",
+        "image": "https://cdn.e-food.gr/cdn-cgi/image/w=382,h=174,fit=cover,dpr=2/shop/5660212/cover",
+        "rating": {
+            "rate": 3.7,
+            "count": 59
+        },
+        "deliveryTime": 35,
+        "minConsumption": 8,
+        "deliveryCost": 1
     }
 ]
