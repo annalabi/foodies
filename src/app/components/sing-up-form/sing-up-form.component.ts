@@ -14,11 +14,33 @@ import { CommonModule } from '@angular/common';
 })
 export class SingUpFormComponent implements OnInit {
   messageSent: boolean = false;
+  fullName: string = '';
 
-  sendMessage() {
+  constructor(private scrollService: ScrollService) {}
+
+  sendMessage(): void {
+    // Get form values
+    this.fullName = (document.getElementById('full name') as HTMLInputElement).value;
+    const email = (document.getElementById('email') as HTMLInputElement).value;
+    const phone = (document.getElementById('Phone') as HTMLInputElement).value;
+
+    // Create an object to store user data
+    const userData = {
+      fullName: this.fullName,
+      email,
+      phone
+    };
+
+    // Store data in session storage
+    sessionStorage.setItem('userData', JSON.stringify(userData));
+
+    // Set a flag to indicate that the message has been sent
     this.messageSent = true;
+
+    // Navigate to the stores page
+    window.location.href = '/main';
   }
-  scrollService = inject(ScrollService);
+  
 
   ngOnInit(): void {
     this.scrollService.startFromTop();

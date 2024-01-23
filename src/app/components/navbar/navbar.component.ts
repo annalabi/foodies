@@ -1,22 +1,44 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { ContactUsComponent } from '../contact-us/contact-us.component';
-import { HomeComponent } from '../home/home.component';
+
 import { CommonModule } from '@angular/common';
-import { Collapse, CollapseOptions } from 'flowbite';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule,RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
 })
-export class NavbarComponent { isNavbarCollapsed = true;
+export class NavbarComponent implements OnInit {
+  isNavbarCollapsed = true;
 
   toggleNavbar() {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
   }
 
-  
+  username: string | null = null;
+
+  ngOnInit(): void {
+    // Get user data from session storage
+    const userDataString = sessionStorage.getItem('userData');
+
+    if (userDataString) {
+      const userData = JSON.parse(userDataString);
+      this.username = userData.fullName;
+    }
+  }
+
+  logout(): void {
+    // Implement the logout functionality
+    // Clear user data from session storage, navigate to logout page, etc.
+    sessionStorage.removeItem('userData');
+    // Redirect to the logout page or perform other logout actions
+    window.location.href = '/logout';
+  }
+  isDropdownOpen = false;
+
+  toggleDropdown(): void {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
 }

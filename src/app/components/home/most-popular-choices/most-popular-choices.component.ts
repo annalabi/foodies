@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, Input, ViewChild, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { CardService } from '../../../card.service';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { Store } from '../../../services/stores.model';
+
 
 @Component({
   selector: 'app-most-popular-choices',
@@ -18,7 +18,7 @@ export class MostPopularChoicesComponent implements AfterViewInit {
   @ViewChild('cardWrapper') cardWrapperRef!: ElementRef;
   cardsData: any;
 
-  constructor(private cardService: CardService) {}
+  constructor(private cardService: CardService, private router: Router) {}
   ngAfterViewInit() {
     this.cardService.getTop10Stores().subscribe({
       next: (data) => {
@@ -48,10 +48,9 @@ export class MostPopularChoicesComponent implements AfterViewInit {
 
     scrollContainer();
   }
-  router: Router = inject(Router);
+  
  
   nextPage(name: string){
-    name = name.replace(/\s/g, "")
-    this.router.navigate(["./main", name])
+    this.router.navigate(["./main", name]);
   }
 }
