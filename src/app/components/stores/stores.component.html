@@ -1,7 +1,7 @@
-<div class="container">
-  <app-navbar></app-navbar>
-</div>
-<div class="flex flex-col m-3">
+<div *ngIf="stores && region" class="flex flex-col m-3">
+  <div class="container">
+    <app-navbar></app-navbar>
+  </div>
   <div class="mt-16">
     <!-- filters -->
     <div class="flex my-2">
@@ -69,6 +69,69 @@
               class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
             >
               Coffee
+            </button>
+            <button
+              [ngClass]="{
+                'bg-gray-400': isSelected(sweetsFilter),
+              }"
+              (click)="updateEnabledFoodCategories(sweetsFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Sweets
+            </button>
+            <button
+              [ngClass]="{
+              'bg-gray-400': isSelected(italianFilter),
+            }"
+              (click)="updateEnabledFoodCategories(italianFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Italian
+            </button>
+            <button
+              [ngClass]="{
+              'bg-gray-400': isSelected(veganFilter),
+            }"
+              (click)="updateEnabledFoodCategories(veganFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Vegan
+            </button>
+            <button
+              [ngClass]="{
+              'bg-gray-400': isSelected(lebaneseFilter),
+            }"
+              (click)="updateEnabledFoodCategories(lebaneseFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Lebanese
+            </button>
+            <button
+              [ngClass]="{
+              'bg-gray-400': isSelected(seafoodFilter),
+            }"
+              (click)="updateEnabledFoodCategories(seafoodFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Seafood
+            </button>
+            <button
+              [ngClass]="{
+              'bg-gray-400': isSelected(saladsFilter),
+            }"
+              (click)="updateEnabledFoodCategories(saladsFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Salads
+            </button>
+            <button
+              [ngClass]="{
+              'bg-gray-400': isSelected(coctailsFilter),
+            }"
+              (click)="updateEnabledFoodCategories(coctailsFilter)"
+              class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+            >
+              Coctails
             </button>
           </div>
         </div>

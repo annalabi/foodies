@@ -14,7 +14,7 @@
           background-size: contain; 
           height: 700px;
           width: 100%;
-          
+
         "
       ></div>
       
@@ -23,7 +23,7 @@
           class="p-0 flex-shrink-0 w-1/3 max-w-1/3 box-border box-content px-2 text-center m-1 ml-6"
         >
         
-          <button (click)="filterStores('Serres')"
+          <button (click)="selectCity(serresFilter)"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
             >
             Serres
@@ -34,7 +34,7 @@
           class="p-0 flex-shrink-0 w-1/3 max-w-1/3 box-border box-content px-2 text-center m-1"
         >
           
-            <button (click)="filterStores('Kavala')"
+            <button (click)="selectCity(kavalaFilter)"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
             >
            Kavala
@@ -45,7 +45,7 @@
           class="p-0 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center m-1"
         >
           <!-- <a  routerLinkActive="active-link"> -->
-            <button (click)="filterStores('Ioannina')"
+            <button (click)="selectCity(ioanninaFilter)"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
             >
               Ioannina
@@ -55,101 +55,83 @@
         <li
           class="p-0 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center m-1"
         >
-          <a routerLink="['/main', { region: 'Thessaloniki' }]" routerLinkActive="active-link">
-            <button
+            <button (click)="selectCity(thessalonikiFilter)"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-3 border border-gray-400 rounded shadow"
             >
             Thessaloniki
             </button>
-          </a>
         </li>
         <li
           class="p-0 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center m-1 ml-4"
         >
-          <a routerLink="/main" routerLinkActive="active-link">
-            <button
+            <button (click)="selectCity(larissaFilter)"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
             >
               Larissa
             </button>
-          </a>
         </li>
         <li
           class="p-0 flex-shrink-0 w-1/2 max-w-1/3 box-border box-content px-2 text-center m-1"
         >
-          <a routerLink="/main" routerLinkActive="active-link">
-            <button
+            <button (click)="selectCity(volosFilter)"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
             >
               Volos
             </button>
-          </a>
         </li>
         <li
           class="p-0 flex-shrink-0 w-1/6 max-w-1/3 box-border box-content px-2 text-center m-1"
         >
-          <a routerLink="/main" routerLinkActive="active-link">
-            <button
+            <button (click)="selectCity(lamiaFilter)"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
             >
               Lamia
             </button>
-          </a>
         </li>
         <li
           class="p-0 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center m-1"
         >
-          <a routerLink="/main" routerLinkActive="active-link">
-            <button
+            <button (click)="selectCity(patraFilter)"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
             >
               Patra
             </button>
-          </a>
         </li>
         <li
           class="p-0 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center m-1"
         >
-          <a routerLink="/main" routerLinkActive="active-link">
-            <button
+            <button (click)="selectCity(chalkidaFilter)"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
             >
               Chalkida
             </button>
-          </a>
         </li>
         <li
           class="p-0 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center m-1"
         >
-          <a routerLink="/main" routerLinkActive="active-link">
-            <button
+            <button (click)="selectCity(athensFilter)"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
             >
               Athens
             </button>
-          </a>
         </li>
         <li
           class="p-0 flex-shrink-0 w-1/4 max-w-1/3 box-border box-content px-2 text-center m-1 ml-8"
         >
-          <a routerLink="/main" routerLinkActive="active-link">
-            <button
+            <button (click)="selectCity(rethymnoFilterr)"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
             >
               Rethymno
             </button>
-          </a>
         </li>
         <li
           class="p-0 flex-shrink-0 w-1/2 max-w-1/2 box-border box-content px-2 text-center m-1"
         >
-          <a routerLink="/main" routerLinkActive="active-link">
-            <button
+            <button (click)="selectCity(heraklionFilter)"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-2 border border-gray-400 rounded shadow"
             >
               Heraklion
             </button>
-          </a>
         </li>
       </ul>
     </div>
