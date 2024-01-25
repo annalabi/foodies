@@ -13,7 +13,7 @@
             <h3>
               <b>{{ card.name }}</b>
             </h3>
-            <p class="category">{{ card.category }} </p>
+            <p class="category">{{ card.category| foodCategoryToDisplay }} </p>
             
             <p>✨ {{ card.rating.rate }} </p><hr>
             <p class="p-3">🕑{{ card.deliveryTime }}' ┆ 🧺{{ card.minConsumption }}€ </p>

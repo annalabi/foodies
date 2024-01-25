@@ -2,14 +2,15 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { CardService } from '../../../card.service';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { FoodCategoryToDisplayPipe } from "../../../pipes/food-category-to-display.pipe";
 
 
 @Component({
-  selector: 'app-most-popular-choices',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
-  templateUrl: './most-popular-choices.component.html',
-  styleUrl: './most-popular-choices.component.scss',
+    selector: 'app-most-popular-choices',
+    standalone: true,
+    templateUrl: './most-popular-choices.component.html',
+    styleUrl: './most-popular-choices.component.scss',
+    imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, FoodCategoryToDisplayPipe]
 })
 export class MostPopularChoicesComponent implements AfterViewInit {
   top10Stores: any[] = [];
