@@ -18,14 +18,14 @@
   @for (product of addedProducts; track $index) {
 
       <div class="group bg-white hover:bg-gray-100 ring-2 ring-gray-200 hover:ring-teal rounded-3xl m-2">
-          <div class="relative pb-2 flex-col rounded-lg p-4" (click)="removeProduct($index)">
+          <div class="relative pb-2 flex-col rounded-lg p-4" >
             <a class="flex-1 font-semibold text-gray-900 ">
               {{product.id}}. {{product.name}} 
             </a>
             
             <!-- Add display -->
             <div class="absolute right-8 top-7 h-5 w-10">
-              <p class="opacity-0 group-hover:opacity-100 text-red-500 text-semibold">Remove</p>
+              <button class="opacity-0 group-hover:opacity-100 text-red-500 text-semibold" (click)="removeProduct($index)">Remove</button>
             </div>
 
             <!-- price display -->
