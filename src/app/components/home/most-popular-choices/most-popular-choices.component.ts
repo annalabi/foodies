@@ -1,16 +1,32 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, ViewChild, inject } from '@angular/core';
-import { CardService } from '../../../card.service';
-import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { FoodCategoryToDisplayPipe } from "../../../pipes/food-category-to-display.pipe";
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  ViewChild,
 
+} from '@angular/core';
+import { CardService } from '../../../card.service';
+import {
+  Router,
+  RouterLink,
+  RouterLinkActive,
+  RouterOutlet,
+} from '@angular/router';
+import { FoodCategoryToDisplayPipe } from '../../../pipes/food-category-to-display.pipe';
 
 @Component({
-    selector: 'app-most-popular-choices',
-    standalone: true,
-    templateUrl: './most-popular-choices.component.html',
-    styleUrl: './most-popular-choices.component.scss',
-    imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, FoodCategoryToDisplayPipe]
+  selector: 'app-most-popular-choices',
+  standalone: true,
+  templateUrl: './most-popular-choices.component.html',
+  styleUrl: './most-popular-choices.component.scss',
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    FoodCategoryToDisplayPipe,
+  ],
 })
 export class MostPopularChoicesComponent implements AfterViewInit {
   top10Stores: any[] = [];
@@ -18,6 +34,7 @@ export class MostPopularChoicesComponent implements AfterViewInit {
   @ViewChild('scrollContainer') scrollContainerRef!: ElementRef;
   @ViewChild('cardWrapper') cardWrapperRef!: ElementRef;
   cardsData: any;
+  store: any;
 
   constructor(private cardService: CardService, private router: Router) {}
   ngAfterViewInit() {
@@ -35,10 +52,13 @@ export class MostPopularChoicesComponent implements AfterViewInit {
 
     let scrollAmount = 0;
     const scrollSpeed = 1;
+    let isHovered = false;
 
     function scrollContainer() {
-      scrollAmount += scrollSpeed;
-      container.scrollLeft = scrollAmount;
+      if (!isHovered) {
+        scrollAmount += scrollSpeed;
+        container.scrollLeft = scrollAmount;
+      }
 
       if (scrollAmount >= wrapper.offsetWidth / 2) {
         scrollAmount = 0;
@@ -46,12 +66,20 @@ export class MostPopularChoicesComponent implements AfterViewInit {
 
       requestAnimationFrame(scrollContainer);
     }
+    container.addEventListener('mouseenter', () => {
+      isHovered = true;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      isHovered = false;
+    });
 
     scrollContainer();
   }
-  
- 
-  nextPage(name: string){
-    this.router.navigate(["./main", name]);
+
+  //  on click navigation to the product page
+  nextPage(name: string) {
+    name = name.replace(/\s/g, '');
+    this.router.navigate(['./main', name]);
   }
 }
