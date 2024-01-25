@@ -8,7 +8,7 @@ export interface Store {
   deliveryTime: number;
   minConsumption: number;
   deliveryCost: number;
-  region: string;
+  region: Region;
   products: Products[];
 }
 
@@ -41,4 +41,27 @@ export const enum FoodCategory {
   SOUVLAKI = 'SOUVLAKI',
   PIZZA = 'PIZZA',
   COFFEE = 'COFFEE',
+  SWEETS = 'SWEETS',
+  ITALIAN = 'ITALIAN',
+  VEGAN = 'VEGAN',
+  LEBANESE = 'LEBANESE',
+  SEAFOOD = 'SEAFOOD',
+  SALADS = 'SALADS',
+  COCKTAILS = 'COCKTAILS',
+}
+
+export const enum Region {
+  Athens = 'Athens',
+  Thessaloniki = 'Thessaloniki',
+  Kavala = 'Kavala',
+  Ioannina = 'Ioannina',
+  Patra = 'Patra',
+  Lamia = 'Lamia',
+  Larissa = 'Larissa',
+  Chalkida = 'Chalkida',
+  Serres = 'Serres',
+  Volos = 'Volos',
+  Rethymno = 'Rethymno',
+  Heraklion = 'Heraklion',
+  All = 'all',
 }

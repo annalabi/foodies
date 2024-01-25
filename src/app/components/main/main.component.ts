@@ -3,9 +3,11 @@ import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { StoresService } from '../../services/stores.service';
 import { StoresComponent } from '../stores/stores.component';
-import { Store } from '../../services/stores.model';
+import { Region, Store } from '../../services/stores.model';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
+import { CityService } from '../../services/city.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-main',
@@ -15,11 +17,12 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrl: './main.component.scss',
 })
 export class MainComponent implements OnInit {
-  stores!: Store[];
-
-  hasLoaded: boolean = false;
-
+  cityService = inject(CityService);
   service = inject(StoresService);
+
+  stores!: Store[];
+  hasLoaded: boolean = false;
+  selectedCity$: Observable<Region> = this.cityService.getSelectedCity();
 
   constructor() {}
 

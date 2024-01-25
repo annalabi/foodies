@@ -21,7 +21,7 @@ export const routes: Routes = [
     //     {path: "stores", component: StoresComponent} ,
     //     {path:"stores/:id", component: ProductsComponent},
     // ]},
-    {path: 'stores', component: StoresComponent},
+    { path: 'store/:location', component: StoresComponent},
     {path: 'main/:name', component: ProductsComponent},
     {path: 'aboutUs', component: AboutUsComponent},
     {path: 'signUp', component: SingUpFormComponent},

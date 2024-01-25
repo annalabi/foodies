@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FoodCategory, Store } from '../../services/stores.model';
+import { FoodCategory, Region, Store } from '../../services/stores.model';
 import { StoresService } from '../../services/stores.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -12,6 +12,8 @@ import { DropdownComponent } from '../dropdown/dropdown.component';
 import { DropdownItems } from '../dropdown/dropdown.model';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FoodCategoryToDisplayPipe } from '../../pipes/food-category-to-display.pipe';
+import { CityService } from '../../services/city.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-stores',
@@ -37,15 +39,43 @@ export class StoresComponent implements OnInit {
   router: Router = inject(Router);
 
   @Input() stores!: Store[];
+  @Input() region!: Region;
   // should not be changed
   initialStore: Store[] = this.stores;
+
+  // Food Category Filters
   asianFilter = FoodCategory.ASIAN;
   donutFilter = FoodCategory.DONUTS;
   fastfoodFilter = FoodCategory.FAST_FOOD;
   souvlakiFilter = FoodCategory.SOUVLAKI;
   pizzaFilter = FoodCategory.PIZZA;
   coffeeFilter = FoodCategory.COFFEE;
+  sweetsFilter = FoodCategory.SWEETS;
+  italianFilter = FoodCategory.ITALIAN;
+  veganFilter = FoodCategory.VEGAN;
+  lebaneseFilter = FoodCategory.LEBANESE;
+  seafoodFilter = FoodCategory.SEAFOOD;
+  saladsFilter = FoodCategory.SALADS;
+  coctailsFilter = FoodCategory.COCKTAILS;
   enabledCategoryFilters: FoodCategory[] = [];
+
+  // City Filters
+  chosenCity: Region[] = [];
+
+  athensFilter = Region.Athens;
+  thessalonikiFilter = Region.Thessaloniki;
+  kavalaFilter = Region.Kavala;
+  ioanninaFilter = Region.Ioannina;
+  patraFilter = Region.Patra;
+  lamiaFilter = Region.Lamia;
+  larissaFilter = Region.Larissa;
+  chalkidaFilter = Region.Chalkida;
+  serresFilter = Region.Serres;
+  volosFilter = Region.Volos;
+  rethymnoFilterr = Region.Rethymno;
+  heraklionFilter = Region.Heraklion;
+
+  // Dropdown Filters
   dropdownItems: DropdownItems[] = [
     { label: 'Sort by name', value: '01' },
     { label: 'Sort by rating', value: '02' },
@@ -59,7 +89,10 @@ export class StoresComponent implements OnInit {
 
   ngOnInit(): void {
     this.initialStore = this.stores;
+    this.stores = this.filterStoresByRegion(this.region, this.stores);
     this.scrollService.startFromTop();
+
+    // this.cityService = this.cityService.selectedCity;
   }
 
   // theo
@@ -136,6 +169,14 @@ export class StoresComponent implements OnInit {
         ? ratingComparison
         : b.rating.count - a.rating.count;
     });
+  }
+
+  private filterStoresByRegion(region: Region, stores: Store[]): Store[] {
+    if (region === Region.All) {
+      return stores;
+    }
+    return stores.filter((store) => store.region === region);
+    // return region === Region.All ? stores :  stores.filter((store) => store.region === region);
   }
 
   private sortByDeliveryTime() {
