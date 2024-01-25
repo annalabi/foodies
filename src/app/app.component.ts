@@ -36,10 +36,10 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     SingUpFormComponent,
     loginFormComponent,
     MostPopularChoicesComponent,
-    WeFeedCitiesComponent,
     FAQsComponent,
     HowItWorksComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    WeFeedCitiesComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],

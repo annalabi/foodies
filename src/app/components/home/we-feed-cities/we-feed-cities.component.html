@@ -1,54 +1,56 @@
-<div class="mx-14 my-40">
+<div class="mx-14 md:mx-14 my-8 md:my-40">
  
   <h1>
     Explore
     <div  class="name inline-block mx-1">We Feed</div>
     cities
   </h1>
-  <div class="max-w-full overflow-x-auto justify-center mt-10">
-    <div class="flex">
+  <div class="max-w-full overflow-hidden justify-center mt-10">
+    <div class="flex flex-col md:flex-row">
       <div
-        class="relative overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lg:mb-10 m-20 p-14 ml-24"
+        class="relative overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lg:mb-10 lg:m-10 lg:px-40  lg:ml-4"
         style="
           background-image: url(/assets/images/GreeceMap.png);
-          height: 500px;
-          width: 900px;
+          background-size: contain; 
+          height: 700px;
+          width: 100%;
+          
         "
       ></div>
       
-      <ul class="flex flex-wrap p-0 mt-20 ml-20"> 
-        <li
-          class="p-0 flex-shrink-0 w-1/3 max-w-1/3 box-border box-content px-2 text-center m-1"
+      <ul class="flex flex-wrap p-0 m-4 md:my-28"> 
+        <li  
+          class="p-0 flex-shrink-0 w-1/3 max-w-1/3 box-border box-content px-2 text-center m-1 ml-6"
         >
-          <a routerLink="['/main', { region: 'Serres' }]" routerLinkActive="active-link">
-            <button
+        
+          <button (click)="filterStores('Serres')"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
             >
-              Serres
+            Serres
             </button>
-          </a>
+         
         </li>
         <li
           class="p-0 flex-shrink-0 w-1/3 max-w-1/3 box-border box-content px-2 text-center m-1"
         >
-          <a routerLink="['/main', { region: 'Kavala' }]" routerLinkActive="active-link">
-            <button
+          
+            <button (click)="filterStores('Kavala')"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
             >
-              Kavala
+           Kavala
             </button>
-          </a>
+          
         </li>
         <li
           class="p-0 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center m-1"
         >
-          <a routerLink="['/main', { region: 'Ioannina' }]" routerLinkActive="active-link">
-            <button
+          <!-- <a  routerLinkActive="active-link"> -->
+            <button (click)="filterStores('Ioannina')"
               class="bg-white hover:bg-gray-200 hover:border-yellow-400 hover:text-yellow-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
             >
               Ioannina
             </button>
-          </a>
+          <!-- </a> -->
         </li>
         <li
           class="p-0 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center m-1"
@@ -62,7 +64,7 @@
           </a>
         </li>
         <li
-          class="p-0 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center m-1"
+          class="p-0 flex-shrink-0 w-1/4 max-w-1/4 box-border box-content px-2 text-center m-1 ml-4"
         >
           <a routerLink="/main" routerLinkActive="active-link">
             <button
@@ -73,7 +75,7 @@
           </a>
         </li>
         <li
-          class="p-0 flex-shrink-0 w-1/3 max-w-1/3 box-border box-content px-2 text-center m-1"
+          class="p-0 flex-shrink-0 w-1/2 max-w-1/3 box-border box-content px-2 text-center m-1"
         >
           <a routerLink="/main" routerLinkActive="active-link">
             <button
@@ -84,7 +86,7 @@
           </a>
         </li>
         <li
-          class="p-0 flex-shrink-0 w-1/3 max-w-1/3 box-border box-content px-2 text-center m-1"
+          class="p-0 flex-shrink-0 w-1/6 max-w-1/3 box-border box-content px-2 text-center m-1"
         >
           <a routerLink="/main" routerLinkActive="active-link">
             <button
@@ -128,7 +130,7 @@
           </a>
         </li>
         <li
-          class="p-0 flex-shrink-0 w-1/3 max-w-1/3 box-border box-content px-2 text-center m-1"
+          class="p-0 flex-shrink-0 w-1/4 max-w-1/3 box-border box-content px-2 text-center m-1 ml-8"
         >
           <a routerLink="/main" routerLinkActive="active-link">
             <button

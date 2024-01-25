@@ -34,5 +34,7 @@ export class MainComponent implements OnInit {
           this.hasLoaded = true;
         },
       });
+      
   }
+  
 }

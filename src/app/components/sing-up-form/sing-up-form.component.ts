@@ -4,7 +4,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
 import { ScrollService } from '../../services/scroll.service';
 import { CommonModule } from '@angular/common';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-sing-up-form',
   standalone: true,
@@ -16,7 +16,7 @@ export class SingUpFormComponent implements OnInit {
   messageSent: boolean = false;
   fullName: string = '';
 
-  constructor(private scrollService: ScrollService) {}
+  constructor(private scrollService: ScrollService, private router: Router) {}
 
   sendMessage(): void {
     // Get form values
@@ -38,7 +38,7 @@ export class SingUpFormComponent implements OnInit {
     this.messageSent = true;
 
     // Navigate to the stores page
-    window.location.href = '/main';
+    this.router.navigate(['/main']);
   }
   
 
