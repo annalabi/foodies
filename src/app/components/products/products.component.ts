@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output, inject } from '@angular/core';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { map } from 'rxjs';
 import { Products } from '../../services/stores.model';
 import { DataService } from '../../services/data.service';
@@ -21,7 +21,7 @@ export class ProductsComponent {
   dataService: DataService = inject(DataService);
   products: Products[] = [];
   hasLoaded: boolean = false;
-  //router: Router = inject(Router)
+  activatedRoute = inject(ActivatedRoute);
   
   // category display
   category!: string; 
@@ -42,14 +42,6 @@ export class ProductsComponent {
     console.log("hello")
   }
 
-  // // add product @OUTPUT
-  // selectProduct?: Products;
-
-  // addProduct(product: Products){
-  //   this.selectProduct = product;
-    
-  // }
-
   // add product
   publisherService = inject(PublisherService);
 
@@ -60,18 +52,23 @@ export class ProductsComponent {
 
 
   ngOnInit() {
-    this.dataService.getProducts()
-    .pipe(map((response: any) => response.products))
+    this.activatedRoute.params
     .subscribe({
-      next: response => {
-        setTimeout(() => {
-          console.log(response);
-          this.products = response;
-          this.hasLoaded = true;
-        }, 500);
-        
+      next: (params: any) => {
+        let name = params.name;
+        this.dataService.getStoreByName(name)
+        .pipe(map((response: any) => response.products))
+        .subscribe({
+          next: response => {
+              console.log(response);
+              this.products = response;
+              this.hasLoaded = true;
+            }
+        })
       }
     })
   }
+
+
 
 }

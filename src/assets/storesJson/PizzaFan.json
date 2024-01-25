@@ -1,0 +1,53 @@
+{
+  "id": 13,
+  "name": "Pizza Fan",
+  "category": "PIZZA",
+  "address": "Ippokrateiou 35",
+  "image": "https://imageproxy.wolt.com/mes-image/f7c8ee52-b8d1-45c0-b28e-d02f72fa0a38/f5e53187-c583-4199-8554-86dcce6d1a2e",
+  "rating": {
+    "rate": 4.2,
+    "count": 156
+  },
+  "deliveryTime": 30,
+  "minConsumption": 10,
+  "deliveryCost": 1,
+  "region": "Patra",
+  "products": [
+    {
+      "id": "17",
+      "name": "Cinnamon Donut",
+      "category": "DONUT",
+      "price": 2.2
+    },
+    {
+      "id": "18",
+      "name": "Donut Bavaria",
+      "category": "DONUT",
+      "price": 1.99
+    },
+    {
+      "id": "19",
+      "name": "Blackberry Cronut",
+      "category": "CRONUT",
+      "price": 1.5
+    },
+    {
+      "id": "20",
+      "name": "Nanou Burger",
+      "category": "BURGER",
+      "price": 4.3
+    },
+    {
+      "id": "21",
+      "name": "Donut Delizioso",
+      "category": "DONUT",
+      "price": 2.5
+    },
+    {
+      "id": "22",
+      "name": "Donut Oreo",
+      "category": "DONUT",
+      "price": 1.99
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": 17,
+  "name": "Mikel",
+  "category": "COFFEE",
+  "address": "Ampelokipoi 72",
+  "image": "https://imageproxy.wolt.com/mes-image/ff3473a9-98c3-48b5-aa2d-4a454caf183a/0fff7cd4-d62c-4f9d-bca9-71e17a8fd13c",
+  "rating": {
+    "rate": 4.3,
+    "count": 689
+  },
+  "deliveryTime": 25,
+  "minConsumption": 5,
+  "deliveryCost": 0.5,
+  "region": "Larissa",
+  "products": [
+    {
+      "id": "17",
+      "name": "Cinnamon Donut",
+      "category": "DONUT",
+      "price": 2.2
+    },
+    {
+      "id": "18",
+      "name": "Donut Bavaria",
+      "category": "DONUT",
+      "price": 1.99
+    },
+    {
+      "id": "19",
+      "name": "Blackberry Cronut",
+      "category": "CRONUT",
+      "price": 1.5
+    },
+    {
+      "id": "20",
+      "name": "Nanou Burger",
+      "category": "BURGER",
+      "price": 4.3
+    },
+    {
+      "id": "21",
+      "name": "Donut Delizioso",
+      "category": "DONUT",
+      "price": 2.5
+    },
+    {
+      "id": "22",
+      "name": "Donut Oreo",
+      "category": "DONUT",
+      "price": 1.99
+    }
+  ]
+}

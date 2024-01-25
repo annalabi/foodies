@@ -1,0 +1,53 @@
+{
+  "id": 14,
+  "name": "Roma Pizza",
+  "category": "PIZZA",
+  "address": "Menelaou 22",
+  "image": "https://imageproxy.wolt.com/mes-image/28752efc-9d64-436a-aa7b-dd892ab8bb46/eba5505f-6991-43a3-9a3c-6a6c7f6aaba9",
+  "rating": {
+    "rate": 4.1,
+    "count": 169
+  },
+  "deliveryTime": 35,
+  "minConsumption": 8,
+  "deliveryCost": 1.5,
+  "region": "Lamia",
+  "products": [
+    {
+      "id": "17",
+      "name": "Cinnamon Donut",
+      "category": "DONUT",
+      "price": 2.2
+    },
+    {
+      "id": "18",
+      "name": "Donut Bavaria",
+      "category": "DONUT",
+      "price": 1.99
+    },
+    {
+      "id": "19",
+      "name": "Blackberry Cronut",
+      "category": "CRONUT",
+      "price": 1.5
+    },
+    {
+      "id": "20",
+      "name": "Nanou Burger",
+      "category": "BURGER",
+      "price": 4.3
+    },
+    {
+      "id": "21",
+      "name": "Donut Delizioso",
+      "category": "DONUT",
+      "price": 2.5
+    },
+    {
+      "id": "22",
+      "name": "Donut Oreo",
+      "category": "DONUT",
+      "price": 1.99
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": 15,
+  "name": "Goodys Burger House",
+  "category": "FAST_FOOD",
+  "address": "Ampelokipous 23rd Av.",
+  "image": "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/33569/cover?t=1675927151&platform=web",
+  "rating": {
+    "rate": 3.9,
+    "count": 121
+  },
+  "deliveryTime": 40,
+  "minConsumption": 9,
+  "deliveryCost": 2,
+  "region": "Lamia",
+  "products": [
+    {
+      "id": "17",
+      "name": "Cinnamon Donut",
+      "category": "DONUT",
+      "price": 2.2
+    },
+    {
+      "id": "18",
+      "name": "Donut Bavaria",
+      "category": "DONUT",
+      "price": 1.99
+    },
+    {
+      "id": "19",
+      "name": "Blackberry Cronut",
+      "category": "CRONUT",
+      "price": 1.5
+    },
+    {
+      "id": "20",
+      "name": "Nanou Burger",
+      "category": "BURGER",
+      "price": 4.3
+    },
+    {
+      "id": "21",
+      "name": "Donut Delizioso",
+      "category": "DONUT",
+      "price": 2.5
+    },
+    {
+      "id": "22",
+      "name": "Donut Oreo",
+      "category": "DONUT",
+      "price": 1.99
+    }
+  ]
+}

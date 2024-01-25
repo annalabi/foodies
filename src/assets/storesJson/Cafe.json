@@ -1,0 +1,53 @@
+{
+  "id": 6,
+  "name": "Cafe",
+  "category": "COFFEE",
+  "address": "Ampelokipous 23rd Av.",
+  "image": "https://imageproxy.wolt.com/venue/6218e8734c5b9b885776b9ad/ec636f46-ed73-11ec-aa52-eac3a2e93abc_25a0a4d2_07b5_11eb_a8f6_a65e3009f9e4_mini_box_donuts0103__1_.jpg",
+  "rating": {
+    "rate": 4.8,
+    "count": 1920
+  },
+  "deliveryTime": 60,
+  "minConsumption": 10,
+  "deliveryCost": 1.5,
+  "region": "Kavala",
+  "products": [
+    {
+      "id": "17",
+      "name": "Cinnamon Donut",
+      "category": "DONUT",
+      "price": 2.2
+    },
+    {
+      "id": "18",
+      "name": "Donut Bavaria",
+      "category": "DONUT",
+      "price": 1.99
+    },
+    {
+      "id": "19",
+      "name": "Blackberry Cronut",
+      "category": "CRONUT",
+      "price": 1.5
+    },
+    {
+      "id": "20",
+      "name": "Nanou Burger",
+      "category": "BURGER",
+      "price": 4.3
+    },
+    {
+      "id": "21",
+      "name": "Donut Delizioso",
+      "category": "DONUT",
+      "price": 2.5
+    },
+    {
+      "id": "22",
+      "name": "Donut Oreo",
+      "category": "DONUT",
+      "price": 1.99
+    }
+  ]
+}

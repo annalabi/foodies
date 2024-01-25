@@ -1,0 +1,53 @@
+{
+  "id": 11,
+  "name": "Pizza Italy",
+  "category": "PIZZA",
+  "address": "Glyfada Str. 203",
+  "image": "https://imageproxy.wolt.com/mes-image/00cfccff-810c-48c1-9fe5-18c0a8a0ce81/b85fa96d-40cf-44b2-b58c-c282156ecafa",
+  "rating": {
+    "rate": 4.5,
+    "count": 1779
+  },
+  "deliveryTime": 60,
+  "minConsumption": 13,
+  "deliveryCost": 1,
+  "region": "Patra",
+  "products": [
+    {
+      "id": "11",
+      "name": "Pork Noodles with teriyaki",
+      "category": "NOODLES",
+      "price": 7.2
+    },
+    {
+      "id": "12",
+      "name": "Chicken Egg Noodles with sweet chili",
+      "category": "NOODLES",
+      "price": 8.2
+    },
+    {
+      "id": "13",
+      "name": "Beef Rice Noodles with cantonese",
+      "category": "NOODLES",
+      "price": 7.2
+    },
+    {
+      "id": "14",
+      "name": "Shrimp White Rice with Coconut Curry",
+      "category": "RICE",
+      "price": 8.2
+    },
+    {
+      "id": "15",
+      "name": "Mushroom Brown Rice with satay",
+      "category": "RICE",
+      "price": 7.2
+    },
+    {
+      "id": "16",
+      "name": "Mixed ingredients with pineapple, brocoli, baby corn and black mushrooms",
+      "category": "OTHER",
+      "price": 5.2
+    }
+  ]
+}

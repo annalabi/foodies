@@ -1,0 +1,77 @@
+{
+  "id": 10,
+  "name": "To souvlaki",
+  "category": "SOUVLAKI",
+  "address": "Syntagma 15",
+  "image": "https://imageproxy.wolt.com/venue/5b18d86f9c0caf000d17d51f/aff8d500-5728-11ec-ac96-ee505c5e0b42_mcdonalds1.jpg",
+  "rating": {
+    "rate": 4.9,
+    "count": 1000
+  },
+  "deliveryTime": 60,
+  "minConsumption": 12,
+  "deliveryCost": 1,
+  "region": "Patra",
+  "products": [
+    {
+      "id": "1",
+      "name": "Big Mac",
+      "category": "BURGERS",
+      "price": 4.99
+    },
+    {
+      "id": "2",
+      "name": "Crispy McBacon",
+      "category": "BURGERS",
+      "price": 3.99
+    },
+    {
+      "id": "3",
+      "name": "Deluxe Burger",
+      "category": "BURGERS",
+      "price": 2.99
+    },
+    {
+      "id": "4",
+      "name": "Single Big Tasty Chicken Bacon",
+      "category": "BURGERS",
+      "price": 2.79
+    },
+    {
+      "id": "5",
+      "name": "Chicken McNuggets",
+      "category": "NUGGETS",
+      "price": 3.99
+    },
+    {
+      "id": "6",
+      "name": "Caesar Salad with crispy chicken",
+      "category": "SALADS",
+      "price": 4.5
+    },
+    {
+      "id": "7",
+      "name": "Caesar Salad with grilled chicken",
+      "category": "SALADS",
+      "price": 4.5
+    },
+    {
+      "id": "8",
+      "name": "Side Salad",
+      "category": "SALADS",
+      "price": 2.5
+    },
+    {
+      "id": "9",
+      "name": "Onion Rings",
+      "category": "FRIES_&_SIDES",
+      "price": 0.99
+    },
+    {
+      "id": "10",
+      "name": "Deluxe Fries",
+      "category": "FRIES_&_SIDES",
+      "price": 1.2
+    }
+  ]
+}

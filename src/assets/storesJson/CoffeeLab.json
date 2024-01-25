@@ -1,0 +1,53 @@
+{
+  "id": 18,
+  "name": "Coffee Lab",
+  "category": "COFFEE",
+  "address": "Athinaion 15",
+  "image": "https://imageproxy.wolt.com/mes-image/35d65592-ec79-423b-8921-ecb09cae52ba/a9bd9221-1631-4a00-92e4-5bde7b171e95",
+  "rating": {
+    "rate": 4.2,
+    "count": 352
+  },
+  "deliveryTime": 15,
+  "minConsumption": 2,
+  "deliveryCost": 1,
+  "region": "Larissa",
+  "products": [
+    {
+      "id": "17",
+      "name": "Cinnamon Donut",
+      "category": "DONUT",
+      "price": 2.2
+    },
+    {
+      "id": "18",
+      "name": "Donut Bavaria",
+      "category": "DONUT",
+      "price": 1.99
+    },
+    {
+      "id": "19",
+      "name": "Blackberry Cronut",
+      "category": "CRONUT",
+      "price": 1.5
+    },
+    {
+      "id": "20",
+      "name": "Nanou Burger",
+      "category": "BURGER",
+      "price": 4.3
+    },
+    {
+      "id": "21",
+      "name": "Donut Delizioso",
+      "category": "DONUT",
+      "price": 2.5
+    },
+    {
+      "id": "22",
+      "name": "Donut Oreo",
+      "category": "DONUT",
+      "price": 1.99
+    }
+  ]
+}
