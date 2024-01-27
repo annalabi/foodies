@@ -14,40 +14,40 @@
   "region": "Lamia",
   "products": [
     {
-      "id": "17",
+      "id": "1",
       "name": "Cinnamon Donut",
       "category": "DONUT",
       "price": 2.2
     },
     {
-      "id": "18",
+      "id": "2",
       "name": "Donut Bavaria",
       "category": "DONUT",
       "price": 1.99
     },
     {
-      "id": "19",
-      "name": "Blackberry Cronut",
-      "category": "CRONUT",
-      "price": 1.5
-    },
-    {
-      "id": "20",
-      "name": "Nanou Burger",
-      "category": "BURGER",
-      "price": 4.3
-    },
-    {
-      "id": "21",
+      "id": "5",
       "name": "Donut Delizioso",
       "category": "DONUT",
       "price": 2.5
     },
     {
-      "id": "22",
+      "id": "6",
       "name": "Donut Oreo",
       "category": "DONUT",
       "price": 1.99
+    },
+    {
+      "id": "3",
+      "name": "Blackberry Cronut",
+      "category": "CRONUT",
+      "price": 1.5
+    },
+    {
+      "id": "4",
+      "name": "Nanou Burger",
+      "category": "BURGER",
+      "price": 4.3
     }
   ]
 }

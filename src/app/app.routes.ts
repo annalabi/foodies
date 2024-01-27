@@ -6,7 +6,6 @@ import { FileNotFoundComponent } from './components/file-not-found/file-not-foun
 import { HomeComponent } from './components/home/home.component';
 import { AboutUsComponent } from './components/footer/about-us/about-us.component';
 import { SingUpFormComponent } from './components/sing-up-form/sing-up-form.component';
-import { loginFormComponent } from './components/log-in-form/log-in-form.component';
 import { FAQsComponent } from './components/footer/faqs/faqs.component';
 import { HowItWorksComponent } from './components/footer/how-it-works/how-it-works.component';
 import { ProductsComponent } from './components/products/products.component';
@@ -24,7 +23,6 @@ export const routes: Routes = [
     {path: 'main/:name', component: ProductsComponent},
     {path: 'aboutUs', component: AboutUsComponent},
     {path: 'signUp', component: SingUpFormComponent},
-    {path: 'login', component: loginFormComponent},
     {path: 'FAQs', component: FAQsComponent},
     {path: 'howItWorks', component: HowItWorksComponent},
     {path: 'contactus', component: ContactUsComponent},

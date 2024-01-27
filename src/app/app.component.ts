@@ -11,7 +11,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutUsComponent } from './components/footer/about-us/about-us.component';
 import { SingUpFormComponent } from './components/sing-up-form/sing-up-form.component';
-import { loginFormComponent } from './components/log-in-form/log-in-form.component';
 import { MostPopularChoicesComponent } from './components/home/most-popular-choices/most-popular-choices.component';
 import { WeFeedCitiesComponent } from './components/home/we-feed-cities/we-feed-cities.component';
 import { FAQsComponent } from './components/footer/faqs/faqs.component';
@@ -35,7 +34,6 @@ import { initFlowbite } from 'flowbite';
     AboutUsComponent,
     HeaderComponent,
     SingUpFormComponent,
-    loginFormComponent,
     MostPopularChoicesComponent,
     FAQsComponent,
     HowItWorksComponent,

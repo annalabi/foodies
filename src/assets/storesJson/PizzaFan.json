@@ -20,6 +20,18 @@
       "price": 2.2
     },
     {
+      "id": "21",
+      "name": "Donut Delizioso",
+      "category": "DONUT",
+      "price": 2.5
+    },
+    {
+      "id": "22",
+      "name": "Donut Oreo",
+      "category": "DONUT",
+      "price": 1.99
+    },
+    {
       "id": "18",
       "name": "Donut Bavaria",
       "category": "DONUT",
@@ -36,18 +48,6 @@
       "name": "Nanou Burger",
       "category": "BURGER",
       "price": 4.3
-    },
-    {
-      "id": "21",
-      "name": "Donut Delizioso",
-      "category": "DONUT",
-      "price": 2.5
-    },
-    {
-      "id": "22",
-      "name": "Donut Oreo",
-      "category": "DONUT",
-      "price": 1.99
     }
   ]
 }

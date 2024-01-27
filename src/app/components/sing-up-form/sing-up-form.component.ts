@@ -8,9 +8,16 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-sing-up-form',
   standalone: true,
-  imports: [CommonModule,NavbarComponent, RouterLink,RouterLinkActive, RouterOutlet,FooterComponent],
+  imports: [
+    CommonModule,
+    NavbarComponent,
+    RouterLink,
+    RouterLinkActive,
+    RouterOutlet,
+    FooterComponent,
+  ],
   templateUrl: './sing-up-form.component.html',
-  styleUrl: './sing-up-form.component.scss'
+  styleUrl: './sing-up-form.component.scss',
 })
 export class SingUpFormComponent implements OnInit {
   messageSent: boolean = false;
@@ -20,7 +27,9 @@ export class SingUpFormComponent implements OnInit {
 
   sendMessage(): void {
     // Get form values
-    this.fullName = (document.getElementById('full name') as HTMLInputElement).value;
+    this.fullName = (
+      document.getElementById('full name') as HTMLInputElement
+    ).value;
     const email = (document.getElementById('email') as HTMLInputElement).value;
     const phone = (document.getElementById('Phone') as HTMLInputElement).value;
 
@@ -28,7 +37,7 @@ export class SingUpFormComponent implements OnInit {
     const userData = {
       fullName: this.fullName,
       email,
-      phone
+      phone,
     };
 
     // Store data in session storage
@@ -40,7 +49,6 @@ export class SingUpFormComponent implements OnInit {
     // Navigate to the stores page
     this.router.navigate(['/main']);
   }
-  
 
   ngOnInit(): void {
     this.scrollService.startFromTop();

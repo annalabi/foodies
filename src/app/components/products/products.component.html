@@ -39,7 +39,7 @@
 
                   @if (category != product.category) {
                     <p class="pt-5 pl-2 text-teal-700 font-bold">
-                      {{ product.category }}
+                      {{ product.category | productCategoryToDisplay }}
                     </p>
                     <p class="border border-grayteal"></p>
                     {{categoryChanger(product.category)}}

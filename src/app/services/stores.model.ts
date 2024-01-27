@@ -15,7 +15,7 @@ export interface Store {
 export interface Products {
   id: number;
   name: string;
-  category: string;
+  category: ProductCategory;
   price: number;
 }
 
@@ -64,4 +64,16 @@ export const enum Region {
   Rethymno = 'Rethymno',
   Heraklion = 'Heraklion',
   All = 'all',
+}
+
+export const enum ProductCategory {
+  NOODLES = 'NOODLES',
+  RICE = 'RICE',
+  OTHER = 'OTHER',
+  DONUT = 'DONUT',
+  CRONUT = 'CRONUT',
+  BURGER = 'BURGER',
+  NUGGETS = 'NUGGETS',
+  SALADS = 'SALADS',
+  FRIES_AND_SIDES = 'FRIES_&_SIDES'
 }

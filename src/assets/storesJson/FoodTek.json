@@ -26,18 +26,6 @@
       "price": 1.99
     },
     {
-      "id": "19",
-      "name": "Blackberry Cronut",
-      "category": "CRONUT",
-      "price": 1.5
-    },
-    {
-      "id": "20",
-      "name": "Nanou Burger",
-      "category": "BURGER",
-      "price": 4.3
-    },
-    {
       "id": "21",
       "name": "Donut Delizioso",
       "category": "DONUT",
@@ -48,6 +36,18 @@
       "name": "Donut Oreo",
       "category": "DONUT",
       "price": 1.99
+    },
+    {
+      "id": "19",
+      "name": "Blackberry Cronut",
+      "category": "CRONUT",
+      "price": 1.5
+    },
+    {
+      "id": "20",
+      "name": "Nanou Burger",
+      "category": "BURGER",
+      "price": 4.3
     }
   ]
 }
