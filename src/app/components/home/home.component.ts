@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';
 
@@ -7,6 +7,8 @@ import { MostPopularChoicesComponent } from './most-popular-choices/most-popular
 import { WeFeedCitiesComponent } from './we-feed-cities/we-feed-cities.component';
 import { OrderWithWeFeedComponent } from './order-with-we-feed/order-with-we-feed.component';
 import { FooterComponent } from '../footer/footer.component';
+import { CityService } from '../../services/city.service';
+import { Region } from '../../services/stores.model';
 
 @Component({
   selector: 'app-home',
@@ -25,4 +27,12 @@ import { FooterComponent } from '../footer/footer.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent implements OnInit{
+  cityService = inject(CityService);
+
+
+  ngOnInit(): void {
+    this.cityService.setSelectedCity(Region.All);
+    
+  }
+}
