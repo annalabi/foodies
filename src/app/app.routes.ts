@@ -14,6 +14,7 @@ import { HowItWorksComponent } from './components/footer/how-it-works/how-it-wor
 import { ProductsComponent } from './components/products/products.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
+
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'main', component: MainComponent},

@@ -36,6 +36,11 @@ export class ShoppingBasketComponent {
     this.total = +this.total.toFixed(2)
   }
 
+  // modal
+  showModal = false;
+  toggleModal(){
+    this.showModal = !this.showModal;
+  }
   
   // for tests
   test(){

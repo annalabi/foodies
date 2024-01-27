@@ -17,6 +17,7 @@ import { WeFeedCitiesComponent } from './components/home/we-feed-cities/we-feed-
 import { FAQsComponent } from './components/footer/faqs/faqs.component';
 import { HowItWorksComponent } from './components/footer/how-it-works/how-it-works.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-root',
@@ -46,4 +47,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 })
 export class AppComponent {
   title = 'WeFeed';
+
+  ngOnInit(): void {
+    initFlowbite();
+  }
 }

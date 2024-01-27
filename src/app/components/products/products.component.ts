@@ -20,6 +20,7 @@ import { FooterComponent } from '../footer/footer.component';
 export class ProductsComponent {
   dataService: DataService = inject(DataService);
   products: Products[] = [];
+  image?: string;
   hasLoaded: boolean = false;
   activatedRoute = inject(ActivatedRoute);
   
@@ -65,6 +66,15 @@ export class ProductsComponent {
               this.hasLoaded = true;
             }
         })
+        this.dataService.getStoreByName(name)
+        .pipe(map((response: any) => response.image))
+        .subscribe({
+          next: response => {
+              console.log(response);
+              this.image = response;
+            }
+        })
+
       }
     })
   }
