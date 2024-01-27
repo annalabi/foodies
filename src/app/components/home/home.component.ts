@@ -9,6 +9,7 @@ import { OrderWithWeFeedComponent } from './order-with-we-feed/order-with-we-fee
 import { FooterComponent } from '../footer/footer.component';
 import { CityService } from '../../services/city.service';
 import { Region } from '../../services/stores.model';
+import { CustomersCommentsComponent } from '../../customers-comments/customers-comments.component';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,8 @@ import { Region } from '../../services/stores.model';
     MostPopularChoicesComponent,
     WeFeedCitiesComponent,
     OrderWithWeFeedComponent,
-    FooterComponent
+    FooterComponent,
+    CustomersCommentsComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

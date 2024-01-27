@@ -17,6 +17,7 @@ import { FAQsComponent } from './components/footer/faqs/faqs.component';
 import { HowItWorksComponent } from './components/footer/how-it-works/how-it-works.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { initFlowbite } from 'flowbite';
+import { CustomersCommentsComponent } from './customers-comments/customers-comments.component';
 
 @Component({
   selector: 'app-root',
@@ -38,7 +39,9 @@ import { initFlowbite } from 'flowbite';
     FAQsComponent,
     HowItWorksComponent,
     ContactUsComponent,
-    WeFeedCitiesComponent
+    WeFeedCitiesComponent,
+    CustomersCommentsComponent
+    
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
