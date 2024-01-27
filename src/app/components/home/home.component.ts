@@ -9,7 +9,8 @@ import { OrderWithWeFeedComponent } from './order-with-we-feed/order-with-we-fee
 import { FooterComponent } from '../footer/footer.component';
 import { CityService } from '../../services/city.service';
 import { Region } from '../../services/stores.model';
-import { CustomersCommentsComponent } from '../../customers-comments/customers-comments.component';
+import { CustomersCommentsComponent } from './customers-comments/customers-comments.component';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-home',
@@ -31,10 +32,17 @@ import { CustomersCommentsComponent } from '../../customers-comments/customers-c
 })
 export class HomeComponent implements OnInit{
   cityService = inject(CityService);
+  scrollService = inject(ScrollService);
 
 
   ngOnInit(): void {
     this.cityService.setSelectedCity(Region.All);
+    this.scrollService.startFromTop();
     
   }
+ 
+ 
+   
+  
 }
+

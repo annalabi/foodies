@@ -105,7 +105,7 @@ h1 {
     }
   }
 }
-.address-box {
+.message {
   position: absolute;
   bottom: 25%;
   left: 40%;
@@ -113,9 +113,14 @@ h1 {
   font: 15px Comic Sans MS;
 }
 @media (max-width: 768px) {
-  .address-box {
+  .message {
     position: absolute;
     bottom: 30%; /* Adjust as needed */
     left: 50%;
     transform: translate(-50%, 50%);
   }}
+
+  .bg-gradient-to-r{ 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+  }
