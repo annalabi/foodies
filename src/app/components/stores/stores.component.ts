@@ -88,8 +88,11 @@ export class StoresComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.initialStore = this.stores;
+    // First it filters by region
     this.stores = this.filterStoresByRegion(this.region, this.stores);
+
+    // And then it sets the selected stores of each region as initial stores, in which all the other filters will be applied
+    this.initialStore = this.stores;
     this.scrollService.startFromTop();
 
     // this.cityService = this.cityService.selectedCity;
