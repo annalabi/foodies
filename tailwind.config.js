@@ -54,6 +54,7 @@ module.exports = {
       'blue-500':'#3b82f6',
       'red-400':'#f87171',
       'red-500':'#ef4444',
+      'red-700':'#b91c1c',
       'fuchsia-400': '#e879f9',
       
     },

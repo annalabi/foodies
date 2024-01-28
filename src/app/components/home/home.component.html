@@ -14,7 +14,7 @@
         <span class="char">D</span>
       </h1>
 
-      <div class="address-box flex flex-col items-center justify-center">
+      <div class="message flex flex-col items-center justify-center">
         <div
           class="text-gray-900 text-center text-2xl bg-orange-50 bg-opacity-60 rounded-lg p-0.5"
           [ngClass]="{
@@ -26,7 +26,16 @@
           <b>It's FOOD o'clock 🕘 </b>
         </div>
         <br />
-        <div class="relative">
+        <div class="flex flex-col items-center justify-center">
+        <a routerLink="/main" >
+          <button
+            class="bg-gradient-to-r from-teal-700 to-purple-400  hover:from-red-700 hover:to-orange-200 text-white text-xl font-semibold px-6 py-2 rounded-md"
+          >
+            ORDER NOW!
+          </button>
+      </a>
+      </div>
+        <!-- <div class="relative">
           <svg
             viewBox="0 0 24 24"
             class="w-6 h-6 absolute top-1/2 transform -translate-y-1/2 left-3 text-gray-500"
@@ -43,7 +52,7 @@
             placeholder="Enter delivery address"
             class="w-50 pl-12 pr-4 py-2 border rounded-md text-gray-700 leading-tight focus:border-yellow-400 focus:outline-none  hover:border-yellow-400"
           />
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -55,6 +64,10 @@
 
     <!-- Why order with We Feed -->
     <app-order-with-we-feed> </app-order-with-we-feed>
+     
+    <!-- Hear what We Feed's customers love! -->
+    <app-customers-comments></app-customers-comments>
+    
     <app-footer> </app-footer>
   </div>
 </div>
