@@ -140,12 +140,12 @@
           @for (store of stores; track $index) {
           <div class="w-96 sm:w-1/1 md:w-1/1 bg-white p-1">
             <button
-              class="hover:bg-offwhite hover:border-gray-light border border-gray-dark rounded-lg shadow"
+              class="hover:bg-offwhite hover:border-gray-light border border-gray-dark rounded-md shadow"
               (click)="nextPage(store.name)"
             >
               <div class="w-full h-64 overflow-hidden">
                 <img
-                  class="rounded-t-sm w-full h-64 hover:scale-110 transition duration-500 cursor-pointer object-cover"
+                  class="rounded-t-md w-full h-64 hover:scale-110 transition duration-500 cursor-pointer object-cover"
                   [src]="store.image"
                   alt="Image of store"
                 />
