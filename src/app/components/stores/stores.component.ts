@@ -8,16 +8,20 @@ import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from '../footer/footer.component';
 import { ProductsComponent } from '../products/products.component';
 import { ScrollService } from '../../services/scroll.service';
-import { DropdownComponent } from '../dropdown/dropdown.component';
-import { DropdownItems } from '../dropdown/dropdown.model';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { DropdownItems } from './dropdown/dropdown.model';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FoodCategoryToDisplayPipe } from '../../pipes/food-category-to-display.pipe';
 import { CityService } from '../../services/city.service';
 import { Observable } from 'rxjs';
+import { RatingSliderComponent } from './rating-slider/rating-slider.component';
+import { RatingSlider } from './rating-slider/ratingSlider.model';
 
 @Component({
   selector: 'app-stores',
   standalone: true,
+  templateUrl: './stores.component.html',
+  styleUrl: './stores.component.scss',
   imports: [
     FoodCategoryToDisplayPipe,
     DropdownComponent,
@@ -29,9 +33,8 @@ import { Observable } from 'rxjs';
     MatButtonModule,
     NavbarComponent,
     FooterComponent,
+    RatingSliderComponent,
   ],
-  templateUrl: './stores.component.html',
-  styleUrl: './stores.component.scss',
 })
 export class StoresComponent implements OnInit {
   service = inject(StoresService);
@@ -72,7 +75,7 @@ export class StoresComponent implements OnInit {
   chalkidaFilter = Region.Chalkida;
   serresFilter = Region.Serres;
   volosFilter = Region.Volos;
-  rethymnoFilterr = Region.Rethymno;
+  rethymnoFilter = Region.Rethymno;
   heraklionFilter = Region.Heraklion;
 
   // Dropdown Filters
@@ -84,6 +87,9 @@ export class StoresComponent implements OnInit {
     { label: 'Sort by min consumption', value: '05' },
     { label: 'Sort by delivery cost', value: '06' },
   ];
+
+  // Filter By Rating
+  ratingValue: number = 0;
 
   constructor() {}
 
@@ -119,6 +125,7 @@ export class StoresComponent implements OnInit {
 
   filterStoreByFoodCategory() {
     // initial state
+    this.ratingValue = 0;
     this.stores = this.initialStore;
     if (this.enabledCategoryFilters.length > 0) {
       this.stores = this.stores.filter((value) =>
@@ -131,8 +138,43 @@ export class StoresComponent implements OnInit {
     return this.enabledCategoryFilters.includes(foodCategory);
   }
 
+  // Cities filter
+  isSelectedCity(region: Region): boolean {
+    return this.chosenCity.includes(region);
+  }
+
+  updateEnabledCities(region: Region) {
+    if (this.chosenCity.includes(region)) {
+      this.chosenCity = this.chosenCity.filter((value) => value !== region);
+    } else {
+      // push category
+      this.chosenCity.push(region);
+    }
+
+    this.filterStoreByCity();
+  }
+
+  filterStoreByCity() {
+    // initial state
+    this.ratingValue = 0;
+    this.stores = this.initialStore;
+    if (this.chosenCity.length > 0) {
+      this.stores = this.stores.filter((value) =>
+        this.chosenCity.includes(value.region)
+      );
+    }
+  }
+
+  // filter by rating
+  filterByRating(rating: number): void {
+    // must update value
+    this.ratingValue = rating;
+    this.stores = this.initialStore;
+    this.stores = this.stores.filter((store) => store.rating.rate >= rating);
+  }
+
+  // dropdown filters
   selectFilter(dropdownItem: DropdownItems): void {
-    console.log(dropdownItem);
     // sort by name
     if (dropdownItem.value === '01') {
       this.sortByName();
