@@ -19,7 +19,7 @@
 
     <div class="flex">
       <p class="flex items-center ">{{product.counter}}x</p>
-      <div class="group bg-white hover:bg-gray-100 ring-2 ring-gray-200 hover:ring-teal rounded-3xl m-2 grow">
+      <div class="group bg-white hover:bg-gray-100 ring-2 ring-gray-200 hover:ring-teal-700 rounded-3xl m-2 grow">
         
         <div class="relative pb-2 flex-col rounded-lg p-4" >
             <a class="flex-1 font-semibold text-gray-900 ">
@@ -44,7 +44,7 @@
   <div class="grid grid-cols-3 pt-2 pl-2 ">
     <p class="text-teal font-bold pt-1">TOTAL:</p>
     <p class="text-lg pb-2">{{total}}€</p>
-    <button class="pb-5" (click)="toggleModal()">Checkout</button>
+    <button class="pb-5 text-green-500" (click)="toggleModal()">Checkout</button>
   </div>
         
   <!-- checkout -->
