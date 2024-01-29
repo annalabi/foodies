@@ -3,6 +3,7 @@
     "name": "McDonald's",
     "category": "FAST_FOOD",
     "address": "Syntagma 15",
+    "image": "/assets/images/mcdonalds1.jpg",
     "products": [
         {
             "id": "1",
