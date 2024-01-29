@@ -17,13 +17,15 @@
         "id": "11",
         "name": "Pork Noodles with teriyaki",
         "category": "NOODLES",
-        "price": 7.2
+        "price": 7.2,
+        "counter": 1
       },
       {
         "id": "12",
         "name": "Chicken Egg Noodles with sweet chili",
         "category": "NOODLES",
-        "price": 8.2
+        "price": 8.2,
+        "counter": 1
       },
       {
         "id": "13",

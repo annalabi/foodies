@@ -25,15 +25,28 @@ export class ShoppingBasketComponent {
   }
 
   addedProduct(selectedProduct: Products){
-    this.addedProducts.push(selectedProduct)
+
+    if(this.addedProducts.includes(selectedProduct) ){
+      selectedProduct.counter += 1;
+    }
+    else{
+      this.addedProducts.push(selectedProduct)
+    }
     this.total += selectedProduct.price
     this.total = +this.total.toFixed(2)
   }
 
   removeProduct(index: number){
     this.total -= this.addedProducts[index].price
-    this.addedProducts.splice(index,1)
     this.total = +this.total.toFixed(2)
+
+    if(this.addedProducts[index].counter !== 1 ){
+      this.addedProducts[index].counter -= 1
+    }
+    else{
+      this.addedProducts.splice(index,1)
+    }
+    
   }
 
   // modal

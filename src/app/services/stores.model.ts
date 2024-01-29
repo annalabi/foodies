@@ -17,6 +17,7 @@ export interface Products {
   name: string;
   category: ProductCategory;
   price: number;
+  counter: number;
 }
 
 export interface Rating {
