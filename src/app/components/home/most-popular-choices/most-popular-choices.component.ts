@@ -6,7 +6,7 @@ import {
   ViewChild,
 
 } from '@angular/core';
-import { CardService } from '../../../card.service';
+import { CardService } from '../../../services/card.service';
 import {
   Router,
   RouterLink,

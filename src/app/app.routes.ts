@@ -10,6 +10,7 @@ import { FAQsComponent } from './components/footer/faqs/faqs.component';
 import { HowItWorksComponent } from './components/footer/how-it-works/how-it-works.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 
 
 export const routes: Routes = [
@@ -27,6 +28,7 @@ export const routes: Routes = [
     {path: 'howItWorks', component: HowItWorksComponent},
     {path: 'contactus', component: ContactUsComponent},
     {path: 'shoppingBasket', component: ShoppingBasketComponent},
+    { path: 'orderHistory', component: OrderHistoryComponent },
     { path: '', redirectTo: 'home',  pathMatch: 'full' },
     { path: '**', component: FileNotFoundComponent}
 ];

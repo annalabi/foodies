@@ -8,7 +8,7 @@ import { FamousStore } from './stores.model';
   providedIn: 'root'
 })
 export class CardService {
-
+ 
   http = inject(HttpClient)
   
   
@@ -26,7 +26,4 @@ export class CardService {
     );
   }
 }
-
-
-
 
