@@ -17,37 +17,43 @@
       "id": "1",
       "name": "Pork Noodles with teriyaki",
       "category": "NOODLES",
-      "price": 7.2
+      "price": 7.2,
+      "counter": 1
     },
     {
       "id": "2",
       "name": "Chicken Egg Noodles with sweet chili",
       "category": "NOODLES",
-      "price": 8.2
+      "price": 8.2,
+      "counter": 1
     },
     {
       "id": "3",
       "name": "Beef Rice Noodles with cantonese",
       "category": "NOODLES",
-      "price": 7.2
+      "price": 7.2,
+      "counter": 1
     },
     {
       "id": "4",
       "name": "Shrimp White Rice with Coconut Curry",
       "category": "RICE",
-      "price": 8.2
+      "price": 8.2,
+      "counter": 1
     },
     {
       "id": "5",
       "name": "Mushroom Brown Rice with satay",
       "category": "RICE",
-      "price": 7.2
+      "price": 7.2,
+      "counter": 1
     },
     {
       "id": "6",
       "name": "Mixed ingredients with pineapple, brocoli, baby corn and black mushrooms",
       "category": "OTHER",
-      "price": 5.2
+      "price": 5.2,
+      "counter": 1
     }
   ]
 }

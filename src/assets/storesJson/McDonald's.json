@@ -8,61 +8,71 @@
             "id": "1",
             "name": "Big Mac",
             "category": "BURGERS",
-            "price" : 4.99
+            "price" : 4.99,
+            "counter": 1
         },
         {
             "id": "2",
             "name": "Crispy McBacon",
             "category": "BURGERS",
-            "price" : 3.99
+            "price" : 3.99,
+            "counter": 1
         },
         {
             "id": "3",
             "name": "Deluxe Burger",
             "category": "BURGERS",
-            "price" : 2.99
+            "price" : 2.99,
+            "counter": 1
         },
         {
             "id": "4",
             "name": "Single Big Tasty Chicken Bacon",
             "category": "BURGERS",
-            "price" : 2.79
+            "price" : 2.79,
+            "counter": 1
         },
         {
             "id": "5",
             "name": "Chicken McNuggets",
             "category": "NUGGETS",
-            "price" : 3.99
+            "price" : 3.99,
+            "counter": 1
         },
         {
             "id": "6",
             "name": "Caesar Salad with crispy chicken",
             "category": "SALADS",
-            "price" : 4.50
+            "price" : 4.50,
+            "counter": 1
         },
         {
             "id": "7",
             "name": "Caesar Salad with grilled chicken",
             "category": "SALADS",
-            "price" : 4.50
+            "price" : 4.50,
+            "counter": 1
         },
         {
             "id": "8",
             "name": "Side Salad",
             "category": "SALADS",
-            "price" : 2.50
+            "price" : 2.50,
+            "counter": 1
         },
         {
             "id": "9",
             "name": "Onion Rings",
             "category": "FRIES_&_SIDES",
-            "price" : 0.99
+            "price" : 0.99,
+            "counter": 1
         },
         {
             "id": "10",
             "name": "Deluxe Fries",
             "category": "FRIES_&_SIDES",
-            "price" : 1.20
+            "price" : 1.20,
+            "counter": 1
         }
     ]
 }
