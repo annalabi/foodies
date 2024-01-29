@@ -17,37 +17,43 @@
       "id": "1",
       "name": "Cinnamon Donut",
       "category": "DONUT",
-      "price": 2.2
+      "price": 2.2,
+      "counter": 1
     },
     {
       "id": "2",
       "name": "Donut Bavaria",
       "category": "DONUT",
-      "price": 1.99
+      "price": 1.99,
+      "counter": 1
     },
     {
       "id": "5",
       "name": "Donut Delizioso",
       "category": "DONUT",
-      "price": 2.5
+      "price": 2.5,
+      "counter": 1
     },
     {
       "id": "6",
       "name": "Donut Oreo",
       "category": "DONUT",
-      "price": 1.99
+      "price": 1.99,
+      "counter": 1
     },
     {
       "id": "3",
       "name": "Blackberry Cronut",
       "category": "CRONUT",
-      "price": 1.5
+      "price": 1.5,
+      "counter": 1
     },
     {
       "id": "4",
       "name": "Nanou Burger",
       "category": "BURGER",
-      "price": 4.3
+      "price": 4.3,
+      "counter": 1
     }
   ]
 }
