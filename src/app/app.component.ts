@@ -17,7 +17,7 @@ import { HowItWorksComponent } from './components/footer/how-it-works/how-it-wor
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { initFlowbite } from 'flowbite';
 import { CustomersCommentsComponent } from './components/home/customers-comments/customers-comments.component';
-import { OrderHistoryComponent } from './order-history/order-history.component';
+import { OrderHistoryComponent } from './components/order-history/order-history.component';
 
 @Component({
   selector: 'app-root',

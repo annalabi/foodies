@@ -12,6 +12,20 @@ export interface Store {
   products: Products[];
 }
 
+export interface StoreByCity {
+  id: number;
+  name: string;
+  category: FoodCategory;
+  address: string;
+  image: string;
+  rating: Rating;
+  deliveryTime: number;
+  minConsumption: number;
+  deliveryCost: number;
+  region: Region;
+  products: Products[];
+}
+
 export interface Products {
   id: number;
   name: string;
