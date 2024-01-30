@@ -32,6 +32,7 @@ export interface Products {
   category: ProductCategory;
   price: number;
   counter: number;
+  storeId: Store["id"];
 }
 
 export interface Rating {
