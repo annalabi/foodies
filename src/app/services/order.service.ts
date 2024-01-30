@@ -13,10 +13,20 @@ export class OrderService {
   // Fetch order history for a specific user
   getUserOrderHistory(email: string): Observable<Order[]> {
     console.log('Fetching orders for user with email:', email);
+    let ordersStr:string|null= sessionStorage.getItem("orders");
+    let allOrders;
+    if (ordersStr){
+      allOrders = JSON.parse(ordersStr);
+
+    } else{
+      allOrders=[];
+    }
+    console.log ("...")
+    console.log(allOrders)
 
     // Fetching orders based on user email
-    const ordersForUser: Order[] = this.userOrders.filter(
-      (order) => order.email === email
+    const ordersForUser: Order[] = allOrders.filter(
+      (order:any):boolean => order.user.email === email
     );
     console.log('Orders for user:', ordersForUser);
     return of(ordersForUser);

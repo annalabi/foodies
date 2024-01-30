@@ -32,6 +32,7 @@ export class ProductsComponent {
   image?: string;
   hasLoaded: boolean = false;
   activatedRoute = inject(ActivatedRoute);
+  private storeId!: number;
 
   // category display
   category!: string;
@@ -55,6 +56,7 @@ export class ProductsComponent {
   publisherService = inject(PublisherService);
 
   addProduct(product: Products) {
+    product.storeId=this.storeId;
     this.publisherService.publishData(product);
   }
 
@@ -64,11 +66,12 @@ export class ProductsComponent {
         let name = params.name;
         this.dataService
           .getStoreByName(name)
-          .pipe(map((response: any) => response.products))
+          .pipe(map((response: any) => response))
           .subscribe({
             next: (response) => {
               console.log(response);
-              this.products = response;
+              this.storeId=response.id;
+              this.products = response.products;
               this.hasLoaded = true;
             },
           });
