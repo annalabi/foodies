@@ -33,7 +33,7 @@ module.exports = {
       'emerald-600': '#059669',
       'grayteal':'#2c4d4a',
       'white': '#fff',
-      'offwhite': '#C8BEBE',
+      'offwhite': '#faf7f8',
       'orange-50': '#fff7ed',
       'orange-100': '#ffedd5',
       'orange-300': '#fdba74',

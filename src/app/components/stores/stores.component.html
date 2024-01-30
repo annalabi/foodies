@@ -1,18 +1,132 @@
-<div *ngIf="stores && region" class="flex flex-col m-3">
+<div *ngIf="stores && region" class="flex flex-col m-1">
   <div class="mt-16 mx-auto">
     <!-- filters -->
     <div class="flex my-2">
       <div
-        class="h-auto bg-gray-100 border-gray-600 mx-4 pl-4 pr-8 overflow-y-auto max-w-xs"
+        class="rounded-md h-auto min-h-screen bg-gray-100 border-gray-600 mx-4 pl-4 pr-8 overflow-y-auto max-w-xs h-screen sticky top-20"
       >
         <div>
-          <div>
+          <!-- <div>
             <app-dropdown
               [dropdownItems]="dropdownItems"
-              (itemClicked)="selectFilter($event)"
-            />
+              (itemClicked)="selectFilter($event, stores)"
+            /> -->
+
+            <!-- Cities -->
             <div>
-              <p class="text-2xl !my-6 !ml-1">Category</p>
+              <p class="text-2xl font-normal !mt-1 !mb-2 !ml-1">Cities</p>
+              <button
+                [ngClass]="{
+                'bg-gray-400': isSelectedCity(athensFilter),
+              }"
+                (click)="updateEnabledCities(athensFilter)"
+                class="p-2 mx-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              >
+                Athens
+              </button>
+              <button
+                [ngClass]="{
+              'bg-gray-400': isSelectedCity(thessalonikiFilter),
+            }"
+                (click)="updateEnabledCities(thessalonikiFilter)"
+                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              >
+                Thessaloniki
+              </button>
+              <button
+                [ngClass]="{
+              'bg-gray-400': isSelectedCity(kavalaFilter),
+            }"
+                (click)="updateEnabledCities(kavalaFilter)"
+                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              >
+                Kavala
+              </button>
+              <button
+                [ngClass]="{
+              'bg-gray-400': isSelectedCity(ioanninaFilter),
+            }"
+                (click)="updateEnabledCities(ioanninaFilter)"
+                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              >
+                Ioannina
+              </button>
+              <button
+                [ngClass]="{
+              'bg-gray-400': isSelectedCity(patraFilter),
+            }"
+                (click)="updateEnabledCities(patraFilter)"
+                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              >
+                Patra
+              </button>
+              <button
+                [ngClass]="{
+              'bg-gray-400': isSelectedCity(lamiaFilter),
+            }"
+                (click)="updateEnabledCities(lamiaFilter)"
+                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              >
+                Lamia
+              </button>
+              <button
+                [ngClass]="{
+                'bg-gray-400': isSelectedCity(larissaFilter),
+              }"
+                (click)="updateEnabledCities(larissaFilter)"
+                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              >
+                Larissa
+              </button>
+              <button
+                [ngClass]="{
+              'bg-gray-400': isSelectedCity(chalkidaFilter),
+            }"
+                (click)="updateEnabledCities(chalkidaFilter)"
+                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              >
+                Chalkida
+              </button>
+              <button
+                [ngClass]="{
+              'bg-gray-400': isSelectedCity(serresFilter),
+            }"
+                (click)="updateEnabledCities(serresFilter)"
+                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              >
+                Serres
+              </button>
+              <button
+                [ngClass]="{
+              'bg-gray-400': isSelectedCity(volosFilter),
+            }"
+                (click)="updateEnabledCities(volosFilter)"
+                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              >
+                Volos
+              </button>
+              <button
+                [ngClass]="{
+              'bg-gray-400': isSelectedCity(rethymnoFilter),
+            }"
+                (click)="updateEnabledCities(rethymnoFilter)"
+                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              >
+                Rethymno
+              </button>
+              <button
+                [ngClass]="{
+              'bg-gray-400': isSelectedCity(heraklionFilter),
+            }"
+                (click)="updateEnabledCities(heraklionFilter)"
+                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
+              >
+                Heraklion
+              </button>
+            </div>
+
+            <div>
+              <p class="text-2xl font-normal !mt-6 !mb-2 !ml-1">Category</p>
               <button
                 [ngClass]="{
                 'bg-gray-400': isSelected(fastfoodFilter),
@@ -131,127 +245,21 @@
                 Coctails
               </button>
             </div>
-
-            <!-- Cities -->
-            <div>
-              <p class="text-2xl !my-6 !ml-1">Cities</p>
-              <button
-                [ngClass]="{
-                'bg-gray-400': isSelectedCity(athensFilter),
-              }"
-                (click)="updateEnabledCities(athensFilter)"
-                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-              >
-                Athens
-              </button>
-              <button
-                [ngClass]="{
-              'bg-gray-400': isSelectedCity(thessalonikiFilter),
-            }"
-                (click)="updateEnabledCities(thessalonikiFilter)"
-                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-              >
-                Thessaloniki
-              </button>
-              <button
-                [ngClass]="{
-              'bg-gray-400': isSelectedCity(kavalaFilter),
-            }"
-                (click)="updateEnabledCities(kavalaFilter)"
-                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-              >
-                Kavala
-              </button>
-              <button
-                [ngClass]="{
-              'bg-gray-400': isSelectedCity(ioanninaFilter),
-            }"
-                (click)="updateEnabledCities(ioanninaFilter)"
-                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-              >
-                Ioannina
-              </button>
-              <button
-                [ngClass]="{
-              'bg-gray-400': isSelectedCity(patraFilter),
-            }"
-                (click)="updateEnabledCities(patraFilter)"
-                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-              >
-                Patra
-              </button>
-              <button
-                [ngClass]="{
-              'bg-gray-400': isSelectedCity(lamiaFilter),
-            }"
-                (click)="updateEnabledCities(lamiaFilter)"
-                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-              >
-                Lamia
-              </button>
-              <button
-                [ngClass]="{
-                'bg-gray-400': isSelectedCity(larissaFilter),
-              }"
-                (click)="updateEnabledCities(larissaFilter)"
-                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-              >
-                Larissa
-              </button>
-              <button
-                [ngClass]="{
-              'bg-gray-400': isSelectedCity(chalkidaFilter),
-            }"
-                (click)="updateEnabledCities(chalkidaFilter)"
-                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-              >
-                Chalkida
-              </button>
-              <button
-                [ngClass]="{
-              'bg-gray-400': isSelectedCity(serresFilter),
-            }"
-                (click)="updateEnabledCities(serresFilter)"
-                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-              >
-                Serres
-              </button>
-              <button
-                [ngClass]="{
-              'bg-gray-400': isSelectedCity(volosFilter),
-            }"
-                (click)="updateEnabledCities(volosFilter)"
-                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-              >
-                Volos
-              </button>
-              <button
-                [ngClass]="{
-              'bg-gray-400': isSelectedCity(rethymnoFilter),
-            }"
-                (click)="updateEnabledCities(rethymnoFilter)"
-                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-              >
-                Rethymno
-              </button>
-              <button
-                [ngClass]="{
-              'bg-gray-400': isSelectedCity(heraklionFilter),
-            }"
-                (click)="updateEnabledCities(heraklionFilter)"
-                class="p-2 m-1 rounded-full text-base text-md text-gray-dark bg-gray-200 hover:bg-gray-400 hover:drop-shadow-md duration-300"
-              >
-                Heraklion
-              </button>
-            </div>
-
             <!-- Rating -->
-            <div>
+            <div class="text-2xl font-normal !mt-6 !ml-1">
               <app-rating-slider
                 (sliderValue)="filterByRating($event)"
                 [ratingValue]="ratingValue"
               />
+              <div class="text-center text-lg my-2 font-light ">
+                <p>{{ ratingValue }}</p>
+              </div>
             </div>
+            <div class="!mt-10">
+              <app-dropdown
+                [dropdownItems]="dropdownItems"
+                (itemClicked)="selectFilter($event, stores)"
+              />
           </div>
         </div>
       </div>
@@ -260,14 +268,14 @@
       <div>
         <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4">
           @for (store of stores; track $index) {
-          <div class="w-96 sm:w-1/1 md:w-1/1 bg-white p-1">
+          <div class="w-96 sm:w-1/1 md:w-1/1 bg-white">
             <button
-              class="hover:bg-offwhite hover:border-gray-light border border-gray-dark rounded-md shadow"
+              class="hover:border-gray-light border border-gray-dark rounded-md shadow"
               (click)="nextPage(store.name)"
             >
               <div class="w-full h-64 overflow-hidden">
                 <img
-                  class="rounded-t-md w-full h-64 hover:scale-110 transition duration-500 cursor-pointer object-cover"
+                  class="rounded-t-md w-96 h-64 hover:scale-110 transition duration-500 cursor-pointer object-cover"
                   [src]="store.image"
                   alt="Image of store"
                 />
@@ -281,6 +289,9 @@
 
                     <p class="category text-center">
                       {{ store.category | foodCategoryToDisplay }}
+                    </p>
+                    <p class="category text-center">
+                      {{ store.region }}
                     </p>
                     <p>✨{{ store.rating.rate }} ({{ store.rating.count }})</p>
                     <hr

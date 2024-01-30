@@ -21,8 +21,7 @@ export class RatingSliderComponent {
   @Output() sliderValue: EventEmitter<number> = new EventEmitter<number>();
 
   onSliderChange(event: any) {
-    this.ratingValue = event.target.value;
-    this.sliderValue.emit(event.target.value);
+    this.ratingValue = parseFloat(event.target.value);
+    this.sliderValue.emit(this.ratingValue);
   }
-
 }
