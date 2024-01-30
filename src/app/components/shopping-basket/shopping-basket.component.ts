@@ -4,6 +4,7 @@ import { PublisherService } from '../../services/publisher.service';
 import { CommonModule } from '@angular/common';
 import { OrderService } from '../../services/order.service';
 import { Subscription } from 'rxjs';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-shopping-basket',
@@ -20,17 +21,16 @@ export class ShoppingBasketComponent implements OnDestroy {
   total: number = 0;
 
   constructor(private orderService: OrderService) {
-    this.loadCartFromLocalStorage(); // Load cart data from localStorage on component initialization
+    // Load cart data from localStorage on component initialization
+    this.loadCartFromLocalStorage();
     this.listenForProductsSubscription = this.publisherService
       .listenForData()
       .subscribe((productToBeAdded) => {
         this.addedProduct(productToBeAdded);
       });
-
   }
   // destroy connection once you leave stores
   ngOnDestroy(): void {
-    
     if (this.listenForProductsSubscription) {
       this.listenForProductsSubscription.unsubscribe();
       console.log('destroy');
@@ -61,24 +61,22 @@ export class ShoppingBasketComponent implements OnDestroy {
       localStorage.removeItem('cart');
       this.addedProducts = [];
       this.addedProducts.push(selectedProduct);
-      
     } else {
-    
-    const existingProduct = this.addedProducts.find(
-      (product: Products): boolean => product.id === selectedProduct.id
-    );
+      const existingProduct = this.addedProducts.find(
+        (product: Products): boolean => product.id === selectedProduct.id
+      );
 
-    if (existingProduct) {
-      existingProduct.counter += 1;
-    } else {
-      selectedProduct.counter = 1;
-      this.addedProducts.push(selectedProduct);
-    }
+      if (existingProduct) {
+        existingProduct.counter += 1;
+      } else {
+        selectedProduct.counter = 1;
+        this.addedProducts.push(selectedProduct);
+      }
     }
     this.updateCartTotal();
-    this.saveCartToLocalStorage(); // Save updated cart data to localStorage
-  
-}
+    // Save updated cart data to localStorage
+    this.saveCartToLocalStorage();
+  }
 
   removeProduct(index: number) {
     const removedProduct = this.addedProducts[index];
@@ -90,7 +88,8 @@ export class ShoppingBasketComponent implements OnDestroy {
     }
 
     this.updateCartTotal();
-    this.saveCartToLocalStorage(); // Save updated cart data to localStorage
+    // Save updated cart data to localStorage
+    this.saveCartToLocalStorage();
   }
   updateCartTotal() {
     this.total = this.addedProducts.reduce(
@@ -114,7 +113,8 @@ export class ShoppingBasketComponent implements OnDestroy {
     // Clear the cart
     this.addedProducts = [];
     this.total = 0;
-    this.saveCartToLocalStorage(); // Save updated cart data to localStorage
+    // Save updated cart data to localStorage
+    this.saveCartToLocalStorage();
   }
   getStoreId(product: Products) {
     return product.storeId;
@@ -130,11 +130,12 @@ export class ShoppingBasketComponent implements OnDestroy {
     // Get user data
     const userDataString = sessionStorage.getItem('userData');
     console.log('User Data:', userDataString);
-    let userData: { 
-      fullName: any,
-      email: any };
-    // Check if userDataString is not null
+    let userData: {
+      fullName: any;
+      email: any;
+    };
 
+    // Check if userDataString is not null
     if (userDataString !== null) {
       userData = JSON.parse(userDataString);
       console.log('User Data:', userData);
@@ -142,15 +143,16 @@ export class ShoppingBasketComponent implements OnDestroy {
 
       // Check if userData is not null
       if (userData !== null) {
+        const orderId: string = uuidv4();
         // Place order using OrderService
         this.orderService
           .placeOrder({
             user: userData,
             items: this.addedProducts,
             total: this.total,
-            orderId: '',
+            orderId: orderId,
             email: '',
-            image: []
+            image: [],
           })
           .subscribe((response) => {
             console.log(response);

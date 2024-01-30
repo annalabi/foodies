@@ -8,14 +8,11 @@
   <div class="mx-auto mt-16">
     <div *ngFor="let order of userOrders$ | async" class="mb-16">
       <div class="bg-white rounded-lg shadow-md flex">
-        
         <img
           class="w-1/2 h-26 object-cover"
           src="/assets/images/order-history.avif"
           alt="Order Image"
         />
-
-        
         <div class="flex-1 p-4 mt-14">
           <div class="flex justify-between items-center mb-4">
             <div>
@@ -23,9 +20,11 @@
                 Here's your order {{ order.user.fullName }}..
               </h3>
             </div>
-           
           </div>
-
+          <div class="flex items-center">
+            <p class="text-lg text-yellow-400">Order ID:</p>
+            <p class="OrderId">{{ order.orderId }}</p>
+          </div>
           <p class="text-lg text-yellow-400">Items:</p>
           <ul class="list-disc pl-4 mt-8">
             <li *ngFor="let item of order.items" class="mt-4">
@@ -47,6 +46,5 @@
       </div>
     </div>
   </div>
-
   <app-footer class="mt-auto"> </app-footer>
 </div>

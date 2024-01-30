@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { FAQsComponent } from './faqs/faqs.component';
-import { HowItWorksComponent } from './how-it-works/how-it-works.component';
-import { AboutUsComponent } from './about-us/about-us.component';
 import { CommonModule } from '@angular/common';
 
 @Component({

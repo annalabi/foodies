@@ -42,8 +42,11 @@ export class SingUpFormComponent implements OnInit {
 
     // Store data in session storage
     sessionStorage.setItem('userData', JSON.stringify(userData));
-    console.log('Session Storage after storing user data:', sessionStorage.getItem('userData'));
-   
+    console.log(
+      'Session Storage after storing user data:',
+      sessionStorage.getItem('userData')
+    );
+
     this.messageSent = true;
 
     // Navigate to the stores page

@@ -40,9 +40,9 @@ export class ContactUsComponent implements OnInit {
 
       Object.keys(formControls).forEach((key) => {
         const control = formControls[key];
-        control.setValue(null); // Set form control value to null or ''
-        control.markAsPristine(); // Mark form control as pristine
-        control.markAsUntouched(); // Mark form control as untouched
+        control.setValue(null); 
+        control.markAsPristine(); 
+        control.markAsUntouched(); 
       });
 
       // Mark the entire form as pristine

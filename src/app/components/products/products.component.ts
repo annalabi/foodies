@@ -6,10 +6,10 @@ import { Products } from '../../services/stores.model';
 import { DataService } from '../../services/data.service';
 import { ShoppingBasketComponent } from '../shopping-basket/shopping-basket.component';
 import { PublisherService } from '../../services/publisher.service';
-
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ProductCategoryToDisplayPipe } from '../../pipes/product-category-to-display';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -21,7 +21,7 @@ import { ProductCategoryToDisplayPipe } from '../../pipes/product-category-to-di
     RouterOutlet,
     NavbarComponent,
     FooterComponent,
-    ProductCategoryToDisplayPipe
+    ProductCategoryToDisplayPipe,
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
@@ -51,12 +51,18 @@ export class ProductsComponent {
   test() {
     console.log('hello');
   }
-
+  constructor(private router: Router) {}
   // add product
   publisherService = inject(PublisherService);
 
   addProduct(product: Products) {
-    product.storeId=this.storeId;
+    const userDataString = sessionStorage.getItem('userData');
+    if (!userDataString) {
+      // User is not signed up, navigate to the sign-up form
+      this.router.navigate(['/signUp']);
+      return;
+    }
+    product.storeId = this.storeId;
     this.publisherService.publishData(product);
   }
 
@@ -70,7 +76,7 @@ export class ProductsComponent {
           .subscribe({
             next: (response) => {
               console.log(response);
-              this.storeId=response.id;
+              this.storeId = response.id;
               this.products = response.products;
               this.hasLoaded = true;
             },

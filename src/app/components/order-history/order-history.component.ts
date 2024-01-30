@@ -10,14 +10,20 @@ import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-order-history',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterOutlet,NavbarComponent,FooterComponent],
+  imports: [
+    CommonModule,
+    RouterLink,
+    RouterOutlet,
+    NavbarComponent,
+    FooterComponent,
+  ],
   templateUrl: './order-history.component.html',
   styleUrl: './order-history.component.scss',
 })
 export class OrderHistoryComponent implements OnInit {
   userOrders$: Observable<Order[]> | undefined;
   orders: Order[] = [];
-image: any;
+  image: any;
 
   constructor(private orderService: OrderService) {
     console.log('OrderService injected into OrderHistoryComponent');
@@ -38,7 +44,6 @@ image: any;
           console.log('User Orders:', orders);
           this.userOrders$ = of(orders);
 
-          console.log('User Orders Observable:', this.userOrders$);
           // Check the type and content of orders
           if (Array.isArray(orders)) {
             this.userOrders$ = of(orders);
