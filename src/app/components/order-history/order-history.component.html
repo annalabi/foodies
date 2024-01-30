@@ -1,3 +1,52 @@
-<div *ngFor="let order of userOrders$ | async">
-    Order ID: {{ order.orderId }}, Items: {{ order.items.join(', ') }}, Total: {{ order.total }}€
+<div class="flex flex-col min-h-screen">
+  <div class="container">
+    <app-navbar></app-navbar>
   </div>
+  <div class="text-center mt-24">
+    <h2 class="text-gray-700">Check your orders!</h2>
+  </div>
+  <div class="mx-auto mt-16">
+    <div *ngFor="let order of userOrders$ | async" class="mb-16">
+      <div class="bg-white rounded-lg shadow-md flex">
+        
+        <img
+          class="w-1/2 h-26 object-cover"
+          src="/assets/images/order-history.avif"
+          alt="Order Image"
+        />
+
+        
+        <div class="flex-1 p-4 mt-14">
+          <div class="flex justify-between items-center mb-4">
+            <div>
+              <h3 class="text-yellow-400">
+                Here's your order {{ order.user.fullName }}..
+              </h3>
+            </div>
+           
+          </div>
+
+          <p class="text-lg text-yellow-400">Items:</p>
+          <ul class="list-disc pl-4 mt-8">
+            <li *ngFor="let item of order.items" class="mt-4">
+              {{ item.name }} : {{ item.price }}€ ┆ x{{ item.counter }}
+            </li>
+          </ul>
+          <hr class="mt-6 mb-6" />
+          <p class="mt-4 text-yellow-400">
+            🧺 Total: {{ order.total }}€
+            <a routerLink="/main">
+              <button
+                class="bg-gradient-to-r from-red-700 to-orange-200 hover:from-teal-700 hover:to-purple-400 text-white text-l font-semibold px-2 py-2 rounded-md ml-5"
+              >
+                Order more
+              </button>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer class="mt-auto"> </app-footer>
+</div>

@@ -27,9 +27,6 @@ export class ShoppingBasketComponent implements OnDestroy {
         this.addedProduct(productToBeAdded);
       });
 
-    // this.publisherService.listenForData().subscribe((data) => {
-    //       this.addedProduct(data);
-    //     });
   }
   // destroy connection once you leave stores
   ngOnDestroy(): void {
@@ -58,15 +55,15 @@ export class ShoppingBasketComponent implements OnDestroy {
     return false;
   }
 
-  // add products to cart
+  // add products to cart from new store
   addedProduct(selectedProduct: Products) {
     if (this.isNewStore(selectedProduct)) {
       localStorage.removeItem('cart');
       this.addedProducts = [];
       this.addedProducts.push(selectedProduct);
-      this.saveCartToLocalStorage();
+      
     } else {
-    }
+    
     const existingProduct = this.addedProducts.find(
       (product: Products): boolean => product.id === selectedProduct.id
     );
@@ -77,10 +74,11 @@ export class ShoppingBasketComponent implements OnDestroy {
       selectedProduct.counter = 1;
       this.addedProducts.push(selectedProduct);
     }
-
+    }
     this.updateCartTotal();
     this.saveCartToLocalStorage(); // Save updated cart data to localStorage
-  }
+  
+}
 
   removeProduct(index: number) {
     const removedProduct = this.addedProducts[index];
@@ -132,7 +130,9 @@ export class ShoppingBasketComponent implements OnDestroy {
     // Get user data
     const userDataString = sessionStorage.getItem('userData');
     console.log('User Data:', userDataString);
-    let userData: { email: any };
+    let userData: { 
+      fullName: any,
+      email: any };
     // Check if userDataString is not null
 
     if (userDataString !== null) {
@@ -150,11 +150,13 @@ export class ShoppingBasketComponent implements OnDestroy {
             total: this.total,
             orderId: '',
             email: '',
+            image: []
           })
           .subscribe((response) => {
             console.log(response);
 
             // Clear the cart after placing the order
+            this.clearCart();
             this.addedProducts = [];
             this.total = 0;
             console.log(

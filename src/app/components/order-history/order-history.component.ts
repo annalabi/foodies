@@ -4,17 +4,20 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { OrderService } from '../../services/order.service';
 import { Order } from '../../services/order.models';
 import { Observable, of } from 'rxjs';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-order-history',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterOutlet],
+  imports: [CommonModule, RouterLink, RouterOutlet,NavbarComponent,FooterComponent],
   templateUrl: './order-history.component.html',
   styleUrl: './order-history.component.scss',
 })
 export class OrderHistoryComponent implements OnInit {
   userOrders$: Observable<Order[]> | undefined;
   orders: Order[] = [];
+image: any;
 
   constructor(private orderService: OrderService) {
     console.log('OrderService injected into OrderHistoryComponent');
