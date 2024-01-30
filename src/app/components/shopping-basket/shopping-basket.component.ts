@@ -3,7 +3,7 @@ import { Products } from '../../services/stores.model';
 import { PublisherService } from '../../services/publisher.service';
 import { CommonModule } from '@angular/common';
 import { OrderService } from '../../services/order.service';
-import { Order } from '../../services/order.models';
+
 
 @Component({
   selector: 'app-shopping-basket',
@@ -19,35 +19,104 @@ export class ShoppingBasketComponent {
   total: number = 0;
 
   constructor(private orderService: OrderService) {
+    this.loadCartFromLocalStorage(); // Load cart data from localStorage on component initialization
+
     this.publisherService.listenForData().subscribe((data) => {
       this.addedProduct(data);
     });
   }
 
   addedProduct(selectedProduct: Products) {
+    const existingProduct = this.addedProducts.find(
+      (product) => product.id === selectedProduct.id
+    );
 
-    if(this.addedProducts.includes(selectedProduct) ){
-      selectedProduct.counter += 1;
-    }
-    else{
+    
+  if (existingProduct && existingProduct.storeId !== selectedProduct.storeId) {
+    // Clear the cart if the product is from a different store
+    this.clearCart();
+  }
+
+  // if (!selectedProduct.storeId) {
+  //   // Set the storeId dynamically based on your logic
+  //   selectedProduct.storeId = this.getStoreId(selectedProduct);
+  // }
+    if (existingProduct ) {
+      existingProduct.counter += 1;
+    } else {
+      selectedProduct.counter = 1;
       this.addedProducts.push(selectedProduct);
     }
-    this.total += selectedProduct.price;
+
+    this.updateCartTotal();
+    this.saveCartToLocalStorage(); // Save updated cart data to localStorage
+  } 
+
+
+
+  removeProduct(index: number) {
+    const removedProduct = this.addedProducts[index];
+
+    if (removedProduct.counter > 1) {
+      removedProduct.counter -= 1;
+    } else {
+      this.addedProducts.splice(index, 1);
+    }
+
+    this.updateCartTotal();
+    this.saveCartToLocalStorage(); // Save updated cart data to localStorage
+  }
+  updateCartTotal() {
+    this.total = this.addedProducts.reduce(
+      (sum, product) => sum + product.price * product.counter,
+      0
+    );
     this.total = +this.total.toFixed(2);
   }
 
-  removeProduct(index: number){
-    this.total -= this.addedProducts[index].price
-    this.total = +this.total.toFixed(2)
-
-    if(this.addedProducts[index].counter !== 1 ){
-      this.addedProducts[index].counter -= 1
+  loadCartFromLocalStorage() {
+    const cartDataString = localStorage.getItem('cart');
+    if (cartDataString) {
+      this.addedProducts = JSON.parse(cartDataString);
+      this.updateCartTotal();
     }
-    else{
-      this.addedProducts.splice(index,1)
-    }
-    
   }
+  saveCartToLocalStorage() {
+    localStorage.setItem('cart', JSON.stringify(this.addedProducts));
+  }
+  clearCart() {
+    // Clear the cart
+    this.addedProducts = [];
+    this.total = 0;
+    this.saveCartToLocalStorage(); // Save updated cart data to localStorage
+  }
+  getStoreId(product: Products) {
+   
+    return product.storeId;
+  }
+
+  //   if(this.addedProducts.includes(selectedProduct) ){
+  //     selectedProduct.counter += 1;
+  //   }
+  //   else{
+  //     this.addedProducts.push(selectedProduct);
+  //   }
+  //   this.total += selectedProduct.price;
+  //   this.total = +this.total.toFixed(2);
+  // }
+
+  // removeProduct(index: number){
+  //   this.total -= this.addedProducts[index].price
+  //   this.total = +this.total.toFixed(2)
+
+  //   if(this.addedProducts[index].counter !== 1 ){
+  //     this.addedProducts[index].counter -= 1
+  //   }
+  //   else{
+  //     this.addedProducts.splice(index,1)
+  //   }
+    
+  // }
 
   // modal
   showModal = false;
