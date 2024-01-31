@@ -115,12 +115,12 @@ export class StoresComponent implements OnInit {
     this.initialStore = this.stores;
     this.initialFamousStore = this.stores;
     this.stores = this.filterStoresByRegion(this.region, this.stores);
+    this.storesCounter = this.stores.length;
     this.storesByCity = this.filterStoresByRegion(
       this.region,
       this.storesByCity
     );
     this.scrollService.startFromTop();
-    this.storesCounter = this.stores.length;
   }
 
   // Function to handle search by store name
@@ -341,6 +341,7 @@ export class StoresComponent implements OnInit {
       return stores;
     }
     return stores.filter((store) => store.region === region);
+    
     // return region === Region.All ? stores :  stores.filter((store) => store.region === region);
   }
 
