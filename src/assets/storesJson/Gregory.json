@@ -14,41 +14,41 @@
   "region": "Chalkida",
   "products": [
     {
-      "id": "17",
+      "id": "1",
       "name": "Cinnamon Donut",
       "category": "DONUT",
       "price": 2.2,
       "counter": 1
     },{
-      "id": "21",
+      "id": "2",
       "name": "Donut Delizioso",
       "category": "DONUT",
       "price": 2.5,
       "counter": 1
     },
     {
-      "id": "22",
+      "id": "3",
       "name": "Donut Oreo",
       "category": "DONUT",
       "price": 1.99,
       "counter": 1
     },
     {
-      "id": "18",
+      "id": "4",
       "name": "Donut Bavaria",
       "category": "DONUT",
       "price": 1.99,
       "counter": 1
     },
     {
-      "id": "19",
+      "id": "5",
       "name": "Blackberry Cronut",
       "category": "CRONUT",
       "price": 1.5,
       "counter": 1
     },
     {
-      "id": "20",
+      "id": "6",
       "name": "Nanou Burger",
       "category": "BURGER",
       "price": 4.3,
