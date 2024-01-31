@@ -3,7 +3,7 @@
   "name": "Asian Wok",
   "category": "ASIAN",
   "address": "Glyfada Str. 203",
-  "image": "https://imageproxy.wolt.com/mes-image/00cfccff-810c-48c1-9fe5-18c0a8a0ce81/b85fa96d-40cf-44b2-b58c-c282156ecafa",
+  "image": "/assets/images/asian1.png",
   "rating": {
     "rate": 4.8,
     "count": 1760
@@ -14,42 +14,42 @@
   "region": "Ioannina",
   "products": [
     {
-      "id": "11",
+      "id": "1",
       "name": "Pork Noodles with teriyaki",
       "category": "NOODLES",
       "price": 7.2,
       "counter": 1
     },
     {
-      "id": "12",
+      "id": "2",
       "name": "Chicken Egg Noodles with sweet chili",
       "category": "NOODLES",
       "price": 8.2,
       "counter": 1
     },
     {
-      "id": "13",
+      "id": "3",
       "name": "Beef Rice Noodles with cantonese",
       "category": "NOODLES",
       "price": 7.2,
       "counter": 1
     },
     {
-      "id": "14",
+      "id": "4",
       "name": "Shrimp White Rice with Coconut Curry",
       "category": "RICE",
       "price": 8.2,
       "counter": 1
     },
     {
-      "id": "15",
+      "id": "5",
       "name": "Mushroom Brown Rice with satay",
       "category": "RICE",
       "price": 7.2,
       "counter": 1
     },
     {
-      "id": "16",
+      "id": "6",
       "name": "Mixed ingredients with pineapple, brocoli, baby corn and black mushrooms",
       "category": "OTHER",
       "price": 5.2,

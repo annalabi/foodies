@@ -3,7 +3,7 @@
   "name": "Gregory",
   "category": "COFFEE",
   "address": "Agisilaou 222",
-  "image": "https://imageproxy.wolt.com/venue/6419d121709881b02fc374fd/c41a2ee6-c7ff-11ed-a735-425ca627a9a2_3dd8a4d4_90b4_11ed_9e09_12a7b2cdefd1_e3dc686c_ea32_11ec_bd83_be3d55be3edb_grigoris_list_3.jpg",
+  "image": "/assets/images/coffee3.png",
   "rating": {
     "rate": 3.8,
     "count": 118
@@ -14,41 +14,42 @@
   "region": "Chalkida",
   "products": [
     {
-      "id": "17",
+      "id": "1",
       "name": "Cinnamon Donut",
       "category": "DONUT",
       "price": 2.2,
       "counter": 1
-    },{
-      "id": "21",
-      "name": "Donut Delizioso",
-      "category": "DONUT",
-      "price": 2.5,
-      "counter": 1
     },
     {
-      "id": "22",
-      "name": "Donut Oreo",
-      "category": "DONUT",
-      "price": 1.99,
-      "counter": 1
-    },
-    {
-      "id": "18",
+      "id": "2",
       "name": "Donut Bavaria",
       "category": "DONUT",
       "price": 1.99,
       "counter": 1
     },
     {
-      "id": "19",
+      "id": "3",
+      "name": "Donut Delizioso",
+      "category": "DONUT",
+      "price": 2.5,
+      "counter": 1
+    },
+    {
+      "id": "4",
+      "name": "Donut Oreo",
+      "category": "DONUT",
+      "price": 1.99,
+      "counter": 1
+    },
+    {
+      "id": "5",
       "name": "Blackberry Cronut",
       "category": "CRONUT",
       "price": 1.5,
       "counter": 1
     },
     {
-      "id": "20",
+      "id": "6",
       "name": "Nanou Burger",
       "category": "BURGER",
       "price": 4.3,
