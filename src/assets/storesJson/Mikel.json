@@ -15,72 +15,44 @@
   "products": [
     {
       "id": "1",
-      "name": "Big Mac",
-      "category": "BURGERS",
-      "price": 4.99,
+      "name": "Cinnamon Donut",
+      "category": "DONUT",
+      "price": 2.2,
       "counter": 1
     },
     {
       "id": "2",
-      "name": "Crispy McBacon",
-      "category": "BURGERS",
-      "price": 3.99,
+      "name": "Donut Bavaria",
+      "category": "DONUT",
+      "price": 1.99,
       "counter": 1
     },
     {
       "id": "3",
-      "name": "Deluxe Burger",
-      "category": "BURGERS",
-      "price": 2.99,
-      "counter": 1
-    },
-    {
-      "id": "4",
-      "name": "Single Big Tasty Chicken Bacon",
-      "category": "BURGERS",
-      "price": 2.79,
-      "counter": 1
-    },
-    {
-      "id": "5",
-      "name": "Chicken McNuggets",
-      "category": "NUGGETS",
-      "price": 3.99,
-      "counter": 1
-    },
-    {
-      "id": "6",
-      "name": "Caesar Salad with crispy chicken",
-      "category": "SALADS",
-      "price": 4.5,
-      "counter": 1
-    },
-    {
-      "id": "7",
-      "name": "Caesar Salad with grilled chicken",
-      "category": "SALADS",
-      "price": 4.5,
-      "counter": 1
-    },
-    {
-      "id": "8",
-      "name": "Side Salad",
-      "category": "SALADS",
+      "name": "Donut Delizioso",
+      "category": "DONUT",
       "price": 2.5,
       "counter": 1
     },
     {
-      "id": "9",
-      "name": "Onion Rings",
-      "category": "FRIES_&_SIDES",
-      "price": 0.99,
+      "id": "4",
+      "name": "Donut Oreo",
+      "category": "DONUT",
+      "price": 1.99,
       "counter": 1
     },
     {
-      "id": "10",
-      "name": "Deluxe Fries",
-      "category": "FRIES_&_SIDES",
-      "price": 1.2,
+      "id": "5",
+      "name": "Blackberry Cronut",
+      "category": "CRONUT",
+      "price": 1.5,
+      "counter": 1
+    },
+    {
+      "id": "6",
+      "name": "Nanou Burger",
+      "category": "BURGER",
+      "price": 4.3,
       "counter": 1
     }
   ]
