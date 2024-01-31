@@ -107,6 +107,8 @@ export class StoresComponent implements OnInit {
   // Filter By Rating
   ratingValue: number = 0;
 
+  storesCounter: number = 0;
+
   constructor() {}
 
   ngOnInit(): void {
@@ -119,6 +121,7 @@ export class StoresComponent implements OnInit {
       this.storesByCity
     );
     this.scrollService.startFromTop();
+    this.storesCounter = this.stores.length;
   }
   
   // Function to handle search by store name
@@ -130,6 +133,8 @@ export class StoresComponent implements OnInit {
       store.name.toLowerCase().includes(this.searchInput.toLowerCase())
     );
     console.log('searching...')
+
+    this.storesCounter = this.stores.length;
     
   }
   updateSearchInput(event: Event): void {
@@ -164,7 +169,8 @@ export class StoresComponent implements OnInit {
       );
     }
 
-    // this.storesByCity = this.sortByPopularity(this.stores);
+    this.storesCounter = this.stores.length;
+    
   }
 
   isSelected(foodCategory: FoodCategory): boolean {
@@ -186,6 +192,7 @@ export class StoresComponent implements OnInit {
     this.stores = this.initialStore;
     this.enabledCategoryFilters = [];
     this.stores = this.filterStoresByRegion(region, this.stores);
+    this.storesCounter = this.stores.length;
   }
 
   // Most famous by category of each city
@@ -262,6 +269,7 @@ export class StoresComponent implements OnInit {
 
     // Apply rating filter
     this.stores = filteredStores.filter((store) => store.rating.rate >= rating);
+    this.storesCounter = this.stores.length;
   }
 
   // dropdown filters
@@ -328,6 +336,8 @@ export class StoresComponent implements OnInit {
     return stores.filter((store) => store.region === region);
     // return region === Region.All ? stores :  stores.filter((store) => store.region === region);
   }
+
+
 
   // theo
   nextPage(name: string) {

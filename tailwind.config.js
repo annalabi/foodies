@@ -25,6 +25,7 @@ module.exports = {
       'gray-900':'#111827',
       'gray-950':'#030712',
       'teal': '#134e4a',
+      'teal-light': '#6A9C89',
       'teal-300': '#5eead4',
       'teal-400': '#2dd4bf',
       'teal-500': '#14b8a6',

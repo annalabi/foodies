@@ -10,6 +10,7 @@ export interface Store {
   deliveryCost: number;
   region: Region;
   products: Products[];
+  counter: number;
 }
 
 export interface StoreByCity {
