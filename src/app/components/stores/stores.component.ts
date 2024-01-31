@@ -21,7 +21,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { FoodCategoryToDisplayPipe } from '../../pipes/food-category-to-display.pipe';
 import { CityService } from '../../services/city.service';
 import { RatingSliderComponent } from './rating-slider/rating-slider.component';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-stores',
@@ -41,7 +41,6 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     RatingSliderComponent,
     FormsModule,
-
   ],
 })
 export class StoresComponent implements OnInit {
@@ -49,8 +48,8 @@ export class StoresComponent implements OnInit {
   service = inject(StoresService);
   scrollService = inject(ScrollService);
   router: Router = inject(Router);
-   // New property for search term
-   searchInput: string = '';
+  // New property for search term
+  searchInput: string = '';
 
   @ViewChild('scrollContainer') scrollContainerRef!: ElementRef;
   @ViewChild('cardWrapper') cardWrapperRef!: ElementRef;
@@ -123,19 +122,16 @@ export class StoresComponent implements OnInit {
     this.scrollService.startFromTop();
     this.storesCounter = this.stores.length;
   }
-  
+
   // Function to handle search by store name
   searchStoresByName(): void {
-  
     let filteredStores = this.initialStore;
-    
+
     this.stores = filteredStores.filter((store) =>
       store.name.toLowerCase().includes(this.searchInput.toLowerCase())
     );
-    console.log('searching...')
 
     this.storesCounter = this.stores.length;
-    
   }
   updateSearchInput(event: Event): void {
     if (event && event.target) {
@@ -159,6 +155,11 @@ export class StoresComponent implements OnInit {
   filterStoreByFoodCategory() {
     this.ratingValue = 0;
     this.stores = this.initialStore;
+
+    this.stores = this.stores.filter((store) =>
+      store.name.toLowerCase().includes(this.searchInput.toLowerCase())
+    );
+
     this.stores = this.filterStoresByRegion(this.region, this.stores);
     if (this.currentDropdownItem) {
       this.stores = this.selectFilter(this.currentDropdownItem, this.stores);
@@ -170,7 +171,6 @@ export class StoresComponent implements OnInit {
     }
 
     this.storesCounter = this.stores.length;
-    
   }
 
   isSelected(foodCategory: FoodCategory): boolean {
@@ -190,6 +190,9 @@ export class StoresComponent implements OnInit {
   filterStoreByCity(region: Region) {
     this.ratingValue = 0;
     this.stores = this.initialStore;
+    this.stores = this.stores.filter((store) =>
+      store.name.toLowerCase().includes(this.searchInput.toLowerCase())
+    );
     this.enabledCategoryFilters = [];
     this.stores = this.filterStoresByRegion(region, this.stores);
     this.storesCounter = this.stores.length;
@@ -245,6 +248,10 @@ export class StoresComponent implements OnInit {
 
     // Apply other filters before rating filter
     let filteredStores = this.initialStore;
+
+    filteredStores = filteredStores.filter((store) =>
+      store.name.toLowerCase().includes(this.searchInput.toLowerCase())
+    );
 
     // Apply region filter
     filteredStores = this.filterStoresByRegion(this.region, filteredStores);
@@ -336,8 +343,6 @@ export class StoresComponent implements OnInit {
     return stores.filter((store) => store.region === region);
     // return region === Region.All ? stores :  stores.filter((store) => store.region === region);
   }
-
-
 
   // theo
   nextPage(name: string) {
