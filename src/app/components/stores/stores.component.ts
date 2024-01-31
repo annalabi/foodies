@@ -21,6 +21,8 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { FoodCategoryToDisplayPipe } from '../../pipes/food-category-to-display.pipe';
 import { CityService } from '../../services/city.service';
 import { RatingSliderComponent } from './rating-slider/rating-slider.component';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; 
 
 @Component({
   selector: 'app-stores',
@@ -39,6 +41,8 @@ import { RatingSliderComponent } from './rating-slider/rating-slider.component';
     NavbarComponent,
     FooterComponent,
     RatingSliderComponent,
+    FormsModule,
+
   ],
 })
 export class StoresComponent implements OnInit {
@@ -46,6 +50,8 @@ export class StoresComponent implements OnInit {
   service = inject(StoresService);
   scrollService = inject(ScrollService);
   router: Router = inject(Router);
+   // New property for search term
+   searchInput: string = '';
 
   @ViewChild('scrollContainer') scrollContainerRef!: ElementRef;
   @ViewChild('cardWrapper') cardWrapperRef!: ElementRef;
@@ -114,6 +120,18 @@ export class StoresComponent implements OnInit {
       this.storesByCity
     );
     this.scrollService.startFromTop();
+  }
+  
+  // Function to handle search by store name
+  searchStoresByName(): void {
+    // Apply other filters before search
+    let filteredStores = this.initialStore;
+
+    const searchTerm = this.searchInput.toLowerCase();
+    this.stores = filteredStores.filter((store) =>
+      store.name.toLowerCase().includes(searchTerm)
+    );
+    console.log('searching...')
   }
 
   // Food category filters
