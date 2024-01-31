@@ -265,8 +265,58 @@
       </div>
 
       <!-- store list -->
-      <div>
-        <div class="w-full sm:pl-28 lg:pl-96 lg:ml-32">
+
+      <div class="relative">
+        <div class="w-full lg:pl-96 lg:ml-32 lg:top-0 lg:left-0 sm:mb-4">
+          <form class="absolute top-0 left-0" (ngSubmit)="searchStoresByName()">
+            <label
+              for="default-search"
+              class="mb-2 text-lg font-medium text-white bg-yellow-400 sr-only"
+              >Search</label
+            >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-yellow-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              
+              <input
+                type="search"
+                id="default-search"
+                class="block w-full lg:w-72 p-4 px-8 text-sm text-gray-600 border-gray-100 rounded-lg focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 shadow-md"
+                placeholder="Search Stores..."
+                required
+                (input)="updateSearchInput($event)"
+                 />
+              
+              
+                </div>
+              <button
+                type="submit"
+                class="text-gray-500 absolute end-2.5 bottom-2.5 bg-gray-50 hover:bg-yellow-400 hover:text-white font-medium rounded-lg text-sm px-4 py-2"
+                (click)="searchStoresByName()"
+              >
+                Search
+              </button>
+              <div *ngFor="let store of stores">
+            </div>
+            
+          </form>
           <app-dropdown
             [dropdownItems]="dropdownItems"
             (itemClicked)="selectFilter($event, stores)"

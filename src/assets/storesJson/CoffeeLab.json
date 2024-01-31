@@ -3,7 +3,7 @@
   "name": "Coffee Lab",
   "category": "COFFEE",
   "address": "Athinaion 15",
-  "image": "https://imageproxy.wolt.com/mes-image/35d65592-ec79-423b-8921-ecb09cae52ba/a9bd9221-1631-4a00-92e4-5bde7b171e95",
+  "image": "/assets/images/coffee2.png",
   "rating": {
     "rate": 4.2,
     "count": 352

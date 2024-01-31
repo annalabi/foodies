@@ -32,7 +32,7 @@ export interface Products {
   category: ProductCategory;
   price: number;
   counter: number;
-  storeId: Store["id"];
+  storeId: number;
 }
 
 export interface Rating {

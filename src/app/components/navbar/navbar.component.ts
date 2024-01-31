@@ -30,9 +30,9 @@ export class NavbarComponent implements OnInit {
   }
 
   logout(): void {
-    // Implement the logout functionality
     // Clear user data from session storage, navigate to logout page, etc.
     sessionStorage.removeItem('userData');
+
     // Redirect to the logout page or perform other logout actions
     window.location.href = '/logout';
   }

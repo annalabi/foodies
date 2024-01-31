@@ -3,7 +3,7 @@
   "name": "Mikel",
   "category": "COFFEE",
   "address": "Ampelokipoi 72",
-  "image": "https://imageproxy.wolt.com/mes-image/ff3473a9-98c3-48b5-aa2d-4a454caf183a/0fff7cd4-d62c-4f9d-bca9-71e17a8fd13c",
+  "image": "/assets/images/coffee1.png",
   "rating": {
     "rate": 4.3,
     "count": 689

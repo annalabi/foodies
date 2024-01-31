@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';
-
 import { MostPopularChoicesComponent } from './most-popular-choices/most-popular-choices.component';
 import { WeFeedCitiesComponent } from './we-feed-cities/we-feed-cities.component';
 import { OrderWithWeFeedComponent } from './order-with-we-feed/order-with-we-feed.component';
@@ -25,24 +24,17 @@ import { ScrollService } from '../../services/scroll.service';
     WeFeedCitiesComponent,
     OrderWithWeFeedComponent,
     FooterComponent,
-    CustomersCommentsComponent
+    CustomersCommentsComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
   cityService = inject(CityService);
   scrollService = inject(ScrollService);
-
 
   ngOnInit(): void {
     this.cityService.setSelectedCity(Region.All);
     this.scrollService.startFromTop();
-    
   }
- 
- 
-   
-  
 }
-

@@ -1,7 +1,14 @@
-import { Component, ElementRef, Input, OnInit, ViewChild, inject } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Input,
+  OnInit,
+  ViewChild,
+  inject,
+} from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FoodCategory, Region, Store, StoreByCity } from '../../services/stores.model';
+import { FoodCategory, Region, Store } from '../../services/stores.model';
 import { StoresService } from '../../services/stores.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -14,31 +21,36 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { FoodCategoryToDisplayPipe } from '../../pipes/food-category-to-display.pipe';
 import { CityService } from '../../services/city.service';
 import { RatingSliderComponent } from './rating-slider/rating-slider.component';
+import { FormsModule } from '@angular/forms'; 
 
 @Component({
-    selector: 'app-stores',
-    standalone: true,
-    templateUrl: './stores.component.html',
-    styleUrl: './stores.component.scss',
-    imports: [
-        FoodCategoryToDisplayPipe,
-        DropdownComponent,
-        CommonModule,
-        RouterOutlet,
-        ProductsComponent,
-        FooterComponent,
-        MatCardModule,
-        MatButtonModule,
-        NavbarComponent,
-        FooterComponent,
-        RatingSliderComponent
-    ]
+  selector: 'app-stores',
+  standalone: true,
+  templateUrl: './stores.component.html',
+  styleUrl: './stores.component.scss',
+  imports: [
+    FoodCategoryToDisplayPipe,
+    DropdownComponent,
+    CommonModule,
+    RouterOutlet,
+    ProductsComponent,
+    FooterComponent,
+    MatCardModule,
+    MatButtonModule,
+    NavbarComponent,
+    FooterComponent,
+    RatingSliderComponent,
+    FormsModule,
+
+  ],
 })
 export class StoresComponent implements OnInit {
   cityService = inject(CityService);
   service = inject(StoresService);
   scrollService = inject(ScrollService);
   router: Router = inject(Router);
+   // New property for search term
+   searchInput: string = '';
 
   @ViewChild('scrollContainer') scrollContainerRef!: ElementRef;
   @ViewChild('cardWrapper') cardWrapperRef!: ElementRef;
@@ -48,7 +60,7 @@ export class StoresComponent implements OnInit {
   @Input() region!: Region;
   // should not be changed
   initialStore: Store[] = this.stores;
-  initialFamousStore :Store[] = this.stores;
+  initialFamousStore: Store[] = this.stores;
   testCityValue$ = this.cityService.getSelectedCity();
 
   // Food Category Filters
@@ -102,8 +114,29 @@ export class StoresComponent implements OnInit {
     this.initialStore = this.stores;
     this.initialFamousStore = this.stores;
     this.stores = this.filterStoresByRegion(this.region, this.stores);
-    this.storesByCity = this.filterStoresByRegion(this.region, this.storesByCity);
+    this.storesByCity = this.filterStoresByRegion(
+      this.region,
+      this.storesByCity
+    );
     this.scrollService.startFromTop();
+  }
+  
+  // Function to handle search by store name
+  searchStoresByName(): void {
+  
+    let filteredStores = this.initialStore;
+    
+    this.stores = filteredStores.filter((store) =>
+      store.name.toLowerCase().includes(this.searchInput.toLowerCase())
+    );
+    console.log('searching...')
+    
+  }
+  updateSearchInput(event: Event): void {
+    if (event && event.target) {
+      const inputElement = event.target as HTMLInputElement;
+      this.searchInput = inputElement.value;
+    }
   }
 
   // Food category filters
@@ -130,7 +163,7 @@ export class StoresComponent implements OnInit {
         this.enabledCategoryFilters.includes(value.category)
       );
     }
-    
+
     // this.storesByCity = this.sortByPopularity(this.stores);
   }
 
@@ -198,7 +231,6 @@ export class StoresComponent implements OnInit {
   //   this.updateEnabledCities(region);
   //   this.sortByPopularity(store);
   // }
-
 
   // filter by rating
   filterByRating(rating: number): void {
@@ -297,8 +329,8 @@ export class StoresComponent implements OnInit {
     // return region === Region.All ? stores :  stores.filter((store) => store.region === region);
   }
 
-   // theo
-   nextPage(name: string) {
+  // theo
+  nextPage(name: string) {
     name = name.replace(/\s/g, '');
     this.router.navigate(['./main', name]);
   }

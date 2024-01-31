@@ -2,19 +2,19 @@
   <app-navbar></app-navbar>
 </div>
 <div class="container mx-auto">
-<div class="flex justify-start items-center">
-  <ng-template
-    *ngIf="hasLoaded; then productBlock; else noProductBlock"
-  ></ng-template>
-  <ng-template #productBlock>
-    <ng-container *ngIf="selectedCity$ | async as selectedCity">
-      <app-stores [stores]="stores" [region]="selectedCity"/>
-    </ng-container>
-  </ng-template>
+  <div class="flex justify-start items-center">
+    <ng-template
+      *ngIf="hasLoaded; then productBlock; else noProductBlock"
+    ></ng-template>
+    <ng-template #productBlock>
+      <ng-container *ngIf="selectedCity$ | async as selectedCity">
+        <app-stores [stores]="stores" [region]="selectedCity" />
+      </ng-container>
+    </ng-template>
 
-  <ng-template #noProductBlock>
-    <h1>Loading Products...</h1>
-  </ng-template>
-</div>
+    <ng-template #noProductBlock>
+      <h1>Loading Products...</h1>
+    </ng-template>
+  </div>
 </div>
 <app-footer> </app-footer>

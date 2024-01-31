@@ -3,7 +3,7 @@
   "name": "Pizza",
   "category": "PIZZA",
   "address": "Glyfada Str. 203",
-  "image": "https://imageproxy.wolt.com/mes-image/00cfccff-810c-48c1-9fe5-18c0a8a0ce81/b85fa96d-40cf-44b2-b58c-c282156ecafa",
+  "image": "/assets/images/pizza.png",
   "rating": {
     "rate": 4.5,
     "count": 1780

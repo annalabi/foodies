@@ -3,7 +3,7 @@
   "name": "To souvlaki",
   "category": "SOUVLAKI",
   "address": "Syntagma 15",
-  "image": "https://imageproxy.wolt.com/venue/5b18d86f9c0caf000d17d51f/aff8d500-5728-11ec-ac96-ee505c5e0b42_mcdonalds1.jpg",
+  "image": "/assets/images/souvlaki.png",
   "rating": {
     "rate": 4.9,
     "count": 1000
