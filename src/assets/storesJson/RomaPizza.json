@@ -3,7 +3,7 @@
   "name": "Roma Pizza",
   "category": "PIZZA",
   "address": "Menelaou 22",
-  "image": "https://imageproxy.wolt.com/mes-image/28752efc-9d64-436a-aa7b-dd892ab8bb46/eba5505f-6991-43a3-9a3c-6a6c7f6aaba9",
+  "image": "/assets/images/pizza3.png",
   "rating": {
     "rate": 4.1,
     "count": 169
@@ -28,28 +28,28 @@
       "counter": 1
     },
     {
-      "id": "5",
+      "id": "3",
       "name": "Donut Delizioso",
       "category": "DONUT",
       "price": 2.5,
       "counter": 1
     },
     {
-      "id": "6",
+      "id": "4",
       "name": "Donut Oreo",
       "category": "DONUT",
       "price": 1.99,
       "counter": 1
     },
     {
-      "id": "3",
+      "id": "5",
       "name": "Blackberry Cronut",
       "category": "CRONUT",
       "price": 1.5,
       "counter": 1
     },
     {
-      "id": "4",
+      "id": "6",
       "name": "Nanou Burger",
       "category": "BURGER",
       "price": 4.3,
