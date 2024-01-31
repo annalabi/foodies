@@ -301,10 +301,9 @@
                 class="block w-full lg:w-72 p-4 px-8 text-sm text-gray-600 border-gray-100 rounded-lg focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 shadow-md"
                 placeholder="Search Stores..."
                 required
-                [(ngModel)]="searchInput"
-                (ngModelChange)="searchStoresByName()"
-              />
-              <div *ngFor="let store of stores">
+                (input)="updateSearchInput($event)"
+                 />
+              
               
                 </div>
               <button
@@ -314,7 +313,7 @@
               >
                 Search
               </button>
-              
+              <div *ngFor="let store of stores">
             </div>
             
           </form>

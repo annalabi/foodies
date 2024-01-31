@@ -21,7 +21,6 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { FoodCategoryToDisplayPipe } from '../../pipes/food-category-to-display.pipe';
 import { CityService } from '../../services/city.service';
 import { RatingSliderComponent } from './rating-slider/rating-slider.component';
-import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; 
 
 @Component({
@@ -124,14 +123,20 @@ export class StoresComponent implements OnInit {
   
   // Function to handle search by store name
   searchStoresByName(): void {
-    // Apply other filters before search
+  
     let filteredStores = this.initialStore;
-
-    const searchTerm = this.searchInput.toLowerCase();
+    
     this.stores = filteredStores.filter((store) =>
-      store.name.toLowerCase().includes(searchTerm)
+      store.name.toLowerCase().includes(this.searchInput.toLowerCase())
     );
     console.log('searching...')
+    
+  }
+  updateSearchInput(event: Event): void {
+    if (event && event.target) {
+      const inputElement = event.target as HTMLInputElement;
+      this.searchInput = inputElement.value;
+    }
   }
 
   // Food category filters
