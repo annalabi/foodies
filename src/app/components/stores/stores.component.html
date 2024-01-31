@@ -255,6 +255,7 @@
               <p>{{ ratingValue }}</p>
             </div>
           </div>
+          
           <!-- <div class="!mt-10">
             <app-dropdown
               [dropdownItems]="dropdownItems"
@@ -266,9 +267,9 @@
 
       <!-- store list -->
 
-      <div class="relative">
-        <div class="w-full lg:pl-96 lg:ml-32 lg:top-0 lg:left-0 sm:mb-4">
-          <form class="absolute top-0 left-0" (ngSubmit)="searchStoresByName()">
+      <div class="relative ">
+        <div class="w-full lg:pl-96 lg:ml-32 lg:top-0 lg:left-0 sm:mb-4 ">
+          <form class="absolute top-0 left-0 lg:absolute top-0 left-0 sm:relative" (ngSubmit)="searchStoresByName()">
             <label
               for="default-search"
               class="mb-2 text-lg font-medium text-white bg-yellow-400 sr-only"
@@ -320,8 +321,10 @@
           <app-dropdown
             [dropdownItems]="dropdownItems"
             (itemClicked)="selectFilter($event, stores)"
+            class="sm:mt-0 lg:ml-0 "
           />
         </div>
+        
         <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4">
           @for (store of stores; track $index) {
           <div class="w-96 sm:w-1/1 md:w-1/1 bg-white">
@@ -365,7 +368,7 @@
           </div>
           }
         </div>
-      </div>
+      
     </div>
   </div>
 </div>
